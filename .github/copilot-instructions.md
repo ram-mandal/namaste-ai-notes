@@ -1,15 +1,33 @@
 # Copilot Instructions for Namaste AI Notes
 
-**Purpose:** Maintain consistent, high-quality notes across all lessons and resources.  
+**Purpose:** Maintain consistent, high-quality notes across all episodes, lessons, and resources.  
 **Audience:** Contributors, maintainers, and AI assistants editing this repo.
 
 ---
 
-## 🎯 Core Principles
+## Course Learning Philosophy
+
+Before writing or editing content, understand the course's learning approach:
+
+> **Slow, Intentional Learning Over Quick Consumption**
+
+This course prioritizes deep understanding over speed. Writers should:
+- Emphasize pausing and reflecting, not binge-watching
+- Encourage rewatching and rereading concepts
+- Highlight the 2-4+ month timeline for proper learning
+- Remind learners to make their own notes
+- Stress doing exercises immediately when instructed
+- Encourage sequential learning (no skipping ahead)
+
+This philosophy should subtly influence tone, pacing of content, and how examples are explained.
+
+---
+
+## Core Principles
 
 1. **Simple language** — Explain like you're talking to a 5th grader
 2. **One concept per section** — Don't mix topics
-3. **Visual-first** — Use diagrams before long text
+3. **Visual-first** — Use tables, blockquotes, emphasis before long paragraphs
 4. **Example-driven** — Show before you tell
 5. **Consistency** — All lessons look and feel the same
 
@@ -23,6 +41,8 @@
 - Break long explanations into short paragraphs
 - Use active voice ("I calculate" not "it is calculated")
 - Add real-world analogies when possible
+- Remind learners to take notes in their own words
+- Encourage pausing, reflecting, rewatching
 
 **DON'T:**
 - Use jargon without explaining it
@@ -30,6 +50,8 @@
 - Assume prior knowledge
 - Use passive voice
 - Be overly formal or robotic
+- Mention specific instructor names (focus on concepts)
+- Encourage rushing or binge-learning
 
 **Example - Simple way:**
 ```
@@ -47,49 +69,60 @@ methodology, which iteratively minimizes the loss function via gradient descent.
 
 ## 📄 Lesson Structure Template
 
-Every lesson `.md` file should follow this structure:
+Every episode/lesson `.md` file should follow this structure:
 
 ```markdown
-# [Lesson Number]: [Clear, Simple Title]
+# Episode/Lesson [Number]: [Clear, Simple Title]
 
-## 🎯 What you'll learn
-- Key point 1 (one line)
-- Key point 2 (one line)
-- Key point 3 (one line)
+> One-line summary of what this teaches.
 
-## 📖 The simple explanation
-[1-2 paragraph explanation of core concept]
+---
 
-## 🔍 How it works (step by step)
-1. Step 1 - what happens
-2. Step 2 - what happens
-3. Step 3 - what happens
+## What you'll learn
+- Key point 1
+- Key point 2
+- Key point 3
 
-## 📊 Visual explanation
-[ASCII diagram, flowchart, or reference to asset file]
+## The simple explanation
+[Core concept in 1-2 paragraphs]
 
-## 💻 Code example
-[Runnable code snippet with comments]
+## How it works (step by step)
+1. Step 1
+2. Step 2
+3. Step 3
 
-## 🌍 Real-world example
-[Concrete example from life, not tech]
+## Visual explanation
+[Table, blockquote, or reference to diagram]
 
-## ⚠️ Common mistakes
-- Mistake 1 and why it's wrong
-- Mistake 2 and why it's wrong
+## Real-world example
+[Concrete example from life]
 
-## 🔑 Key takeaways
+## Key takeaways
 - Takeaway 1
 - Takeaway 2
-- Takeaway 3
 
-## 🔗 Resources & further reading
-- [Resource name](link)
-- [Resource name](link)
-
-## 🚀 Next lesson
+## What comes next
 [Link to next lesson]
 ```
+
+---
+
+## When to Use Markdown Visuals
+
+**Use tables for:**
+- Comparisons (do/don't, theory vs practice)
+- Structured data
+- Prerequisites, tools, or options
+
+**Use blockquotes for:**
+- Key insights or philosophies
+- Important warnings
+- Motivational reminders
+
+**Use bold for:**
+- First mention of important terms
+- Key concepts you want to emphasize
+- Action items
 
 ---
 
@@ -252,7 +285,31 @@ Think of it like learning to ride a bike—practice makes perfect.
 
 ---
 
-## 📏 File Naming Convention
+## Markdown Formatting Rules
+
+**Headings:**
+- `#` for episode/lesson title only (used once per file)
+- `##` for major sections
+- `###` for subsections only when needed
+
+**Emphasis:**
+- Use `**bold**` for important terms and key concepts
+- Use `_italics_` sparingly
+- Use blockquotes `>` for key insights and philosophies
+
+**Tables:**
+- Use for comparisons (do/don't, concept A vs B, pros/cons)
+- Use for structured information
+- Prefer tables over bullet lists when comparing options
+
+**Lists:**
+- Use `-` for unordered lists
+- Use `1.` for step-by-step sequences
+- Keep items short (one line ideal)
+
+**Dividers:**
+- Use `---` to separate major sections
+- Creates visual breathing room
 
 **Lesson files:**
 - Format: `lesson-01.md`, `lesson-02.md`, etc.
@@ -271,42 +328,43 @@ Think of it like learning to ride a bike—practice makes perfect.
 
 ---
 
-## 🚀 Before Creating a New Lesson
+## 🚀 Before Creating a New Episode/Lesson
 
-1. **Check existing lessons** — Avoid duplicating content
+1. **Check existing content** — Avoid duplicating material
 2. **Outline first** — Write bullet points before full sentences
 3. **Find a real example** — What will readers see in real life?
-4. **Create visuals** — ASCII art or diagram (in `assets/`)
+4. **Create visuals** — Use Markdown tables or blockquotes
 5. **Write code** — Test it locally before adding
-6. **Run the checklist** — Verify all items above
+6. **Run the checklist** — Verify all items in Consistency Checklist
 7. **Get feedback** — Have someone else review before merging
 
 ---
 
-## 🛠️ Maintenance
+## Maintenance
 
 **Regular tasks:**
 - Check links monthly (broken links?)
-- Update lessons if course content changes
-- Review & update explanations based on feedback
-- Add new lessons as course progresses
+- Update episodes/lessons if course content changes
+- Review explanations based on feedback
+- Add new episodes as course progresses
 
 **When merging contributions:**
 - Check formatting against this guide
 - Verify code examples work
 - Ensure links are correct
-- Confirm tone is consistent
+- Confirm tone is consistent with course philosophy
 - Test diagrams/images load
 
 ---
 
-## ❓ Questions?
+## Questions?
 
 If you're unsure about:
-- **Tone:** Read Lesson 1, match that style
-- **Formatting:** Copy the template structure
-- **Content depth:** Explain it to a beginner, not an expert
+- **Tone:** Read Episode 01, match that style (slow, intentional, encouraging)
+- **Formatting:** Copy the template structure above
+- **Content depth:** Explain to a beginner, not an expert
 - **Examples:** Use real-world before code
+- **Learning pace:** Emphasize pausing, reflecting, rewatching
 
-**Remember:** Clarity wins over complexity. Every. Single. Time.
+**Remember:** Clarity and simplicity always win. This course values understanding over speed.
 

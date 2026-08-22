@@ -4,172 +4,109 @@
 
 ---
 
-## 🎯 Season 1 Overview
+## Season 1 Overview
 
 **What you'll learn:**
 - What is AI and why it matters
-- Math foundations (no calculus required)
-- How neural networks actually work
-- Training, optimization, and debugging
+- How to approach this course for maximum learning
+- How neural networks work
+- Training, optimization, and practical applications
 - Your first real AI projects
 
-**Time to complete:** ~4-6 weeks (self-paced)  
+**Time to complete:** 2-4+ months (if learning properly, with pauses and reflection)  
 **Prerequisites:** Basic programming knowledge (Python helpful)  
 **Outcome:** Build and train your first neural network from scratch
 
 ---
 
-## 📖 Lessons
+## Episodes & Lessons
 
-### Module 1: Introduction & Foundations
-- **[Lesson 01: What is AI?](./lesson-01.md)** — History, types, and real-world impact
-- **[Lesson 02: Key Concepts](./lesson-02.md)** — Data, features, labels, predictions
-- **[Lesson 03: Math Basics](./lesson-03.md)** — Vectors, matrices, and derivatives (simplified)
+### Foundation & Philosophy
+- **[Episode 01: Welcome to Namaste AI](./episode-01-welcome-to-namaste-ai.md)** — Course overview, prerequisites, learning philosophy, practical tips
+
+### Module 1: Fundamentals  
+- **[Lesson 02: AI Fundamentals](./lesson-02.md)** — What is AI, evolution, real-world applications
+- **[Lesson 03: Key Concepts](./lesson-03.md)** — Data, features, labels, predictions
+- **[Lesson 04: Math Basics](./lesson-04.md)** — Vectors, matrices, derivatives (simplified)
 
 ### Module 2: Neural Networks
-- **[Lesson 04: How neurons work](./lesson-04.md)** — From biology to math
-- **[Lesson 05: Building networks](./lesson-05.md)** — Layers, activation, architecture
-- **[Lesson 06: Forward pass](./lesson-06.md)** — How data flows through a network
+- **[Lesson 05: How neurons work](./lesson-05.md)** — From biology to math
+- **[Lesson 06: Building networks](./lesson-06.md)** — Layers, activation, architecture
+- **[Lesson 07: Forward pass](./lesson-07.md)** — How data flows through a network
 
 ### Module 3: Training & Learning
-- **[Lesson 07: Backward pass](./lesson-07.md)** — How networks learn (backpropagation)
-- **[Lesson 08: Optimization](./lesson-08.md)** — Gradient descent and variants
-- **[Lesson 09: Debugging networks](./lesson-09.md)** — When things go wrong
+- **[Lesson 08: Backward pass](./lesson-08.md)** — How networks learn (backpropagation)
+- **[Lesson 09: Optimization](./lesson-09.md)** — Gradient descent and variants
+- **[Lesson 10: Debugging networks](./lesson-10.md)** — When things go wrong
 
-### Module 4: Hands-On Projects
+### Module 4: Projects
 - **[Project 1: Build a classifier](../projects/README.md)** — Predict categories from data
 - **[Project 2: Text to numbers](../projects/README.md)** — Embeddings and representations
 - **[Project 3: Full pipeline](../projects/README.md)** — End-to-end ML workflow
 
 ---
 
-## 📊 Learning Path
+## Learning Philosophy
 
-```
-START
-  ↓
-Why AI? (Lesson 01)
-  ↓
-Core concepts (Lesson 02)
-  ↓
-Math foundations (Lesson 03)
-  ↓
-How neurons work (Lesson 04)
-  ↓
-Building networks (Lesson 05)
-  ↓
-Forward pass (Lesson 06)
-  ↓
-Backpropagation (Lesson 07)
-  ↓
-Optimization (Lesson 08)
-  ↓
-Debugging (Lesson 09)
-  ↓
-BUILD PROJECTS ← (Your learning solidifies here!)
-  ↓
-EXPERT
-```
+This course emphasizes **slow, intentional learning**:
+
+| Principle | Why |
+|-----------|-----|
+| Pause and reflect | Absorption requires time, not speed |
+| Make your own notes | Retention through active learning |
+| Rewatch if needed | Concepts click on multiple exposures |
+| Do exercises | Practice cements understanding |
+| Join community | Peer support sustains long-term learning |
+
+**Most important:** Expect 2-4+ months if learning properly. This isn't a sprint.
 
 ---
 
-## 🚀 How to use Season 1
+## How to use Season 1
 
-### Option 1: Linear Path (Recommended for beginners)
-Read lessons in order: 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09
+### Recommended approach
+Follow lessons sequentially: Episode 01 → Lesson 02 → Lesson 03 → ... → Projects
 
-**Time:** ~2-3 hours per lesson (including code practice)
+**Time per lesson:** 1-2 hours (including video, notes, reflection)  
+**Pace:** Slow and deliberate — understand deeply, not quickly  
+**Review:** Go back to lessons as needed, especially before projects
 
-### Option 2: Skipped Path (For those with some background)
-If you know the basics, skip to Module 2 (Lesson 04)
+### If you have some background
+You can skim Episode 01 but don't skip it—the learning philosophy matters.
 
-**Time:** ~1.5 hours per lesson
-
-### Option 3: Project-First Path (Learn by doing)
-1. Start Lesson 01
-2. Jump to a project from Module 4
-3. Come back to lessons as needed
-4. Repeat for next project
+### If you're new to everything
+Start with Episode 01, follow sequentially, don't skip any lessons.
 
 ---
 
-## 💡 Tips for success
+## How to Get the Most Out of Each Lesson
 
-**DO:**
-- ✅ Read one lesson at a time
-- ✅ Run code examples yourself (copy-paste and execute)
-- ✅ Modify examples (change numbers, parameters, data)
-- ✅ Take notes (in your own words)
-- ✅ Try projects after every 2-3 lessons
-
-**DON'T:**
-- ❌ Skip the "Why" sections
-- ❌ Just read code without running it
-- ❌ Memorize—understand instead
-- ❌ Rush through to projects
-- ❌ Get stuck on math—move forward and return later
+1. **Read the lesson first** — Get the overview
+2. **Watch the video** — Take notes in your own words
+3. **Pause and think** — After the video, review what you learned
+4. **Do exercises** — Complete any practice problems
+5. **Review your notes** — Within 24 hours, strengthen memory
+6. **Share learning** — Post on social media or discuss in community
 
 ---
 
-## ❓ FAQ
+## Progress Tracker
 
-**Q: What if I don't understand a lesson?**  
-A: That's normal! Read it twice. Try the code examples. Check the resources section for alternatives. Ask in discussions.
+Track your progress through Season 1:
 
-**Q: Should I take notes?**  
-A: Yes, but in your own words. Don't copy-paste these notes—rephrase them. This helps learning stick.
-
-**Q: How long does each lesson take?**  
-A: 30-60 minutes reading + 30-60 minutes practicing code = ~2 hours average.
-
-**Q: Can I skip lessons?**  
-A: Try not to. Each lesson builds on the previous one. If something feels familiar, skim it—don't skip entirely.
-
-**Q: When should I start projects?**  
-A: After Lesson 06. By then you understand networks. Projects cement that understanding.
-
----
-
-## 📚 Resources
-
-**All lessons link to:**
-- External tutorials
-- Papers (simplified versions)
-- Relevant blog posts
-- Video supplements
-
-**Check each lesson's resources section for deep dives.**
-
----
-
-## 🎬 Course Connection
-
-These notes follow the **Namaste AI Season 1 course** structure but are:
-- ✅ Condensed summaries (not a replacement for videos)
-- ✅ Study aids with code examples
-- ✅ Reference material for later review
-- ✅ Practice exercise guides
-
-**Best experience:** Watch video → Read corresponding lesson → Run code → Try project
-
----
-
-## 📈 Progress tracker
-
-Keep track of what you've learned:
-
-- [ ] Lesson 01: What is AI?
-- [ ] Lesson 02: Key Concepts
-- [ ] Lesson 03: Math Basics
-- [ ] Lesson 04: How neurons work
-- [ ] Lesson 05: Building networks
-- [ ] Lesson 06: Forward pass
-- [ ] Lesson 07: Backward pass
-- [ ] Lesson 08: Optimization
-- [ ] Lesson 09: Debugging networks
-- [ ] Project 1: Complete
-- [ ] Project 2: Complete
-- [ ] Project 3: Complete
+- [ ] Episode 01: Welcome to Namaste AI
+- [ ] Lesson 02: AI Fundamentals
+- [ ] Lesson 03: Key Concepts
+- [ ] Lesson 04: Math Basics
+- [ ] Lesson 05: How neurons work
+- [ ] Lesson 06: Building networks
+- [ ] Lesson 07: Forward pass
+- [ ] Lesson 08: Backward pass
+- [ ] Lesson 09: Optimization
+- [ ] Lesson 10: Debugging networks
+- [ ] Project 1: Build a classifier
+- [ ] Project 2: Text to numbers
+- [ ] Project 3: Full pipeline
 
 ---
 
