@@ -4,21 +4,21 @@
 
 ---
 
-## 🎯 What is this?
+## What is this?
 
-A **structured learning resource** for the Namaste AI course by Akshay Saini. These notes break down complex AI/ML concepts into simple, digestible lessons with:
+A **structured learning resource** for the Namaste AI course. These notes break down complex AI/ML concepts into simple, digestible lessons with:
 
-- 📝 Clear explanations in plain language
-- 💻 Code examples and snippets
-- 🎨 Diagrams and visual explanations
-- 🚀 Links to hands-on projects
-- 📚 Resources for deeper learning
+- Clear explanations in plain language
+- Code examples and snippets
+- Diagrams and visual explanations
+- Links to hands-on projects
+- Resources for deeper learning
 
 **Target audience:** Anyone wanting to learn AI/ML fundamentals through structured notes and practical projects.
 
 ---
 
-## 📖 How to use this repo
+## How to use this repo
 
 ### For learners
 1. **Start here:** Pick a Season below
@@ -27,33 +27,41 @@ A **structured learning resource** for the Namaste AI course by Akshay Saini. Th
 4. **Build projects:** Apply what you learned in the projects section
 5. **Ask questions:** Check FAQ or open an issue
 
+### Learning approach
+This course emphasizes **slow, intentional learning** over rushed consumption:
+- Pause after each lesson to reflect
+- Make your own notes in your own words
+- Do assignments with full effort
+- Engage with the community
+- Expect to spend 2-4+ months if learning properly
+
 ### File structure
-- `season-1/` — All Season 1 lessons and resources
+- `season-1/` — All Season 1 episodes and resources
 - `projects/` — Links to hands-on projects (separate repos)
 - `assets/` — Diagrams, screenshots, visual aids
 - `resources/` — External links and reference materials
 
 ---
 
-## 📚 Seasons & Lessons
+## Seasons & Lessons
 
-### Season 1 (Live 🟢)
+### Season 1 (Live)
 Learn AI foundations, neural networks, optimization, and build your first AI projects.
 
-**Lessons:**
-- [Lesson 01: Introduction to AI](./season-1/lesson-01.md) — What is AI? Why learn it?
-- [Lesson 02: Fundamentals](./season-1/lesson-02.md) — Math, data, and key concepts
-- [Lesson 03: Neural Networks](./season-1/lesson-03.md) — How neural networks work
+**Episodes:**
+- [Episode 01: Welcome to Namaste AI](./season-1/episode-01-welcome-to-namaste-ai.md) — Course overview, prerequisites, learning philosophy
+- [Lesson 02: AI Fundamentals](./season-1/lesson-02.md) — What is AI, evolution, real-world impact
+- [Lesson 03: Key Concepts](./season-1/lesson-03.md) — Data, features, labels, predictions
 - (More lessons coming...)
 
-👉 **[Full Season 1 Overview](./season-1/README.md)**
+**[Full Season 1 Overview](./season-1/README.md)**
 
 ### Season 2, 3, etc.
-Coming soon... 🚀
+Coming soon...
 
 ---
 
-## 🚀 Live Projects
+## Live Projects
 
 Apply what you learn by building **real-world AI projects**.
 
@@ -63,11 +71,11 @@ Apply what you learn by building **real-world AI projects**.
 | Project 2 | Image classifier | `namaste-ai-project-image-classifier` |
 | Project 3 | Text summarizer | `namaste-ai-project-summarizer` |
 
-👉 **[All Projects](./projects/README.md)**
+**[All Projects](./projects/README.md)**
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Can I use these notes for my own learning?**  
 A: Yes! These are open for personal learning. Please respect the original course and creator.
@@ -83,6 +91,12 @@ A: Please open an issue or submit a PR. We'll fix it.
 
 **Q: Are these notes aligned with the official course?**  
 A: These are personal learning notes from the Namaste AI course. They're supplementary—watch the course videos for complete learning.
+
+**Q: Should I binge-watch the videos?**  
+A: No. Watch slowly, pause to reflect, rewatch if needed. This is a 2-4+ month journey if done properly.
+
+**Q: How long should I spend per episode?**  
+A: Plan for 1-2 hours including video, notes, and reflection. More is fine if you need it.
 
 ---
 
