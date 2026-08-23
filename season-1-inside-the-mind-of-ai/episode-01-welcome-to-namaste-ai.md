@@ -14,9 +14,9 @@
 ---
 
 <details>
-<summary>📝 Notes at a Glance (click to expand)</summary>
+<summary><span style="font-size: 1.25em; font-weight: bold;">📝 Notes at a Glance (click to expand)</span></summary>
 
-![Episode 01 Notes](../assets/season-1/episode-01-welcome-to-namaste-ai.png)
+![Episode 01 Notes](../assets/season-1-inside-the-mind-of-ai/episode-01-welcome-to-namaste-ai.png)
 
 </details>
 
