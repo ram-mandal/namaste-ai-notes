@@ -1,12 +1,12 @@
 # Projects
 
-> Build real AI projects to apply what you learn.
+> Hands-on projects built alongside the course — where the notes meet real code.
 
 ---
 
 ## Project List
 
-_(Projects will be listed here as they are created.)_
+_(Projects will be listed here as they're built.)_
 
 ---
 

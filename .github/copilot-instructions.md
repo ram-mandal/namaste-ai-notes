@@ -11,15 +11,25 @@ Maintain consistent, high-quality notes across all episodes and resources.
 - The course is **high-level AI** (LLMs, prompt engineering, RAG, AI for developers, AI tools, AI agents, MCP, AI engineering). It does **not** cover ML, neural networks, backpropagation, or optimization — do not add such content.
 - **RAG** and **MCP** are separate topics — never merge them (e.g. no "AI Agents & MCP" combined topic).
 
-## Notes Style (concise)
+## Notes Style (concise but not shallow)
 
-These are **notes, not a tutorial** — keep them short and scannable.
+These are **personal learning notes, not a tutorial** — concise, scannable, but with real depth where it matters.
 
-- **Small points only** — short bullets, no long explanations or "why" paragraphs
+- **Concise, not shallow** — short bullets for facts, but allow 2-4 sentence explanations where a concept genuinely needs them
 - **No redundancy** — don't repeat the same point across sections (e.g. no separate "checklist" + "tips" + "takeaways" all saying the same thing)
-- **Drop video-oriented filler** — no "how to watch the videos", "questions to think about", or motivational prose
+- **Don't blindly bullet everything** — use prose where it reads better
 - **Keep only relevant facts** — roadmap, prerequisites, key points, links
 - Prefer a single compact section over several overlapping ones
+
+## Distinguishing Content Types
+
+Clearly separate these in every episode:
+- **What the course teaches** — "Key Concepts" and "Deep Dive" sections: neutral, technically accurate
+- **My own understanding** — "My Mental Model": first person, analogies, informal
+- **My observations/opinions** — "Practical / Engineering Connection": first person, engineering framing
+- **Things I still need to investigate** — "Questions / Things to Explore": open questions, flagged as such
+
+If something in the notes appears technically questionable, **flag it** (e.g. `> ⚠️ Needs verification: ...`) rather than silently changing it.
 
 ## Learning Philosophy
 
@@ -57,44 +67,57 @@ These are **notes, not a tutorial** — keep them short and scannable.
 - No instructor names — focus on concepts
 - No rushing or binge-learning
 
-## Episode Structure Template
+## Episode Structure (flexible)
 
-Every episode `.md` file follows the structure used in `season-1/episode-01-welcome-to-namaste-ai.md`:
+Every episode starts with a title and one-line summary:
 
 ```markdown
-# Episode [Number]: [Clear, Simple Title]
+# Season X — Episode XX: <Title>
 
-> One-line summary of what this teaches.
+> One-line summary of what this episode is about.
+```
 
----
+Then **include only the sections that make sense for this episode** — do NOT force every section on every episode. Available sections (pick as needed):
 
-## What you'll learn
-- Key point 1
-- Key point 2
-- Key point 3
+- 🎯 Episode Overview
+- 🧠 Key Concepts
+- 🔍 Deep Dive
+- 💡 My Mental Model
+- 🧩 Visual Explanation
+- 📝 Key Takeaways
+- 🤔 Questions / Things to Explore
+- 🛠️ Practical / Engineering Connection
+- 🧪 Experiments / Projects
+- 🔗 Resources
+- ➡️ Next
 
-## [Topic-specific sections]
-[Content for this episode]
+**Rules:**
+- Only include a section if it has real content for this episode — no filler or empty placeholder sections
+- "My Mental Model" and "Questions" are explicitly *personal* — first person, informal
+- "Key Concepts" and "Deep Dive" are *course content* — technically accurate, neutral tone
+- End every episode with a prev/next navigation table:
 
-## Key Takeaways
-[Summary of the main points]
-
-## What Comes Next
-[What the next episode covers]
-
-## Resources
-[Links to related pages]
-
----
-
-**Status:** Episode [Number] complete
-
----
-
+```markdown
 | ← Previous | Next → |
 |:---:|:---:|
 | [Episode N-1: Title](./episode-XX-title.md) | [Episode N+1: Title](./episode-XX-title.md) |
 ```
+
+## Visual Explanation Guidance
+
+For each episode, identify the **ONE** most important concept that deserves a visual representation. Choose the form that fits the topic:
+
+- Timeline (e.g. evolution of AI)
+- Concept map / flow diagram (e.g. course roadmap)
+- Architecture / pipeline diagram (e.g. RAG pipeline, agent loop)
+- Before → After (e.g. with/without RAG)
+- Decision tree / comparison diagram
+
+**Rules:**
+- Prefer Mermaid for flow/architecture/timeline; ASCII when Mermaid would be excessive
+- Tables only when they genuinely improve readability
+- **Do not force a diagram** when it doesn't add value — a short note like `_(No diagram needed for this episode.)_` is fine
+- Don't force every episode to have the same visual layout — the representation should depend on the topic
 
 ## Code Examples
 
@@ -107,19 +130,19 @@ Every episode `.md` file follows the structure used in `season-1/episode-01-welc
 ## Naming Conventions
 
 - **Episode files:** `episode-NN-[descriptive-slug].md` (lowercase, 2-digit number, e.g. `episode-01-welcome-to-namaste-ai.md`)
-- **Asset files:** `assets/[topic]-[description].png` (descriptive, not `image1.png`)
+- **Asset files:** `assets/<season-folder>/episode-NN-[descriptive-slug].png` (e.g. `assets/season-1-inside-the-mind-of-ai/episode-01-welcome-to-namaste-ai.png` — matches the episode slug, not `image1.png`)
+- **Episode titles:** always include the season — `# Season N — Episode NN: Title`
 
 ## Before Committing
 
-- [ ] Title is clear & simple (5-7 words)
-- [ ] Follows the template structure above
-- [ ] "What you'll learn" has 3-5 bullets
-- [ ] Simple explanation comes before code/diagrams
-- [ ] Visual explanation included (ASCII art or asset link)
+- [ ] Title is clear & simple (5-7 words) and includes the season
+- [ ] Only sections that make sense for this episode are included (no filler/empty sections)
+- [ ] Course content vs. personal understanding clearly separated
+- [ ] Visual explanation included (or explicitly noted as not needed)
 - [ ] Code is runnable, tested, with comments
-- [ ] Real-world example exists
 - [ ] No unexplained jargon
-- [ ] Takeaways section has 3-5 bullets
-- [ ] Next episode linked
+- [ ] Key Takeaways has 3-7 bullets
+- [ ] Next episode linked (and prev/next table correct)
+- [ ] Season README episode table updated (status column)
 - [ ] No broken links
 

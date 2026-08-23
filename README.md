@@ -1,51 +1,62 @@
 # Namaste AI Notes
 
-> Notes and resources for the **Namaste AI course**.
+> My personal learning journey through the [Namaste AI](https://www.namasteai.com/) course by Akshay Saini — episode by episode, in my own words.
 
----
+## About
 
-## What is this?
+This repository is my public learning journal for the Namaste AI course. Each episode note is organized into two kinds of content:
 
-Structured notes that break down AI concepts into simple, digestible lessons.
+- **Course content** — what the episode teaches: key concepts, deep dives, and takeaways, written neutrally and technically
+- **Personal notes** — how *I* understand it: mental models, analogies, engineering connections, and open questions, written in first person
 
----
+The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. It does not cover ML math, neural networks, or model training; the focus is on building *with* AI.
 
-## File structure
+> ⚠️ These are **personal learning notes, not official course material.** They are not affiliated with or endorsed by the course.
 
-- `season-1/` — Season 1 episodes
-- `projects/` — Hands-on projects (separate repos)
-- `assets/` — Diagrams and visual aids
-- `resources/` — External links and references
+## Course Roadmap
 
----
+The course covers 10 topics in sequence:
 
-## Seasons
+```mermaid
+flowchart LR
+    A[AI Fundamentals] --> B[LLMs]
+    B --> C[Prompt Engineering]
+    C --> D[AI for Developers]
+    D --> E[AI Tools & Ecosystem]
+    E --> F[RAG]
+    F --> G[AI Agents]
+    G --> H[MCP]
+    H --> I[AI Engineering]
+    I --> J[Projects]
+```
 
-### Season 1
-High-level AI concepts and foundations.
+## Seasons & Episodes
 
-**[Season 1 Overview](./season-1/README.md)**
+### Season 1 — Inside the Mind of AI
+
+| # | Episode | Status |
+|:---:|:---|:---:|
+| 01 | [Welcome to Namaste AI](./season-1-inside-the-mind-of-ai/episode-01-welcome-to-namaste-ai.md) | ✅ |
+| 02 | [The Evolution of AI](./season-1-inside-the-mind-of-ai/episode-02-the-evolution-of-ai.md) | 🚧 |
+
+**[Season 1 Overview](./season-1-inside-the-mind-of-ai/README.md)** · Legend: ✅ complete · 🚧 in progress · ⬜ not started
 
 ### Season 2+
+
 Coming soon...
 
----
+## Projects & Experiments
 
-## Projects
+Hands-on projects built alongside the course live in **[projects/](./projects/README.md)**.
 
-**[All Projects](./projects/README.md)**
+## Resources
 
----
+Curated external links and references: **[resources/useful-links.md](./resources/useful-links.md)**
 
-## Contributing
+## Repository Structure
 
-Found an error or want to add something? Open an issue or submit a PR.
-
----
-
-## License
-
-Personal learning notes from the Namaste AI course. Open for personal and educational use.
-
-**Course credits:** Namaste AI by Akshay Saini.
+- `season-1-inside-the-mind-of-ai/` — Season 1 episode notes
+- `projects/` — Hands-on projects
+- `assets/` — Diagrams and visual aids
+- `resources/` — External links and references
 
