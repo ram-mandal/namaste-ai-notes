@@ -1,78 +1,68 @@
 # Copilot Instructions for Namaste AI Notes
 
-**Purpose:** Maintain consistent, high-quality notes across all episodes, lessons, and resources.  
-**Audience:** Contributors, maintainers, and AI assistants editing this repo.
+Maintain consistent, high-quality notes across all episodes and resources.
 
----
+## Accuracy (most important)
 
-## Course Learning Philosophy
+- **Only include information the user has provided or that is verifiable** in the existing files.
+- **Never invent** episode titles, lesson names, project names, repo names, links, or facts.
+- **Check the truth before adding anything** — read the actual files to confirm a link, name, or claim exists before referencing it.
+- If details are unknown, leave a clear placeholder (e.g. `_(coming soon)_`) instead of guessing.
+- The course is **high-level AI** (LLMs, prompt engineering, RAG, AI for developers, AI tools, AI agents, MCP, AI engineering). It does **not** cover ML, neural networks, backpropagation, or optimization — do not add such content.
+- **RAG** and **MCP** are separate topics — never merge them (e.g. no "AI Agents & MCP" combined topic).
 
-Before writing or editing content, understand the course's learning approach:
+## Notes Style (concise)
+
+These are **notes, not a tutorial** — keep them short and scannable.
+
+- **Small points only** — short bullets, no long explanations or "why" paragraphs
+- **No redundancy** — don't repeat the same point across sections (e.g. no separate "checklist" + "tips" + "takeaways" all saying the same thing)
+- **Drop video-oriented filler** — no "how to watch the videos", "questions to think about", or motivational prose
+- **Keep only relevant facts** — roadmap, prerequisites, key points, links
+- Prefer a single compact section over several overlapping ones
+
+## Learning Philosophy
 
 > **Slow, Intentional Learning Over Quick Consumption**
 
-This course prioritizes deep understanding over speed. Writers should:
-- Emphasize pausing and reflecting, not binge-watching
-- Encourage rewatching and rereading concepts
-- Highlight the 2-4+ month timeline for proper learning
-- Remind learners to make their own notes
-- Stress doing exercises immediately when instructed
+- Emphasize pausing, reflecting, rewatching — not binge-watching
 - Encourage sequential learning (no skipping ahead)
-
-This philosophy should subtly influence tone, pacing of content, and how examples are explained.
-
----
+- Remind learners to make their own notes
+- 2-4+ month timeline for proper learning
 
 ## Core Principles
 
-1. **Simple language** — Explain like you're talking to a 5th grader
+1. **Simple language** — Explain like talking to a 5th grader
 2. **One concept per section** — Don't mix topics
-3. **Visual-first** — Use tables, blockquotes, emphasis before long paragraphs
+3. **Visual-first** — Tables, blockquotes before long paragraphs
 4. **Example-driven** — Show before you tell
-5. **Consistency** — All lessons look and feel the same
+5. **Consistency** — All episodes look and feel the same
+6. **Split long lists** — When a list has many items (roughly 6+), split it into a two-column (left/right) layout using a table so it reads as two side-by-side groups instead of one long vertical list.
 
----
+   ```markdown
+   | | |
+   |:---|:---|
+   | - Item 1 | - Item 4 |
+   | - Item 2 | - Item 5 |
+   | - Item 3 | - Item 6 |
+   ```
 
-## 📝 Tone & Voice
+## Tone
 
-**DO:**
-- Use "you" and "we" (conversational)
+- Conversational: use "you" and "we"
 - Start with "why" before "how"
-- Break long explanations into short paragraphs
-- Use active voice ("I calculate" not "it is calculated")
-- Add real-world analogies when possible
-- Remind learners to take notes in their own words
-- Encourage pausing, reflecting, rewatching
+- Active voice, short sentences (max 2 lines)
+- Real-world analogies before code
+- No jargon without explanation
+- No instructor names — focus on concepts
+- No rushing or binge-learning
 
-**DON'T:**
-- Use jargon without explaining it
-- Write sentences longer than 2 lines
-- Assume prior knowledge
-- Use passive voice
-- Be overly formal or robotic
-- Mention specific instructor names (focus on concepts)
-- Encourage rushing or binge-learning
+## Episode Structure Template
 
-**Example - Simple way:**
-```
-Neural networks learn by adjusting weights. Think of weights like recipe ingredients—
-adjust them to improve the cake, adjust them to improve predictions.
-```
-
-**Example - NOT recommended:**
-```
-The optimization of synaptic weights is performed through backpropagation
-methodology, which iteratively minimizes the loss function via gradient descent.
-```
-
----
-
-## 📄 Lesson Structure Template
-
-Every episode/lesson `.md` file should follow this structure:
+Every episode `.md` file follows the structure used in `season-1/episode-01-welcome-to-namaste-ai.md`:
 
 ```markdown
-# Episode/Lesson [Number]: [Clear, Simple Title]
+# Episode [Number]: [Clear, Simple Title]
 
 > One-line summary of what this teaches.
 
@@ -83,288 +73,53 @@ Every episode/lesson `.md` file should follow this structure:
 - Key point 2
 - Key point 3
 
-## The simple explanation
-[Core concept in 1-2 paragraphs]
+## [Topic-specific sections]
+[Content for this episode]
 
-## How it works (step by step)
-1. Step 1
-2. Step 2
-3. Step 3
+## Key Takeaways
+[Summary of the main points]
 
-## Visual explanation
-[Table, blockquote, or reference to diagram]
+## What Comes Next
+[What the next episode covers]
 
-## Real-world example
-[Concrete example from life]
+## Resources
+[Links to related pages]
 
-## Key takeaways
-- Takeaway 1
-- Takeaway 2
+---
 
-## What comes next
-[Link to next lesson]
+**Status:** Episode [Number] complete
+
+---
+
+| ← Previous | Next → |
+|:---:|:---:|
+| [Episode N-1: Title](./episode-XX-title.md) | [Episode N+1: Title](./episode-XX-title.md) |
 ```
 
----
+## Code Examples
 
-## When to Use Markdown Visuals
-
-**Use tables for:**
-- Comparisons (do/don't, theory vs practice)
-- Structured data
-- Prerequisites, tools, or options
-
-**Use blockquotes for:**
-- Key insights or philosophies
-- Important warnings
-- Motivational reminders
-
-**Use bold for:**
-- First mention of important terms
-- Key concepts you want to emphasize
-- Action items
-
----
-
-## 💻 Code Examples
-
-**DO:**
-- Use small, focused examples (3-10 lines ideal)
-- Add comments explaining each step
-- Use realistic variable names
+- Small and focused (3-10 lines ideal)
+- Comments explaining each step
+- Realistic variable names (no single letters except in math)
 - Include expected output
-- Test the code before submitting
+- Test before submitting
 
-**DON'T:**
-- Use overly complex code
-- Skip comments
-- Use single-letter variable names (except in math)
-- Leave code untested
+## Naming Conventions
 
-**Example - GOOD:**
-````markdown
-```python
-# Simple neural network forward pass
-def forward_pass(input_data, weights):
-    # Multiply input by weights
-    output = input_data * weights
-    # Apply activation function
-    return relu(output)
+- **Episode files:** `episode-NN-[descriptive-slug].md` (lowercase, 2-digit number, e.g. `episode-01-welcome-to-namaste-ai.md`)
+- **Asset files:** `assets/[topic]-[description].png` (descriptive, not `image1.png`)
 
-# Expected output: [0.5, 1.2, 0.0]
-```
-````
+## Before Committing
 
-**Example - BAD:**
-````markdown
-```python
-def fp(x, w):
-    return relu(x * w)
-```
-````
-
----
-
-## 🎨 Diagrams & Visual Aids
-
-**DO:**
-- Use simple ASCII art for quick concepts
-- Reference external diagram files for complex visualizations
-- Number and label diagrams clearly
-- Place diagrams close to the text they explain
-
-**DON'T:**
-- Put huge diagrams inline (link to `assets/` folder instead)
-- Use colored text that's hard to read
-- Create diagrams without labels
-
-**Example - Inline ASCII:**
-````markdown
-## How data flows
-
-```
-Input Data
-    ↓
-Weight Multiplication
-    ↓
-Activation Function
-    ↓
-Output
-```
-````
-
-**Example - Reference external diagram:**
-````markdown
-## Complex architecture
-See detailed diagram in [assets/neural-network-architecture.png](../assets/neural-network-architecture.png)
-````
-
----
-
-## 📚 Markdown Formatting Rules
-
-**Headings:**
-- `#` for lesson title only (used once per file)
-- `##` for major sections (What you'll learn, Explanation, etc.)
-- `###` for subsections only when needed
-
-**Emphasis:**
-- Use `**bold**` for important terms (first mention)
-- Use `_italics_` sparingly (for emphasis, not styling)
-- Use `**bold + code** for function names in text
-
-**Lists:**
-- Use `-` for unordered lists
-- Use `1.` for ordered/step lists
-- Keep list items short (one line ideal)
-- Use sub-bullets for related details
-
-**Code blocks:**
-- Specify language (python, javascript, bash, etc.)
-- Always include language identifier
-- Add comments explaining what the code does
-- Keep examples short and runnable
-
-**Links:**
-- Use descriptive link text: `[Lesson 02](./lesson-02.md)` ✅
-- Avoid: `[Click here](./lesson-02.md)` ❌
-- Link to sections: `[See diagram section](#visual-explanation)`
-
----
-
-## ✅ Consistency Checklist
-
-Before committing lesson notes, verify:
-
-- [ ] **Title is clear & simple** (5-7 words max)
-- [ ] **Headings follow the structure** (copy template above)
-- [ ] **"What you'll learn" section exists** (3-5 bullet points)
-- [ ] **Simple explanation comes first** (before code/diagrams)
-- [ ] **Visual explanation included** (ASCII art or asset link)
-- [ ] **Code example is runnable** (tested, with comments)
-- [ ] **Real-world example exists** (not just theory)
-- [ ] **No jargon** (or if used, explained immediately)
-- [ ] **Sentences are short** (avoid 3+ lines)
-- [ ] **Active voice used** (not passive)
-- [ ] **Takeaways section exists** (3-5 bullets)
-- [ ] **Resources linked** (at least 2-3)
-- [ ] **Next lesson linked** (or "Check back soon")
-- [ ] **No broken links** (verify all internal links work)
-- [ ] **Grammar & spelling checked** (proof-read once)
-
----
-
-## 🔄 Common Formatting Examples
-
-**When introducing a term:**
-```markdown
-**Machine Learning** is a type of AI that learns from data without being programmed.
-Think of it like learning to ride a bike—practice makes perfect.
-```
-
-**When showing comparisons:**
-```markdown
-| Traditional Programming | Machine Learning |
-|------------------------|------------------|
-| Tell computer all steps | Show computer examples |
-| Hard to change logic | Easy to improve with more data |
-```
-
-**When explaining step-by-step:**
-```markdown
-1. **Step 1:** Prepare your data
-   - Clean it
-   - Split into train/test
-2. **Step 2:** Build the model
-   - Choose architecture
-   - Initialize weights
-3. **Step 3:** Train
-   - Feed data through
-   - Update weights
-```
-
----
-
-## Markdown Formatting Rules
-
-**Headings:**
-- `#` for episode/lesson title only (used once per file)
-- `##` for major sections
-- `###` for subsections only when needed
-
-**Emphasis:**
-- Use `**bold**` for important terms and key concepts
-- Use `_italics_` sparingly
-- Use blockquotes `>` for key insights and philosophies
-
-**Tables:**
-- Use for comparisons (do/don't, concept A vs B, pros/cons)
-- Use for structured information
-- Prefer tables over bullet lists when comparing options
-
-**Lists:**
-- Use `-` for unordered lists
-- Use `1.` for step-by-step sequences
-- Keep items short (one line ideal)
-
-**Dividers:**
-- Use `---` to separate major sections
-- Creates visual breathing room
-
-**Lesson files:**
-- Format: `lesson-01.md`, `lesson-02.md`, etc.
-- Always use lowercase
-- Always use 2-digit numbers (01, not 1)
-
-**Asset files:**
-- Format: `assets/[topic]-[description].png`
-- Example: `assets/neural-network-architecture.png`
-- Use descriptive names, not generic (not `image1.png`)
-
-**Project folders:**
-- Separate repos (not in this repo)
-- Naming: `namaste-ai-project-[short-name]`
-- Example: `namaste-ai-project-rag-chatbot`
-
----
-
-## 🚀 Before Creating a New Episode/Lesson
-
-1. **Check existing content** — Avoid duplicating material
-2. **Outline first** — Write bullet points before full sentences
-3. **Find a real example** — What will readers see in real life?
-4. **Create visuals** — Use Markdown tables or blockquotes
-5. **Write code** — Test it locally before adding
-6. **Run the checklist** — Verify all items in Consistency Checklist
-7. **Get feedback** — Have someone else review before merging
-
----
-
-## Maintenance
-
-**Regular tasks:**
-- Check links monthly (broken links?)
-- Update episodes/lessons if course content changes
-- Review explanations based on feedback
-- Add new episodes as course progresses
-
-**When merging contributions:**
-- Check formatting against this guide
-- Verify code examples work
-- Ensure links are correct
-- Confirm tone is consistent with course philosophy
-- Test diagrams/images load
-
----
-
-## Questions?
-
-If you're unsure about:
-- **Tone:** Read Episode 01, match that style (slow, intentional, encouraging)
-- **Formatting:** Copy the template structure above
-- **Content depth:** Explain to a beginner, not an expert
-- **Examples:** Use real-world before code
-- **Learning pace:** Emphasize pausing, reflecting, rewatching
-
-**Remember:** Clarity and simplicity always win. This course values understanding over speed.
+- [ ] Title is clear & simple (5-7 words)
+- [ ] Follows the template structure above
+- [ ] "What you'll learn" has 3-5 bullets
+- [ ] Simple explanation comes before code/diagrams
+- [ ] Visual explanation included (ASCII art or asset link)
+- [ ] Code is runnable, tested, with comments
+- [ ] Real-world example exists
+- [ ] No unexplained jargon
+- [ ] Takeaways section has 3-5 bullets
+- [ ] Next episode linked
+- [ ] No broken links
 
