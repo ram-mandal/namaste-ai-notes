@@ -130,7 +130,7 @@ For each episode, identify the **ONE** most important concept that deserves a vi
 ## Naming Conventions
 
 - **Episode files:** `episode-NN-[descriptive-slug].md` (lowercase, 2-digit number, e.g. `episode-01-welcome-to-namaste-ai.md`)
-- **Asset files:** `assets/<season-folder>/episode-NN-[descriptive-slug].png` (e.g. `assets/season-1-inside-the-mind-of-ai/episode-01-welcome-to-namaste-ai.png` — matches the episode slug, not `image1.png`)
+- **Asset files:** `assets/<season-folder>/episode-NN/<filename>` — one folder per episode (e.g. `assets/season-1-inside-the-mind-of-ai/episode-01/episode-01-welcome-to-namaste-ai.png`, `assets/season-1-inside-the-mind-of-ai/episode-02/Alan_turing_header.jpg` — descriptive names, not `image1.png`)
 - **Episode titles:** always include the season — `# Season N — Episode NN: Title`
 
 ## Before Committing
