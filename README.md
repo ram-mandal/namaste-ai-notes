@@ -1,6 +1,8 @@
 # Namaste AI Notes
 
-> My personal learning journey through the [Namaste AI](https://www.namasteai.com/) course by Akshay Saini — episode by episode, in my own words.
+> My personal learning journey through the [Namaste AI](https://namastedev.com/learn/namaste-ai) course by [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/) — episode by episode, in my own words.
+
+Notes by [Ram Mandal](https://www.linkedin.com/in/rvmandal/).
 
 ## About
 
