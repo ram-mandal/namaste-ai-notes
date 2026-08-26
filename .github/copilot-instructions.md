@@ -56,6 +56,20 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
    | - Item 2 | - Item 5 |
    | - Item 3 | - Item 6 |
    ```
+7. **Readable formatting** — Keep the page visually calm, use consistent spacing, and avoid decorative formatting that competes with the content.
+
+### Episode Formatting
+
+- Use one clear H1 for the episode title: `# Episode NN: <Title>`
+- Put the full season name on the next line as a blockquote: `> **Season N — <Season Name>**`
+- Keep the title and season label on separate lines; do not mix font sizes inside one heading
+- Use `<details>` accordions for longer sections, keeping the first primary section expanded by default
+- Give each accordion a consistent inline title style and `margin-bottom: 1rem;` spacing
+- Add a clear `coming soon` label to unfinished accordion titles
+- Keep visual notes in a separate, collapsed-by-default `Quick Notes` section, outside the main learning accordions
+- Use a table or gallery-style layout for visual notes so additional images can be added without restructuring the page
+- Keep `Course Roadmap` open by default when it is the first main learning section
+- Preserve semantic heading order inside accordions and keep colors, contrast, and spacing accessible
 
 ## Tone
 
@@ -69,10 +83,12 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 
 ## Episode Structure (flexible)
 
-Every episode starts with a title and one-line summary:
+Every episode starts with a title, season label, and one-line summary:
 
 ```markdown
-# Season X — Episode XX: <Title>
+# Episode XX: <Title>
+
+> **Season X — <Season Name>**
 
 > One-line summary of what this episode is about.
 ```
@@ -135,7 +151,9 @@ For each episode, identify the **ONE** most important concept that deserves a vi
 
 ## Before Committing
 
-- [ ] Title is clear & simple (5-7 words) and includes the season
+- [ ] Episode title is clear and simple (5-7 words)
+- [ ] Full season name appears below the title in a consistent blockquote
+- [ ] Long sections use consistent, readable accordions with the first primary section expanded
 - [ ] Only sections that make sense for this episode are included (no filler/empty sections)
 - [ ] Course content vs. personal understanding clearly separated
 - [ ] Visual explanation included (or explicitly noted as not needed)
