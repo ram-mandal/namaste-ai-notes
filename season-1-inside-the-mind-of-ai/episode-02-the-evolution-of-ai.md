@@ -1,4 +1,6 @@
-# Season 1 — Episode 02: The Evolution of AI
+# Episode 02: The Evolution of AI
+
+> **Season 1 — Inside the Mind of AI**
 
 > Where the journey of AI began and how we have evolved so far — a high-level overview of where the AI industry stands today.
 
@@ -6,17 +8,17 @@
 
 ## What you'll learn
 
-- What is Artificial Intelligence?
-- Why AI was difficult for decades
-- Why Machine Learning became necessary
-- Why Deep Learning changed everything
-- How Transformers revolutionized AI
-- How LLMs became popular
-- Why Agentic AI is the next evolution
+| Foundations | Where AI is going |
+|:---|:---|
+| 🧩 What Artificial Intelligence means | 🔁 How Transformers changed AI |
+| ❄️ Why AI was difficult for decades | ✍️ How LLMs became popular |
+| 📚 Why Machine Learning became necessary | 🧭 Why Agentic AI is the next evolution |
+| 🧠 Why Deep Learning changed everything | |
 
 ---
 
-## What is Artificial Intelligence?
+<details open style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🧩 What is Artificial Intelligence?</strong></summary>
 
 **Definition:** AI is the science of making machines perform tasks that normally require human intelligence.
 
@@ -46,9 +48,12 @@
 - Understanding where AI came from helps you build a **mental model** of how it evolved
 - This episode sets the foundation for everything that follows — worth your full attention
 
+</details>
+
 ---
 
-## The Early Days: 1950–1955
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🕰️ The Early Days: 1950–1955</strong></summary>
 
 > AI is a very new subject in computer science — computer science existed long before it. And AI has survived multiple **hype cycles**: hype rises, hype dies (the "AI winters"), hype rises again. Today we're in a hype phase that doesn't look like it's dying anytime soon.
 
@@ -101,9 +106,12 @@ Researchers came together with an ambitious belief:
 - A very bold statement — made **70 years ago**, when there was no compute, no GPUs, and no data
 - McCarthy could not have imagined that in 2025, AI would be a whole industry and everyone would be using the word he coined
 
+</details>
+
 ---
 
-## Why AI was difficult for decades
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">❄️ Why AI was difficult for decades</strong></summary>
 
 ### The Hype Cycle: Rise, Fall, Repeat 🎢
 
@@ -172,9 +180,12 @@ So Haugland's question from 1986 is now more relevant: **Is today's AI still "ar
 
 > We don't know yet — and honestly, we might not need to. We just use it and get results. The philosophy is interesting, but the pragmatism is: **does it work?**
 
+</details>
+
 ---
 
-## The Comeback: 1997 — Deep Blue vs. Kasparov
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">♟️ The Comeback: 1997 — Deep Blue vs. Kasparov</strong></summary>
 
 After years of winter, AI finally had a major breakthrough that captured the world's attention.
 
@@ -232,9 +243,12 @@ Deep Blue's victory reignited the field:
 
 > Deep Blue showed the world: "Look, machines CAN be intelligent (or at least *look* intelligent). Give us more time and resources." And the world listened.
 
+</details>
+
 ---
 
-## Standing on the Shoulders of Giants 🧠
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🌟 Standing on the Shoulders of Giants</strong></summary>
 
 Here's something that bothers me: today, everyone talks about **Sam Altman**, **Demis Hassabis**, **Google**, **Anthropic**, and the modern AI boom.
 
@@ -252,9 +266,12 @@ When you use ChatGPT or code with Copilot today, you're standing on 70+ years of
 
 > **The lesson:** Always know where your field came from. Give credit to the pioneers. Don't just chase the latest hype — understand the history that made it possible.
 
+</details>
+
 ---
 
-## Why Machine Learning became necessary
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">📚 Why Machine Learning became necessary</strong></summary>
 
 ### The Era of Rule-Based AI (1950s–1980s) 📋
 
@@ -344,9 +361,12 @@ The machine didn't discover these features on its own. Humans did.
 
 > Machine Learning = humans write rules → Machine Learning = machines learn patterns from examples (but humans still guide what to look for)
 
+</details>
+
 ---
 
-## Why Deep Learning changed everything
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🧠 Why Deep Learning changed everything</strong></summary>
 
 ### The Neural Network Breakthrough 🧠
 
@@ -420,23 +440,34 @@ When practical applications emerged, real money followed. And when money flows i
 
 This was when the **AI hype cycle started rising again** — and this time, it had real results to back it up.
 
----
-
-## How Transformers revolutionized AI
-
-_(coming soon)_
+</details>
 
 ---
 
-## How LLMs became popular
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🔁 How Transformers revolutionized AI — coming soon</strong></summary>
 
 _(coming soon)_
+
+</details>
 
 ---
 
-## Why Agentic AI is the next evolution
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">✍️ How LLMs became popular — coming soon</strong></summary>
 
 _(coming soon)_
+
+</details>
+
+---
+
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🧭 Why Agentic AI is the next evolution — coming soon</strong></summary>
+
+_(coming soon)_
+
+</details>
 
 ---
 

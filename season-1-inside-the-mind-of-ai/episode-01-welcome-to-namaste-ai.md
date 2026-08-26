@@ -1,4 +1,6 @@
-# Season 1 — Episode 01: Welcome to Namaste AI
+# Episode 01: Welcome to Namaste AI
+
+> **Season 1 — Inside the Mind of AI**
 
 > Start your AI journey with a clear roadmap and practical learning strategies.
 
@@ -13,16 +15,20 @@
 
 ---
 
-<details>
-<summary><span style="font-size: 1.25em; font-weight: bold;">📝 Notes at a Glance (click to expand)</span></summary>
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
 
-![Episode 01 Notes](../assets/season-1-inside-the-mind-of-ai/episode-01/episode-01-welcome-to-namaste-ai.png)
+| Note | Visual |
+|:---|:---|
+| Episode overview | ![Episode 01 Notes](../assets/season-1-inside-the-mind-of-ai/episode-01/episode-01-welcome-to-namaste-ai.png) |
+| Additional note | _(Add another note image here when available.)_ |
 
 </details>
 
 ---
 
-## Course Roadmap
+<details open style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🗺️ Course Roadmap</strong></summary>
 
 | | |
 |:---|:---|
@@ -34,9 +40,12 @@
 
 - Sequential learning — each topic builds on the previous, don't skip
 
+</details>
+
 ---
 
-## Prerequisites
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🧰 Prerequisites</strong></summary>
 
 **Not needed:** ML background, advanced Python, statistics, calculus, linear algebra, neural networks
 
@@ -47,9 +56,12 @@
 
 > **Minimum:** basics of programming + how software works
 
+</details>
+
 ---
 
-## How to get most out of this course?
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🎯 How to get the most out of this course</strong></summary>
 
 - Notes
 - Assignments
@@ -57,7 +69,10 @@
 - Social Media
 - Time
 
-## How to learn from this course?
+</details>
+
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">📖 How to learn from this course</strong></summary>
 
 | | |
 |:---|:---|
@@ -68,7 +83,10 @@
 | - 4. Do Assignments * | - 10. Social Media |
 | - 5. Build Projects | - 11. Help others - Community |
 
-## 3 Things to Bring
+</details>
+
+<details style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">🎒 3 Things to Bring</strong></summary>
 
 - **Curiosity** — the spark has to come from within; the course teaches the subject, you bring the curiosity
   - AI is a very new subject and changing fast — stay ahead by learning every new thing
@@ -82,6 +100,8 @@
   - Lock yourself in a room, keep a water bottle, no interruptions
   - Pause after each video and reflect on what you learned
   - Fun fact: the famous Google paper "Attention Is All You Need" laid the foundation for modern AI
+
+</details>
 
 ---
 
