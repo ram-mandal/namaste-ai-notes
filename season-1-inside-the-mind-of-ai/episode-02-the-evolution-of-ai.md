@@ -19,6 +19,7 @@
 
 <details open style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧩 What is Artificial Intelligence?</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 **Definition:** AI is the science of making machines perform tasks that normally require human intelligence.
 
@@ -48,12 +49,14 @@
 - Understanding where AI came from helps you build a **mental model** of how it evolved
 - This episode sets the foundation for everything that follows — worth your full attention
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🕰️ The Early Days: 1950–1955</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 > AI is a very new subject in computer science — computer science existed long before it. And AI has survived multiple **hype cycles**: hype rises, hype dies (the "AI winters"), hype rises again. Today we're in a hype phase that doesn't look like it's dying anytime soon.
 
@@ -106,12 +109,14 @@ Researchers came together with an ambitious belief:
 - A very bold statement — made **70 years ago**, when there was no compute, no GPUs, and no data
 - McCarthy could not have imagined that in 2025, AI would be a whole industry and everyone would be using the word he coined
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">❄️ Why AI was difficult for decades</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 ### The Hype Cycle: Rise, Fall, Repeat 🎢
 
@@ -180,12 +185,14 @@ So Haugland's question from 1986 is now more relevant: **Is today's AI still "ar
 
 > We don't know yet — and honestly, we might not need to. We just use it and get results. The philosophy is interesting, but the pragmatism is: **does it work?**
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">♟️ The Comeback: 1997 — Deep Blue vs. Kasparov</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 After years of winter, AI finally had a major breakthrough that captured the world's attention.
 
@@ -243,12 +250,14 @@ Deep Blue's victory reignited the field:
 
 > Deep Blue showed the world: "Look, machines CAN be intelligent (or at least *look* intelligent). Give us more time and resources." And the world listened.
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🌟 Standing on the Shoulders of Giants</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 Here's something that bothers me: today, everyone talks about **Sam Altman**, **Demis Hassabis**, **Google**, **Anthropic**, and the modern AI boom.
 
@@ -266,12 +275,14 @@ When you use ChatGPT or code with Copilot today, you're standing on 70+ years of
 
 > **The lesson:** Always know where your field came from. Give credit to the pioneers. Don't just chase the latest hype — understand the history that made it possible.
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">📚 Why Machine Learning became necessary</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 ### The Era of Rule-Based AI (1950s–1980s) 📋
 
@@ -361,12 +372,14 @@ The machine didn't discover these features on its own. Humans did.
 
 > Machine Learning = humans write rules → Machine Learning = machines learn patterns from examples (but humans still guide what to look for)
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧠 Why Deep Learning changed everything</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 ### The Neural Network Breakthrough 🧠
 
@@ -440,33 +453,40 @@ When practical applications emerged, real money followed. And when money flows i
 
 This was when the **AI hype cycle started rising again** — and this time, it had real results to back it up.
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🔁 How Transformers revolutionized AI — coming soon</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 _(coming soon)_
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">✍️ How LLMs became popular — coming soon</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 _(coming soon)_
 
+</div>
 </details>
 
 ---
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧭 Why Agentic AI is the next evolution — coming soon</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 _(coming soon)_
 
+</div>
 </details>
 
 ---

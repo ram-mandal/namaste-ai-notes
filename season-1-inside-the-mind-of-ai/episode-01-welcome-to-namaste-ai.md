@@ -17,18 +17,19 @@
 
 <details style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Note | Visual |
 |:---|:---|
 | Episode overview | ![Episode 01 Notes](../assets/season-1-inside-the-mind-of-ai/episode-01/episode-01-welcome-to-namaste-ai.png) |
 | Additional note | _(Add another note image here when available.)_ |
 
+</div>
 </details>
 
 ---
 
-<details open style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">🗺️ Course Roadmap</strong></summary>
+## 🗺️ Course Roadmap
 
 | | |
 |:---|:---|
@@ -40,12 +41,9 @@
 
 - Sequential learning — each topic builds on the previous, don't skip
 
-</details>
-
 ---
 
-<details style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">🧰 Prerequisites</strong></summary>
+## 🧰 Prerequisites
 
 **Not needed:** ML background, advanced Python, statistics, calculus, linear algebra, neural networks
 
@@ -56,12 +54,9 @@
 
 > **Minimum:** basics of programming + how software works
 
-</details>
-
 ---
 
-<details style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">🎯 How to get the most out of this course</strong></summary>
+## 🎯 How to get the most out of this course
 
 - Notes
 - Assignments
@@ -69,10 +64,7 @@
 - Social Media
 - Time
 
-</details>
-
-<details style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">📖 How to learn from this course</strong></summary>
+## 📖 How to learn from this course
 
 | | |
 |:---|:---|
@@ -83,10 +75,7 @@
 | - 4. Do Assignments * | - 10. Social Media |
 | - 5. Build Projects | - 11. Help others - Community |
 
-</details>
-
-<details style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">🎒 3 Things to Bring</strong></summary>
+## 🎒 3 Things to Bring
 
 - **Curiosity** — the spark has to come from within; the course teaches the subject, you bring the curiosity
   - AI is a very new subject and changing fast — stay ahead by learning every new thing
@@ -100,8 +89,6 @@
   - Lock yourself in a room, keep a water bottle, no interruptions
   - Pause after each video and reflect on what you learned
   - Fun fact: the famous Google paper "Attention Is All You Need" laid the foundation for modern AI
-
-</details>
 
 ---
 
