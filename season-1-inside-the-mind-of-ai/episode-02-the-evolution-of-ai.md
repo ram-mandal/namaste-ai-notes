@@ -53,7 +53,7 @@
 
 ### Why AI matters right now
 
-- **9 out of the top 10 companies by market cap** are betting heavily on AI: NVIDIA, Apple, Alphabet, Microsoft, Amazon, Meta, Broadcom, Tesla, TSMC (the exception: Saudi Aramco — an oil company)
+- **Most of the world's largest companies by market cap** are betting heavily on AI — NVIDIA, Apple, Alphabet, Microsoft, Amazon, Meta, and more
 - New models and tools are released **every day** — coding models, image generation, video, NLP
 - Every company and venture capitalist is investing in AI; a lot of research is ongoing
 - We are in the middle of a tech **revolution** — the biggest money in the world is flowing into AI
@@ -154,11 +154,11 @@ The 1970s–1980s saw the first major crash:
 
 - **The Problem:** Early AI researchers promised too much — "We'll create thinking machines!" But the computers were too slow, there wasn't enough data, and the algorithms hit a wall
 - **The Crash:** When promises weren't kept, investors pulled out. Research slowed. Funding evaporated. Motivation died.
-- **The Winter:** This period became known as the **"AI Winter"** — no major breakthroughs, everyone was demotivated, and it felt like AI was a dead field
+- **The Winter:** These periods became known as the **"AI Winters"** (notably in the 1970s and again in the late 1980s) — funding and interest dropped sharply, though research quietly continued in the background
 
 > The "AI Winter" is what happens when the hype bubble pops and reality doesn't match the promise. It's not about the temperature — it's about the **cold shoulder** the field got.
 
-### 1986 — The Great Naming Debate: "Artificial" vs. "Synthetic"
+### A Side Debate: "Artificial" vs. "Synthetic" Intelligence 🤔
 
 While the field was struggling, something interesting happened in 1986: a **naming crisis**. Yes, really — scientists were arguing about what to *call* the field.
 
@@ -243,7 +243,7 @@ Deep Blue worked by:
 
 In other words:
 - **Kasparov:** Used intuition, experience, creativity, real intelligence
-- **Deep Blue:** Used exhaustive calculation — checking every possible move tree
+- **Deep Blue:** Used massive, selective search — not human-like understanding
 
 #### The Illusion of Intelligence
 
@@ -399,7 +399,7 @@ For the cat vs. dog problem, a human would still need to say:
 
 The machine didn't discover these features on its own. Humans did.
 
-> Machine Learning = humans write rules → Machine Learning = machines learn patterns from examples (but humans still guide what to look for)
+> Rule-based AI = humans write the rules → Machine Learning = machines learn patterns from examples (but humans still choose the data, labels, and features to look at)
 
 #### Machine Learning vs Deep Learning (Quick Distinction)
 
@@ -445,7 +445,7 @@ Here's what made deep learning revolutionary:
 **After (Deep Learning):**
 - Human: "Here are 1 million face images"
 - Machine: "I learned it myself... eyes look like dark circles... nose looks like a triangle... mouths look like curves... and together they're a face"
-- **Humans didn't have to tell it anything.**
+- **Humans no longer had to hand-engineer those features.**
 
 For the first time, machines could **discover features automatically**. They didn't need human guidance.
 
@@ -458,7 +458,7 @@ Deep learning made these breakthrough applications possible:
 | **Image Recognition** | Google Photos can search "beach" and find all beach photos automatically |
 | **Face Unlock** | Your phone recognizes your face without you training it |
 | **Speech Recognition** | Alexa, Siri, and Google Assistant understand you |
-| **Translation** | Google Translate went from broken to nearly perfect |
+| **Translation** | Google Translate improved dramatically |
 
 Each of these seemed like magic because machines were now **discovering patterns on their own** — not following human-written rules.
 
@@ -580,11 +580,11 @@ Without Transformers, the current LLM wave would not exist in this form.
 ### What Is an LLM (Simple Definition)
 
 An **LLM (Large Language Model)** is basically:
-- a Transformer-based model
+- typically a **Transformer-based** model (most modern LLMs are)
 - trained on a very large amount of text/data
 - optimized to predict the next token very well
 
-Because it learns patterns from massive data, it can write, summarize, explain, translate, reason, and generate code.
+Because it learns patterns from massive data, it can write, summarize, explain, translate, generate code, and produce reasoning-like responses.
 
 ### Why They Became Mainstream So Fast
 
@@ -691,7 +691,7 @@ Best practice:
 
 - [**Rule-based AI (1950s–80s) hit a ceiling**](#machine-learning) — writing thousands of if-else rules doesn't scale; you can never cover every edge case
 - [**Machine Learning was the breakthrough**](#machine-learning) — instead of rules, show machines examples and let them learn patterns, but humans still guided features in many systems
-- [**Deep Learning was the revolution**](#deep-learning) — neural networks discovered features automatically, without human guidance (image recognition, face unlock, translation)
+- [**Deep Learning was the revolution**](#deep-learning) — neural networks learned features automatically from raw data (image recognition, face unlock, translation), though humans still choose the data and training setup
 - [**AlexNet + ImageNet was a pivotal moment**](#deep-learning) — large labeled image data plus deep networks and GPUs accelerated modern AI progress
 - [**Transformers unlocked modern language AI**](#transformers) — attention-based modeling solved long-context problems much better than earlier NLP methods
 - [**LLMs became mainstream when research met product UX**](#llms) — powerful models + chat interface + infrastructure made AI usable for everyone
@@ -712,4 +712,4 @@ Best practice:
 
 | ← Previous | Next → |
 |:---:|:---:|
-| [Episode 01: Welcome to Namaste AI](./episode-01-welcome-to-namaste-ai.md) | — |
+| [Episode 01: Welcome to Namaste AI](./episode-01-welcome-to-namaste-ai.md) | [Episode 03: Does ChatGPT Know or Does It Guess?](./episode-03-does-chatgpt-know-or-does-it-guess.md) |
