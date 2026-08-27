@@ -11,9 +11,9 @@ This repository is my public learning journal for the Namaste AI course. Each ep
 - **Course content** — what the episode teaches: key concepts, deep dives, and takeaways, written neutrally and technically
 - **Personal notes** — how I understand it: mental models, analogies, engineering connections, and open questions, written in first person
 
-The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. It does not cover ML math, neural networks, or model training; the focus is on building with AI.
+The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. It does not go deep into ML math, neural network internals, or model training; the focus is on building with AI.
 
-> These are **personal learning notes, not official course material.** They are not affiliated with or endorsed by the course.
+> These are **personal learning notes** and they are **not a replacement for the actual course.**
 
 ## Course Roadmap
 
@@ -32,18 +32,25 @@ flowchart LR
     I --> J[Projects]
 ```
 
-## Seasons & Episodes
+## Seasons
 
 ### Season 1 — Inside the Mind of AI
 
-| # | Episode | Status |
-|:---:|:---|:---:|
-| 01 | [Welcome to Namaste AI](./season-1-inside-the-mind-of-ai/episode-01-welcome-to-namaste-ai.md) | ✅ |
-| 02 | [The Evolution of AI](./season-1-inside-the-mind-of-ai/episode-02-the-evolution-of-ai.md) | 🚧 |
+See the **[Season 1 overview](./season-1-inside-the-mind-of-ai/README.md)** for episode details and status.
 
-**[Season 1 Overview](./season-1-inside-the-mind-of-ai/README.md)** · Legend: ✅ complete · 🚧 in progress · ⬜ not started
+### Season 2 — AI Native Software Engineer
 
-### Season 2+
+Coming soon...
+
+### Season 3 — Building AI Applications
+
+Coming soon...
+
+### Season 4 — Giving AI Knowledge (RAG)
+
+Coming soon...
+
+### Season 5 — From Chatbots To Agents
 
 Coming soon...
 
@@ -54,6 +61,10 @@ Hands-on projects built alongside the course live in **[projects/](./projects/RE
 ## Resources
 
 Curated external links and references: **[resources/useful-links.md](./resources/useful-links.md)**
+
+## Contributing
+
+Found a correction, improvement, or idea to make these notes better? Contributions are welcome through an issue or pull request.
 
 ## Repository Structure
 
