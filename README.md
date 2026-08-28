@@ -60,7 +60,7 @@ Hands-on projects built alongside the course live in **[projects/](./projects/RE
 
 ## Resources
 
-Curated external links and references: **[resources/useful-links.md](./resources/useful-links.md)**
+Curated external links and references: **[External Links](./resources/useful-links.md)**
 
 ## Contributing
 

@@ -71,6 +71,16 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 - Keep `Course Roadmap` open by default when it is the first main learning section
 - Preserve semantic heading order inside accordions and keep colors, contrast, and spacing accessible
 
+### Visual Notes
+
+- Keep `Quick Notes` collapsed and visual-only; reserve it for images or a small gallery.
+- Do not use `What you'll learn` by default. Use a specific heading such as `At a Glance` only when an overview table adds value.
+- Add emojis only when they clarify a heading or a major explanatory paragraph. Do not decorate every sentence.
+- Do not repeat the same emoji within one section when it represents the same idea; choose a distinct meaningful icon or omit it.
+- Write notes as direct, self-contained explanations; do not refer to a transcript or how the course presents something.
+- Keep Mermaid diagrams unstyled unless the note explicitly needs styling. For an AI-assistant diagram, show the assistant as the outer layer around its base model and capabilities.
+- Link each Key Takeaway to the relevant section anchor so readers can jump back to the explanation.
+
 ## Tone
 
 - Conversational: use "you" and "we"
