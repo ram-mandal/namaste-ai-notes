@@ -6,7 +6,7 @@
 
 ---
 
-## What you'll learn
+## At a Glance
 
 | Foundations | Where AI is going |
 |:---|:---|
@@ -14,6 +14,15 @@
 | ❄️ Why AI was difficult for decades | ✍️ How LLMs became popular |
 | 📚 Why Machine Learning became necessary | 🧭 Why Agentic AI is the next evolution |
 | 🧠 Why Deep Learning changed everything | |
+
+---
+
+<details id="quick-notes" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem; min-height: 1rem;">&nbsp;</div>
+</details>
+
+---
 
 ## Fast Timeline
 
@@ -77,7 +86,7 @@
 
 ### 1950 — Can Machines Think?
 
-Before 1950, machines were only used for **computation** — heavy mathematical operations, done fast. Everybody wanted machines to be faster and better, but nobody asked the deeper question:
+🧮 Before 1950, machines were only used for **computation** — heavy mathematical operations, done fast. Everybody wanted machines to be faster and better, but nobody asked the deeper question:
 
 > **Can machines think?**
 
@@ -135,7 +144,7 @@ Researchers came together with an ambitious belief:
 
 ### The Hype Cycle: Rise, Fall, Repeat 🎢
 
-AI didn't evolve smoothly. Instead, it went through **hype cycles** — periods of explosive optimism followed by disappointing crashes. Think of it like a stock market bubble: everyone gets excited, invests heavily, expectations get unrealistic, then reality hits hard.
+🎢 AI didn't evolve smoothly. Instead, it went through **hype cycles** — periods of explosive optimism followed by disappointing crashes. Think of it like a stock market bubble: everyone gets excited, invests heavily, expectations get unrealistic, then reality hits hard.
 
 ```mermaid
 flowchart LR
@@ -209,7 +218,7 @@ So Haugland's question from 1986 is now more relevant: **Is today's AI still "ar
 <summary><strong style="font-size: 1.25em;">♟️ The Comeback: 1997 — Deep Blue vs. Kasparov</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-After years of winter, AI finally had a major breakthrough that captured the world's attention.
+♟️ After years of winter, AI finally had a major breakthrough that captured the world's attention.
 
 ### IBM's Deep Blue: The Turning Point
 
@@ -315,7 +324,7 @@ When you use ChatGPT or code with Copilot today, you're standing on 70+ years of
 
 ### The Era of Rule-Based AI (1950s–1980s) 📋
 
-For the first 30 years of AI, there was only one way to make a machine "intelligent": **write rules**.
+📋 For the first 30 years of AI, there was only one way to make a machine "intelligent": **write rules**.
 
 Intelligence was just a collection of if-else statements. Nothing more.
 
@@ -359,7 +368,7 @@ Then someone asked a radical question:
 
 > **"What if we stopped writing rules? What if we showed the machine examples, and let it figure out the rules by itself?"**
 
-This was the birth of **Machine Learning**.
+💡 This was the birth of **Machine Learning**.
 
 Instead of:
 ```
@@ -426,13 +435,13 @@ Think of it this way:
 
 ### The Neural Network Breakthrough 🧠
 
-In the early 2000s, researchers had an inspired idea:
+🧠 In the early 2000s, researchers had an inspired idea:
 
 > **"What if we modeled computers after the human brain itself?"**
 
 Human brains have **neurons** that fire and connect to each other. What if we built artificial neurons that could do the same?
 
-This idea led to **Neural Networks** — and eventually **Deep Learning**.
+🔗 This idea led to **Neural Networks** — and eventually **Deep Learning**.
 
 #### The Game-Changer: Automatic Feature Discovery
 
@@ -529,7 +538,7 @@ This was when the **AI hype cycle started rising again** — and this time, it h
 <summary><strong style="font-size: 1.25em;">🔁 How Transformers revolutionized AI</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-Before Transformers, AI struggled badly with long language context.
+🧵 Before Transformers, AI struggled badly with long language context.
 
 ### Why NLP Was Hard
 
@@ -544,7 +553,7 @@ Example: In a long sentence, when you see "he," who is "he"? The model often for
 
 ### 2017 — The Breakthrough
 
-In 2017, the paper **"Attention Is All You Need"** introduced the **Transformer** architecture.
+🔁 In 2017, the paper **"Attention Is All You Need"** introduced the **Transformer** architecture.
 
 Key idea:
 - Instead of reading text step-by-step and forgetting older tokens,
@@ -595,14 +604,14 @@ Three forces came together:
 
 ### The 2022 Public Moment
 
-The major adoption wave started when chat-style LLM products became public in 2022.
+💬 The major adoption wave started when chat-style LLM products became public in 2022.
 
 Why this mattered:
 - People could directly "talk" to AI
 - Businesses saw immediate use cases (content, support, coding, analysis)
 - Competition exploded across major AI companies
 
-This changed AI from a research story into a daily productivity tool.
+🚀 This changed AI from a research story into a daily productivity tool.
 
 ### From Single-Mode to Multimodal
 
@@ -638,7 +647,7 @@ So adoption is global, but frontier model creation is concentrated.
 
 Classic chat AI answers your question.
 
-**Agentic AI** goes one step further: it can plan tasks, call tools, and execute multi-step workflows toward a goal.
+🧭 **Agentic AI** goes one step further: it can plan tasks, call tools, and execute multi-step workflows toward a goal.
 
 That means the model can move from:
 - "Here is the answer"
@@ -673,7 +682,7 @@ Together, they can behave like a small digital team.
 
 ### Important Caution
 
-Agentic AI can increase productivity a lot, but we should avoid blind automation.
+⚠️ Agentic AI can increase productivity a lot, but we should avoid blind automation.
 
 Best practice:
 - offload repetitive tasks,
@@ -696,17 +705,6 @@ Best practice:
 - [**Transformers unlocked modern language AI**](#transformers) — attention-based modeling solved long-context problems much better than earlier NLP methods
 - [**LLMs became mainstream when research met product UX**](#llms) — powerful models + chat interface + infrastructure made AI usable for everyone
 - [**Agentic AI is the next shift**](#agentic-ai) — from answering questions to completing multi-step tasks using tools, memory, and planning
-
----
-
-## Resources
-
-- [Full Season 1 Overview](./README.md)
-- [External Resources](../resources/useful-links.md)
-
----
-
-**Status:** Episode 02 in progress
 
 ---
 
