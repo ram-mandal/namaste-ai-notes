@@ -19,7 +19,11 @@
 
 <details id="quick-notes" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
-<div style="margin-left: 3rem; margin-top: .25rem; min-height: 1rem;">&nbsp;</div>
+<div style="margin-left: 3rem; margin-top: .25rem;">
+
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-the-evolution-of-ai.png" alt="Handwritten notes for Episode 2: The Evolution of AI" width="100%">
+
+</div>
 </details>
 
 ---
