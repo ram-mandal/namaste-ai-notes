@@ -15,6 +15,7 @@
 - [The Illustrated Transformer (Jay Alammar)](https://jalammar.github.io/illustrated-transformer/) — Best visual explanation of transformers
 - [The Annotated Transformer (Harvard NLP)](https://nlp.seas.harvard.edu/annotated-transformer/) — Transformer code, line by line
 - [How LLMs Work (Raschka)](https://magazine.sebastianraschka.com/p/how-llms-work) — Practical, code-backed explanation of LLM internals
+- [Why ChatGPT Can Do Math (Joe Hubert Tuhme)](https://www.linkedin.com/pulse/why-chatgpt-can-do-math-its-what-you-think-joe-hubert-tuhme/) — How math ability evolved from pattern prediction to tool-assisted computation
 
 ### Prompt Engineering
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) — Official techniques and patterns
