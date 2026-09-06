@@ -75,7 +75,7 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 
 - Keep `Quick Notes` collapsed and visual-only; reserve it for images or a small gallery.
 - Do not use `What you'll learn` by default. Use a specific heading such as `At a Glance` only when an overview table adds value.
-- Add emojis only when they clarify a heading or a major explanatory paragraph. Do not decorate every sentence.
+- Use meaningful emojis at the start of explanatory sentences or paragraphs, as demonstrated in Episode 3, when they improve scanning or reinforce the idea. Do not decorate every sentence or repeat the same emoji within one section.
 - Do not repeat the same emoji within one section when it represents the same idea; choose a distinct meaningful icon or omit it.
 - Write notes as direct, self-contained explanations; do not refer to a transcript or how the course presents something.
 - Keep Mermaid diagrams unstyled unless the note explicitly needs styling. For an AI-assistant diagram, show the assistant as the outer layer around its base model and capabilities.
@@ -156,6 +156,7 @@ For each episode, identify the **ONE** most important concept that deserves a vi
 ## Naming Conventions
 
 - **Episode files:** `episode-NN-[descriptive-slug].md` (lowercase, 2-digit number, e.g. `episode-01-welcome-to-namaste-ai.md`)
+- **Episode roadmap:** Check the relevant season `README.md` before creating an episode or adding episode links. Use its verified title, number, filename, and status.
 - **Asset files:** `assets/<season-folder>/episode-NN/<filename>` — one folder per episode (e.g. `assets/season-1-inside-the-mind-of-ai/episode-01/episode-01-welcome-to-namaste-ai.png`, `assets/season-1-inside-the-mind-of-ai/episode-02/Alan_turing_header.jpg` — descriptive names, not `image1.png`)
 - **Episode titles:** always include the season — `# Season N — Episode NN: Title`
 

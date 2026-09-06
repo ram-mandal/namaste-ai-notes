@@ -396,4 +396,4 @@ From the outside, all three look identical — just a number. The interesting pa
 
 | ← Previous | Next → |
 |:---:|:---:|
-| [Episode 02: The Evolution of AI](./episode-02-the-evolution-of-ai.md) | — |
+| [Episode 02: The Evolution of AI](./episode-02-the-evolution-of-ai.md) | [Episode 04: The Secret Language of LLMs](./episode-04-the-secret-language-of-llms.md) |
