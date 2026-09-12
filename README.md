@@ -1,23 +1,18 @@
 # Namaste AI Notes
 
-> My personal notes from the [Namaste AI](https://namastedev.com/learn/namaste-ai) course by [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/) — explored one episode at a time, in my own words.
+> Welcome! 👋 These are my personal notes from the [Namaste AI](https://namastedev.com/learn/namaste-ai) course by [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/).
 
 Notes by [Ram Mandal](https://www.linkedin.com/in/rvmandal/).
 
 ## About
 
-This repository is my public learning journal for the Namaste AI course. Each episode note is organized into two kinds of content:
+I started these notes so I could **revise concepts quickly later** — a fast refresher instead of rewatching videos, which I only go back to when truly necessary.
 
-- **Course content** — what the episode teaches: key concepts, deep dives, and takeaways, written neutrally and technically
-- **Personal notes** — how I understand it: mental models, analogies, engineering connections, and open questions, shared from my own perspective
-
-The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. It does not go deep into ML math, neural network internals, or model training; the focus is on building with AI.
-
-> These are **personal learning notes** and they are **not a replacement for the actual course.**
+The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training; the focus is on building with AI.
 
 ## Course Roadmap
 
-The course covers 10 topics in sequence:
+The notes are organized around these topics:
 
 ```mermaid
 flowchart LR
@@ -64,7 +59,7 @@ Curated external links and references: **[External Links](./resources/useful-lin
 
 ## Contributing
 
-Spotted a correction, a clearer way to explain something, or an idea worth adding? Help these notes grow by opening an issue or pull request.
+These notes are a living document — if you spot a mistake, a clearer way to explain something, or an idea worth adding, I'd love your help. Open an issue, send a pull request, or just drop a note. Every bit of support helps these notes grow. 🙏
 
 ## Repository Structure
 
@@ -72,4 +67,3 @@ Spotted a correction, a clearer way to explain something, or an idea worth addin
 - `projects/` — Hands-on projects
 - `assets/` — Diagrams and visual aids
 - `resources/` — External links and references
-
