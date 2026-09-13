@@ -2,7 +2,7 @@
 
 > **Season 1 — Inside the Mind of AI**
 
-> A line-by-line tour of the important parts of [nanoGPT's `model.py`](https://github.com/karpathy/nanogpt/blob/master/model.py), mapped directly onto the architecture diagram from [Episode 06](./episode-06-the-computational-brain-of-machines.md). Read the episode first; this file is the "where is that in the code?" reference.
+> A line-by-line tour of the important parts of [nanoGPT's `model.py`](https://github.com/karpathy/nanogpt/blob/master/model.py), mapped directly onto the architecture diagram from [Episode 06](../episode-06-the-computational-brain-of-machines.md). Read the episode first; this file is the "where is that in the code?" reference.
 
 > **A useful question:** Which lines of code actually do the embedding, the attention, and the final probability output?
 
@@ -326,4 +326,4 @@ def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):
 
 | ← Back to Episode 06 | Next → |
 |:---:|:---:|
-| [Episode 06: The Computational Brain of Machines](./episode-06-the-computational-brain-of-machines.md) | _coming soon_ |
+| [Episode 06: The Computational Brain of Machines](../episode-06-the-computational-brain-of-machines.md) | _coming soon_ |

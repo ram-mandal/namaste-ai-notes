@@ -1,6 +1,6 @@
-# Episode 04: The Secret Language of LLMs
+> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
 
-> **Season 1 — Inside the Mind of AI**
+# Episode 04: The Secret Language of LLMs
 
 > Before an LLM can continue your prompt, a tokenizer turns your text into reusable pieces and numbers. This episode follows that journey and explains why token count matters.
 
@@ -8,7 +8,9 @@
 
 ---
 
-## At a Glance
+<details id="at-a-glance" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Question | Short answer |
 |:---|:---|
@@ -18,6 +20,9 @@
 | Do token IDs have universal meaning? | No. An ID only has meaning inside its tokenizer vocabulary |
 | What else uses tokens? | Whitespace, punctuation, emoji, code, roles, tools, documents, and generated output |
 | Why should I care? | Tokens affect context limits, processing work, and API cost |
+
+</div>
+</details>
 
 ---
 
@@ -121,7 +126,7 @@ This hands-on exploration makes the concept stick better than reading alone.
 <summary><strong style="font-size: 1.25em;">🧩 What a Tokenizer Actually Does</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-A tokenizer is not a tiny machine that understands language. It is code. Given a string, it applies rules and a learned vocabulary to split or encode that string.
+🔧 A tokenizer is not a tiny machine that understands language. It is code. Given a string, it applies rules and a learned vocabulary to split or encode that string.
 
 There is no single universal tokenizer:
 
@@ -190,7 +195,7 @@ Case and whitespace are characters too. A leading space may be included in the t
 <summary><strong style="font-size: 1.25em;">🧱 Why Tokenizers Use Subwords</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-A tokenizer has to balance two competing pressures:
+⚖️ A tokenizer has to balance two competing pressures:
 
 | Strategy | Advantage | Cost |
 |:---|:---|:---|
@@ -252,7 +257,7 @@ These mappings are illustrative, not a verified vocabulary table. Vocabulary siz
 
 ### Byte-pair encoding: the basic idea
 
-BPE is commonly explained as repeatedly merging frequent neighbouring pieces.
+🔗 BPE is commonly explained as repeatedly merging frequent neighbouring pieces.
 
 Start with small pieces from examples such as:
 
@@ -277,7 +282,7 @@ The name includes **byte** because many BPE systems begin from byte-level repres
 
 ### Bits and bytes in simple terms
 
-Computers store and process information using tiny switches that can be in one of two states:
+💻 Computers store and process information using tiny switches that can be in one of two states:
 
 ```text
 0 = off
@@ -412,7 +417,7 @@ These are sketches, not complete implementations. Their shared goal is useful co
 
 ### Familiar text versus unfamiliar text
 
-Common patterns are more likely to exist as larger reusable pieces. A random or unfamiliar string often matches fewer large pieces and is split more finely.
+🌍 Common patterns are more likely to exist as larger reusable pieces. A random or unfamiliar string often matches fewer large pieces and is split more finely.
 
 That is why gibberish can consume more tokens than an English sentence of a similar visible length. In the course demonstration, the English portion was described as using 14 tokens while the gibberish portion used 38. The exact strings are not available in the supplied transcript, so those counts should be treated as the demonstration's values, not a universal rule.
 
@@ -556,7 +561,7 @@ A model request may contain:
 | Tool results | Weather, search, calculator, database, or code output |
 | Generated text | Earlier assistant responses or the current response as it grows |
 
-A **context window** is the amount of tokenized information a model can process in one request or active generation context. It is a finite working window, not unlimited memory.
+🪟 A **context window** is the amount of tokenized information a model can process in one request or active generation context. It is a finite working window, not unlimited memory.
 
 ### Input and output share the budget
 
@@ -595,7 +600,7 @@ The exact strategy is product- and model-dependent. A chat interface may still d
 <summary><strong style="font-size: 1.25em;">✂️ Long Prompt Does Not Mean Better Prompt</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-A prompt should be as long as the task needs, not as long as possible.
+✂️ A prompt should be as long as the task needs, not as long as possible.
 
 Compare these requests about JavaScript closures:
 
@@ -667,7 +672,7 @@ A long prompt is not automatically bad. Extra tokens are worthwhile when they ad
 <summary><strong style="font-size: 1.25em;">💡 My Mental Model</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-I think of a tokenizer as a packing system. It takes a sentence, code file, emoji, or mixed-language message and packs it into reusable pieces that fit the model's vocabulary.
+📦 I think of a tokenizer as a packing system. It takes a sentence, code file, emoji, or mixed-language message and packs it into reusable pieces that fit the model's vocabulary.
 
 The token IDs are labels on those pieces. The labels help the model handle the input, but the labels are not the meaning. A bag labelled “12” is not automatically the same bag in another warehouse.
 
@@ -712,21 +717,21 @@ The goal is not to memorize token IDs. The goal is to notice that small changes 
 
 ## Key Takeaways
 
-- [**A tokenizer encodes text into token IDs**](#text-to-token-ids) and decodes generated IDs back into visible text.
-- [**Tokens are reusable pieces, not guaranteed words**](#what-is-a-tokenizer); they can include subwords, punctuation, whitespace, emoji pieces, code, and control markers.
-- [**Subwords balance vocabulary size and sequence length**](#subwords), while BPE, WordPiece, and Unigram build those vocabularies differently.
-- [**Token boundaries are not meaning boundaries**](#subwords); token IDs are local labels, not universal concepts.
-- [**Language, spelling, emoji, whitespace, case, punctuation, and code formatting affect tokenization**](#language-and-formatting).
-- [**The visible prompt is only part of the request**](#hidden-structure); history, instructions, documents, retrieval, tools, and output also use context.
-- [**A context window is finite and shared by input and output**](#context-window), so visible chat history is not necessarily active model context.
-- [**Relevant detail is useful; repetition is expensive**](#prompt-relevance), especially when token count affects API cost.
-- [**Tokenization explains representation, not meaning**](#mental-model). Embeddings are the next bridge in the course.
+- **A tokenizer encodes text into token IDs** and decodes generated IDs back into visible text. [🔗](#text-to-token-ids)
+- **Tokens are reusable pieces, not guaranteed words**; they can include subwords, punctuation, whitespace, emoji pieces, code, and control markers. [🔗](#what-is-a-tokenizer)
+- **Subwords balance vocabulary size and sequence length**, while BPE, WordPiece, and Unigram build those vocabularies differently. [🔗](#subwords)
+- **Token boundaries are not meaning boundaries**; token IDs are local labels, not universal concepts. [🔗](#subwords)
+- **Language, spelling, emoji, whitespace, case, punctuation, and code formatting affect tokenization**. [🔗](#language-and-formatting)
+- **The visible prompt is only part of the request**; history, instructions, documents, retrieval, tools, and output also use context. [🔗](#hidden-structure)
+- **A context window is finite and shared by input and output**, so visible chat history is not necessarily active model context. [🔗](#context-window)
+- **Relevant detail is useful; repetition is expensive**, especially when token count affects API cost. [🔗](#prompt-relevance)
+- **Tokenization explains representation, not meaning**. Embeddings are the next bridge in the course. [🔗](#mental-model)
 
 ## Questions / Things to Explore
 
-- How does an LLM turn arbitrary token IDs into useful representations of meaning?
-- How are token embeddings different from the token IDs assigned by a tokenizer?
-- Why can two related words receive very different IDs but still become related inside a model?
+- How does an LLM turn arbitrary token IDs into useful representations of meaning? [🔗](./episode-05-how-machines-represent-meaning.md#from-token-ids-to-learned-vectors)
+- How are token embeddings different from the token IDs assigned by a tokenizer? [🔗](./episode-05-how-machines-represent-meaning.md#from-token-ids-to-learned-vectors)
+- Why can two related words receive very different IDs but still become related inside a model? [🔗](./episode-05-how-machines-represent-meaning.md#vectors-dimensions-and-neighborhoods)
 - How do tokenization choices affect Hindi, Hinglish, and other lower-resource languages in practice?
 - How do chat products decide which old messages to keep, summarize, or remove?
 - How should a RAG system choose document chunks when token budgets are limited?

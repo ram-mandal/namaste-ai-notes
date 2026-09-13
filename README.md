@@ -6,9 +6,7 @@ Notes by [Ram Mandal](https://www.linkedin.com/in/rvmandal/).
 
 ## About
 
-I started these notes so I could **revise concepts quickly later** — a fast refresher instead of rewatching videos, which I only go back to when truly necessary.
-
-The course is **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training; the focus is on building with AI.
+The notes cover **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training; the focus is on building with AI.
 
 ## Course Roadmap
 
@@ -29,9 +27,7 @@ flowchart LR
 
 ## Seasons
 
-### Season 1 — Inside the Mind of AI
-
-See the **[Season 1 overview](./season-1-inside-the-mind-of-ai/README.md)** for episode details and status.
+### [Season 1 — Inside the Mind of AI](./season-1-inside-the-mind-of-ai/README.md)
 
 ### Season 2 — AI Native Software Engineer
 

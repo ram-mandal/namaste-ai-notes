@@ -1,12 +1,14 @@
-# Episode 02: The Evolution of AI
+> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
 
-> **Season 1 — Inside the Mind of AI**
+# Episode 02: The Evolution of AI
 
 > Where the journey of AI began and how we have evolved so far — a high-level overview of where the AI industry stands today.
 
 ---
 
-## At a Glance
+<details id="at-a-glance" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Foundations | Where AI is going |
 |:---|:---|
@@ -14,6 +16,9 @@
 | ❄️ Why AI was difficult for decades | ✍️ How LLMs became popular |
 | 📚 Why Machine Learning became necessary | 🧭 Why Agentic AI is the next evolution |
 | 🧠 Why Deep Learning changed everything | |
+
+</div>
+</details>
 
 ---
 
@@ -702,13 +707,19 @@ Best practice:
 
 ## Key Takeaways
 
-- [**Rule-based AI (1950s–80s) hit a ceiling**](#machine-learning) — writing thousands of if-else rules doesn't scale; you can never cover every edge case
-- [**Machine Learning was the breakthrough**](#machine-learning) — instead of rules, show machines examples and let them learn patterns, but humans still guided features in many systems
-- [**Deep Learning was the revolution**](#deep-learning) — neural networks learned features automatically from raw data (image recognition, face unlock, translation), though humans still choose the data and training setup
-- [**AlexNet + ImageNet was a pivotal moment**](#deep-learning) — large labeled image data plus deep networks and GPUs accelerated modern AI progress
-- [**Transformers unlocked modern language AI**](#transformers) — attention-based modeling solved long-context problems much better than earlier NLP methods
-- [**LLMs became mainstream when research met product UX**](#llms) — powerful models + chat interface + infrastructure made AI usable for everyone
-- [**Agentic AI is the next shift**](#agentic-ai) — from answering questions to completing multi-step tasks using tools, memory, and planning
+- **Rule-based AI (1950s–80s) hit a ceiling** — writing thousands of if-else rules doesn't scale; you can never cover every edge case. [🔗](#machine-learning)
+- **Machine Learning was the breakthrough** — instead of rules, show machines examples and let them learn patterns, but humans still guided features in many systems. [🔗](#machine-learning)
+- **Deep Learning was the revolution** — neural networks learned features automatically from raw data (image recognition, face unlock, translation), though humans still choose the data and training setup. [🔗](#deep-learning)
+- **AlexNet + ImageNet was a pivotal moment** — large labeled image data plus deep networks and GPUs accelerated modern AI progress. [🔗](#deep-learning)
+- **Transformers unlocked modern language AI** — attention-based modeling solved long-context problems much better than earlier NLP methods. [🔗](#transformers)
+- **LLMs became mainstream when research met product UX** — powerful models + chat interface + infrastructure made AI usable for everyone. [🔗](#llms)
+- **Agentic AI is the next shift** — from answering questions to completing multi-step tasks using tools, memory, and planning. [🔗](#agentic-ai)
+
+## Questions / Things to Explore
+
+- How does a model actually learn patterns from examples instead of following hand-written rules?
+- What makes a neural network "deep" compared to earlier machine learning approaches?
+- How did the Transformer architecture change what was possible in language modeling? [🔗](./episode-06-the-computational-brain-of-machines.md#attention-is-all-you-need)
 
 ---
 

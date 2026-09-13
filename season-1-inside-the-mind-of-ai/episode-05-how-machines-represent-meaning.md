@@ -1,22 +1,27 @@
-# Episode 05: How Machines Represent Meaning
+> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
 
-> **Season 1 — Inside the Mind of AI**
+# Episode 05: How Machines Represent Meaning
 
 > Token IDs are meaningless labels. Vectorization and embeddings turn those labels into numerical representations that can capture relationships between words, sentences, images, and other information.
 
 ---
 
-## At a Glance
+<details id="at-a-glance" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Question | Short answer |
 |:---|:---|
 | What is vectorization? | Converting any piece of information (text, image, audio, code) into a numerical vector |
 | What is an embedding? | A learned list of numbers that represents an item for a particular model and task |
-| Is a token ID an embedding? | No. A token ID is a vocabulary index; it selects a learned vector from an embedding table |
+| Is a token ID an embedding? | No. A token ID is just a vocabulary index — a meaningless number that points to a row in the embedding table. The meaning lives in the learned vector it retrieves, not in the ID itself (like a library card number vs. the book it finds) |
 | Does a vector contain a dictionary definition? | No. It captures patterns that training found useful, not a human-readable definition |
 | Why does word order matter? | The same tokens can mean different things in a different order, so models also receive position information |
 | Are all embeddings the same? | No. Token embeddings help a language model process text; text embeddings help applications compare whole pieces of content |
 | Does a high similarity score prove something? | No. It is a model-dependent retrieval signal, not proof of truth, intent, or safety |
+
+</div>
+</details>
 
 ---
 
@@ -33,7 +38,7 @@
 
 ### Why this episode exists
 
-Natural language is messy. The same word can mean different things depending on context:
+🗣️ Natural language is messy. The same word can mean different things depending on context:
 
 > I ate an **apple** in the afternoon.
 
@@ -49,7 +54,7 @@ This episode answers one question: **How does a machine go from meaningless numb
 
 ### A token ID is an index, not meaning
 
-In the previous episode, text became tokens and then token IDs. A token ID tells the model which entry from a specific tokenizer vocabulary it received. The number itself does not carry meaning.
+🔢 In the previous episode, text became tokens and then token IDs. A token ID tells the model which entry from a specific tokenizer vocabulary it received. The number itself does not carry meaning.
 
 Try this thought experiment. Imagine a vocabulary table:
 
@@ -68,7 +73,7 @@ A different tokenizer could assign completely different numbers to the same word
 
 ### Vectorization: the bridge from labels to meaning
 
-If token IDs carry no meaning, how does a machine understand anything? The answer is **vectorization**.
+🌉 If token IDs carry no meaning, how does a machine understand anything? The answer is **vectorization**.
 
 > **Vectorization** is the process of converting any piece of information into a numerical vector (an array of numbers).
 
@@ -82,7 +87,7 @@ Vectorization is not limited to text. It applies to:
 | - Audio and speech | - Code and structured data |
 | - Product descriptions | - Any other information a system needs to compare |
 
-When you convert a sentence, an image, or a product listing into an array of numbers, that is vectorization. The specific learned vectors used by a language model are called **embeddings**.
+When you convert a sentence, an image, or a product listing into an array of numbers, that is vectorization. In a language model, those number arrays are not random — they are **learned** during training. We call these learned number arrays **embeddings**.
 
 ### Why numbers?
 
@@ -92,7 +97,7 @@ That is the entire motivation for vectorization: it turns meaning into a form th
 
 ### An embedding lookup selects a learned vector
 
-The model has an **embedding table**: one learned vector for each vocabulary entry. The token ID is used as an address to look up its row in that table.
+📇 The model has an **embedding table**: one learned vector for each vocabulary entry. The token ID is used as an address to look up its row in that table.
 
 ```text
 12  -> [ 0.12,  0.43,  0.87, ...]
@@ -100,12 +105,20 @@ The model has an **embedding table**: one learned vector for each vocabulary ent
 182 -> [ 0.12, -0.32,  0.08, ...]
 ```
 
-These values are invented for explanation. In a real model, each vector commonly has hundreds or thousands of numbers. The values are model parameters learned during training, not numbers chosen by a human to label an idea.
+![Token ID lookup: a meaningless index points to a learned vector row in the embedding table](../assets/season-1-inside-the-mind-of-ai/episode-05/token-id-vs-embedding-lookup.png)
+
+These values are invented for explanation. In a real model, each vector commonly has hundreds or thousands of numbers. The values are **model parameters** — the adjustable numbers inside the model that training tunes. No human picks them to "mean" something.
+
+Think of parameters like the knobs on a radio. You do not set each knob by hand to a "correct" frequency. You turn them slightly, listen, adjust again, and again — until the signal comes through clearly. Training does the same thing with billions of numbers: make a prediction, measure how wrong it was, nudge the numbers a tiny bit, repeat millions of times.
+
+![Model parameters before and after training: random zeros become learned vectors that group related words](../assets/season-1-inside-the-mind-of-ai/episode-05/model_parameters_training_infographic.webp)
+
+Nobody told the model "dogs and cats are similar." The training process adjusted the numbers until its predictions improved, and the useful grouping appeared on its own. Once training is done, those numbers are fixed — they become the model's memory. A 7-billion-parameter model is essentially a file of 7 billion such numbers.
 
 > **Token ID:** “Which vocabulary entry is this?”  
 > **Token embedding:** “Which learned starting vector belongs to that entry?”
 
-During training, the model repeatedly sees tokens in context and adjusts its parameters to improve its training objective. Tokens used in similar linguistic situations can develop vectors with useful relationships. This does not mean the model stores a neat dictionary definition inside each vector.
+One important thing to keep in mind: the vector is **not** a dictionary definition stored in number form. It does not say "king = a male ruler of a country." It captures something more subtle — *how this word tends to appear alongside other words*. "King" shows up near "queen," "crown," and "castle." "Banana" shows up near "sweet," "monkey," and "peel." The vector encodes those patterns, not a definition.
 
 </div>
 </details>
@@ -116,7 +129,7 @@ During training, the model repeatedly sees tokens in context and adjusts its par
 <summary><strong style="font-size: 1.25em;">🗺️ Vectors, Dimensions, and Neighborhoods</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-An embedding is also called a **vector**: an ordered list of numbers. You can picture a small vector as coordinates on a map, although real embedding spaces are far too large to draw directly.
+📍 An embedding is also called a **vector**: an ordered list of numbers. You can picture a small vector as coordinates on a map, although real embedding spaces are far too large to draw directly.
 
 ### What is a dimension, really?
 
@@ -138,13 +151,15 @@ Carrot     -> [0.2, 0.5, 0.9]
 Watermelon -> [0.6, 0.9, 0.6]
 ```
 
+![3D coordinate diagram showing each fruit as a dot, with axes for Sweetness, Size, and Crunchiness](../assets/season-1-inside-the-mind-of-ai/episode-05/fruit_embedding_3d_coordinate_diagram.webp)
+
 Each number in the array is one **dimension**. In this toy example, the dimensions have human-readable labels (sweetness, size, crunchiness). If you asked "which fruits are very crunchy?", you would look at the third number and see that carrot (0.9) and apple (0.8) rank highest.
 
 > **A dimension is one axis on which an item is scored.** In the fruit example, you chose the axes. In a real embedding model, the axes are not chosen by anyone.
 
 ### The "learned" in learned representation
 
-The word **learned** is the most important word in the definition of an embedding. No human sits down and decides that dimension 1 means "sweetness" and dimension 2 means "size." The model discovers these axes on its own from data.
+🌱 The word **learned** is the most important word in the definition of an embedding. No human sits down and decides that dimension 1 means "sweetness" and dimension 2 means "size." The model discovers these axes on its own from data.
 
 Here is how that works in simple terms:
 
@@ -161,11 +176,11 @@ Think about a newborn baby. The baby does not know what a "king" is. But if ever
 
 A model does the same thing, but at massive scale. It reads millions of documents where "king" and "queen" appear together, where "banana" appears near "sweet" and "monkey," where "sun," "moon," and "planet" cluster in the same sentences. After enough exposure, the numerical relationships form on their own.
 
-> **Linguistic environment** means the words that appear near a token in the sentences and documents the model reads. Words that share similar linguistic environments develop similar numerical relationships.
+> **Linguistic environment** simply means the words that appear near a token in the sentences and documents the model reads. Words that show up in similar situations end up with similar vectors. "King" and "queen" both appear in stories about castles and crowns, so their vectors drift close together. No one programmed that — it emerged from the data.
 
 This is also why the process requires so much compute. No human can assign these values by hand. The model must process enormous amounts of text, adjusting billions of numbers. That is why companies race to build more GPUs and data centers: the "learning" is pure mathematics at a scale that only dedicated hardware can handle.
 
-### Try it: which embeddings look closer?
+### Try it: which embeddings are closer?
 
 Look at these three vectors (illustrative values):
 
@@ -175,11 +190,11 @@ Queen  -> [0.79, 0.36, -0.48, 0.22]
 Banana -> [-0.24, 0.91, 0.11, -0.63]
 ```
 
-Now hide the labels. Which two vectors look closer to each other?
+Now ignore the names and focus only on the numbers. Which two vectors have the most similar values?
 
 The first two. Their numbers are similar in each position: 0.81 ≈ 0.79, 0.32 ≈ 0.36, −0.52 ≈ −0.48, 0.17 ≈ 0.22. The third vector is very different in every position. That is the signal: **King and Queen are related; Banana is not.**
 
-This is exactly what a similarity measure formalizes. You do not need to know what each dimension "means" to see that two vectors are close.
+This is exactly what a **similarity score** measures: how close two vectors are, without needing to know what each dimension "means."
 
 The relationships go beyond obvious pairs. A model that has read enough data will also place:
 
@@ -191,7 +206,7 @@ These are not rules someone wrote. They are patterns that emerged from the data.
 
 ### Embedding models
 
-The model that produces these vectors is called an **embedding model**. Each major AI company builds its own:
+🏭 The model that produces these vectors is called an **embedding model**. Each major AI company builds its own:
 
 - OpenAI has its own embedding model.
 - Google (Gemini) has its own.
@@ -201,7 +216,7 @@ An embedding model's job is to take information (a token, a sentence, a document
 
 ### Embeddings as coordinates: a 2D picture
 
-📐 Our brains understand two or three spatial dimensions. We can picture an X-Y graph or an X-Y-Z box. We cannot picture 1,000 dimensions. So for teaching, we pretend each token has only two numbers and plot them on a flat graph.
+📐 Our brains understand two or three spatial dimensions. We can picture an X-Y graph or an X-Y-Z box. We cannot picture 1,000 dimensions. So to build intuition, I pretend each token has only two numbers and plot them on a flat graph.
 
 ```text
 King       -> [8.0, 7.0]
@@ -262,13 +277,13 @@ During training, every time the model sees these words together, it makes a tiny
 
 ### Data is the foundation
 
-Everything in an embedding comes from data. The more diverse and large the training data, the richer the patterns the model can capture. This is why companies invest heavily in data collection and protection. Artists, writers, and musicians have raised concerns when their work is used to train models without consent. The patterns learned from that data can then be used to generate new content in similar styles.
+Everything in an embedding comes from data. The more diverse and large the training data, the richer the patterns the model can capture. This is why companies invest heavily in data collection and curation. The patterns learned from that data shape what the model can represent and what it cannot.
 
 The quality of an embedding is ultimately bounded by the quality and coverage of the data it was trained on.
 
 ### An embedding is not the meaning
 
-It is tempting to look at a vector and think, "This array IS the meaning of king." It is not. The vector captures **patterns of relationship**: king appears near queen, near crown, near castle. It does not store a picture of a king or a dictionary definition.
+It is tempting to look at a vector and think, "This array is the meaning of king." It is not. The vector captures **patterns of relationship**: king appears near queen, near crown, near castle. It does not store a picture of a king or a dictionary definition.
 
 A computer does not "understand" what a king is the way you do. It has no image, no story, no feeling. It has numbers, and it performs mathematics on those numbers. The usefulness of the representation comes from the patterns encoded in the numbers, not from any internal comprehension.
 
@@ -281,7 +296,7 @@ A computer does not "understand" what a king is the way you do. It has no image,
 <summary><strong style="font-size: 1.25em;">📏 Semantic Similarity and Cosine Similarity</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-**Semantic similarity** asks whether two pieces of content express related ideas, even when they do not use the same words.
+🔍 **Semantic similarity** asks whether two pieces of content express related ideas, even when they do not use the same words.
 
 Compare these queries:
 
@@ -305,13 +320,13 @@ The last example shows the other direction: keyword matching might incorrectly l
 
 ### Cosine similarity compares direction
 
-One common comparison is **cosine similarity**. It measures the angle $\theta$ between two vectors, so it focuses on whether they point in a similar direction rather than how long the vectors are.
+📐 One common comparison is **cosine similarity**. It measures the angle $\theta$ between two vectors, so it focuses on whether they point in a similar direction rather than how long the vectors are.
 
 $$
 \operatorname{cosine}(a,b) = \frac{a \cdot b}{\lVert a \rVert \lVert b \rVert}
 $$
 
-The numerator is the **dot product** of the two vectors. The denominator is the product of their **magnitudes** (lengths). Dividing by the magnitudes normalizes the result, so a long vector and a short vector pointing in the same direction still get a score near $1$.
+The top part (**dot product**) measures how much the two vectors point in the same direction. The bottom part (**magnitudes**) is just the length of each vector. Dividing by the lengths removes the size difference, so a long vector and a short vector pointing the same way still score near $1$. Think of it as: **ignore how long the arrows are, only compare which way they point.**
 
 Think about the angle:
 
@@ -372,7 +387,7 @@ Things to try:
 
 ### Identity is not enough; order matters too
 
-These sentences contain the same words but describe very different events:
+🔀 These sentences contain the same words but describe very different events:
 
 ```text
 Dog bites man
@@ -388,7 +403,7 @@ Notice that both sentences use the exact same tokens and the exact same token em
 
 > **Identity + Order.** The model must know *which* tokens are present *and* *where* each one appears. Without order, "dog bites man" and "man bites dog" would be indistinguishable.
 
-Transformer architectures add or combine position information with token vectors using architecture-specific methods. Position alone does not understand grammar; it gives the model a way to learn patterns in ordered text.
+Transformer architectures combine position information with token vectors (the exact method varies by design). Position alone does not understand grammar; it simply gives the model a way to learn patterns in ordered text.
 
 ### The same token can mean different things
 
@@ -402,7 +417,7 @@ The word **Apple** can refer to a fruit or a technology company. The word **bank
 
 > **Context** means the surrounding words and data that appear along with a token. A word does not exist in isolation; its meaning depends on the sentence around it.
 
-A static embedding system gives a token one fixed starting vector. That single vector must somehow represent every meaning of the word, which is not possible. Modern language models solve this using **contextual representations**: the representation of a token changes based on the surrounding words.
+A basic embedding system gives a token one fixed vector, no matter what sentence it appears in. That single vector must somehow represent every meaning of the word, which is not possible. Modern language models solve this using **contextual representations**: the vector for a token changes depending on the words around it.
 
 ### How a transformer makes representations contextual
 
@@ -423,7 +438,7 @@ flowchart LR
     C --> R[Contextual representations]
 ```
 
-The exact context a token can use depends on the architecture. For example, an autoregressive LLM normally processes a token using permitted earlier tokens, while other language-model designs can use a different attention pattern. The main idea is stable: the final internal representation depends on more than the token by itself.
+The exact context a token can use depends on the model's design. For example, most modern LLMs let each token "look at" the tokens before it, while other designs allow a different pattern. The main idea is stable: the final representation of a token depends on more than the token by itself.
 
 </div>
 </details>
@@ -434,7 +449,7 @@ The exact context a token can use depends on the architecture. For example, an a
 <summary><strong style="font-size: 1.25em;">🧰 Token Embeddings, Text Embeddings, and Limits</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-The word **embedding** can refer to several related representations. The question to always ask is: **an embedding of what, and for which task?**
+🧰 The word **embedding** can refer to several related representations. The question to always ask is: **an embedding of what, and for which task?**
 
 | Representation | What it represents | Common use |
 |:---|:---|:---|
@@ -507,7 +522,7 @@ This is why a good embedding system needs evaluation on representative examples,
 <summary><strong style="font-size: 1.25em;">💡 My Mental Model</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-I think of a token ID as a library call number: it helps the model find one row in its own catalog, but it says nothing useful by itself outside that catalog.
+📚 I think of a token ID as a library call number: it helps the model find one row in its own catalog, but it says nothing useful by itself outside that catalog.
 
 An embedding is like a location on a learned map. Similar items may end up in nearby neighborhoods because of patterns in how they were used. Context is the part that tells the map whether **Apple** means something I eat or the company that makes a device.
 
@@ -518,13 +533,13 @@ The map helps find likely connections. I still need to inspect the actual source
 
 ## Key Takeaways
 
-- [**Token IDs are meaningless labels; vectorization turns them into numbers**](#from-token-ids-to-learned-vectors) so that mathematical operations can be performed on them.
-- [**Dimensions are learned from data, not defined by humans**](#vectors-dimensions-and-neighborhoods); the model discovers which axes capture useful patterns.
-- [**More dimensions != more intelligence**](#vectors-dimensions-and-neighborhoods); they add capacity and cost, but usefulness depends on data, objective, and task.
-- [**Semantic similarity is task-dependent**](#semantic-similarity-and-cosine-similarity); cosine similarity measures vector alignment, not truth or a universal definition of meaning.
-- [**The model needs both identity and order**](#order-and-context-change-representation); contextualization changes a token's representation through transformer layers based on surrounding words.
-- [**Token and text embeddings serve different jobs**](#token-embeddings-text-embeddings-and-limits): language-model processing versus comparison of larger content (search, RAG, recommendations — often hybrid with keyword search).
-- [**Embedding systems can inherit bias and gaps from data**](#token-embeddings-text-embeddings-and-limits), so their results need testing and verification.
+- **Token IDs are meaningless labels; vectorization turns them into numbers** so that mathematical operations can be performed on them. [🔗](#from-token-ids-to-learned-vectors)
+- **Dimensions are learned from data, not defined by humans**; the model discovers which axes capture useful patterns. [🔗](#vectors-dimensions-and-neighborhoods)
+- **More dimensions != more intelligence**; they add capacity and cost, but usefulness depends on data, objective, and task. [🔗](#vectors-dimensions-and-neighborhoods)
+- **Semantic similarity is task-dependent**; cosine similarity measures vector alignment, not truth or a universal definition of meaning. [🔗](#semantic-similarity-and-cosine-similarity)
+- **The model needs both identity and order**; contextualization changes a token's representation through transformer layers based on surrounding words. [🔗](#order-and-context-change-representation)
+- **Token and text embeddings serve different jobs**: language-model processing versus comparison of larger content (search, RAG, recommendations — often hybrid with keyword search). [🔗](#token-embeddings-text-embeddings-and-limits)
+- **Embedding systems can inherit bias and gaps from data**, so their results need testing and verification. [🔗](#token-embeddings-text-embeddings-and-limits)
 
 ## Questions / Things to Explore
 
