@@ -1,6 +1,6 @@
-# Episode 06: The Computational Brain of Machines
+> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
 
-> **Season 1 — Inside the Mind of AI**
+# Episode 06: The Computational Brain of Machines
 
 > An LLM is a prediction machine, and the "brain" that makes the prediction is a neural network built from the Transformer architecture. This episode opens that brain and walks through each part — embeddings, attention, the Transformer block, and the final probability output.
 
@@ -8,7 +8,9 @@
 
 ---
 
-## At a Glance
+<details id="at-a-glance" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Question | Short answer |
 |:---|:---|
@@ -18,7 +20,10 @@
 | What is self-attention? | Attention where tokens attend to *other tokens in the same sequence* — no human tells it what to focus on |
 | What is the "heart" of a Transformer? | Attention. Without it, the architecture has no way to relate words to each other |
 | What does the model output? | A probability for every token in the vocabulary; the next token is chosen from those probabilities |
-| Where can I see the real code? | [nanoGPT](https://github.com/karpathy/nanogpt) and the [GPT-2 codebase](https://github.com/openai/gpt-2/tree/master) — see the [code walkthrough](./episode-06-nanogpt-code-walkthrough.md) |
+| Where can I see the real code? | [nanoGPT](https://github.com/karpathy/nanogpt) and the [GPT-2 codebase](https://github.com/openai/gpt-2/tree/master) — see the [code walkthrough](./episode-06/nanogpt-code-walkthrough.md) |
+
+</div>
+</details>
 
 ---
 
@@ -35,7 +40,7 @@
 
 ### Recap: an LLM is a prediction machine
 
-In the previous episodes we established that an LLM is a **prediction machine**. Give it a half-finished sentence and it predicts the **next token** (not the next "word" — technically it is a token). It then feeds that token back in and predicts the one after it, and so on. That loop is how every response you see in ChatGPT, Gemini, or Grok is built, one token at a time.
+🔁 In the previous episodes we established that an LLM is a **prediction machine**. Give it a half-finished sentence and it predicts the **next token** (not the next "word" — technically it is a token). It then feeds that token back in and predicts the one after it, and so on. That loop is how every response you see in ChatGPT, Gemini, or Grok is built, one token at a time.
 
 ```text
 "The pizza is"        -> predicts "ready"
@@ -48,7 +53,7 @@ The *how* of that prediction is the subject of this episode. The machine that do
 
 ### GPT = Generative Pre-trained Transformer
 
-The full form of **GPT** is **Generative Pre-trained Transformer**. Each of the three words carries meaning:
+🧩 The full form of **GPT** is **Generative Pre-trained Transformer**. Each of the three words carries meaning:
 
 | Word | What it means |
 |:---|:---|
@@ -60,7 +65,7 @@ The full form of **GPT** is **Generative Pre-trained Transformer**. Each of the 
 
 ### Why "Transformer" matters
 
-Before 2017, sequence models like **RNNs** and **LSTMs** (Long Short-Term Memory) processed text one token at a time, in order. That made it hard for them to connect words that were far apart in a sentence. The Transformer changed the game: it processes the **whole sequence at once** and uses **attention** to let every token relate to every other token it is allowed to see.
+⏪ Before 2017, sequence models like **RNNs** and **LSTMs** (Long Short-Term Memory) processed text one token at a time, in order. That made it hard for them to connect words that were far apart in a sentence. The Transformer changed the game: it processes the **whole sequence at once** and uses **attention** to let every token relate to every other token it is allowed to see.
 
 > **The Transformer is a type of neural network architecture designed to process sequences of information using attention.**
 
@@ -75,7 +80,7 @@ That single sentence is the whole idea. The rest of this episode unpacks it.
 <summary><strong style="font-size: 1.25em;">📄 "Attention Is All You Need" (2017)</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-The Transformer was introduced in a 2017 research paper titled **"Attention Is All You Need"** by a team of researchers from Google (Google Brain and Google DeepMind) and the University of Toronto. The paper is short on the number of new moving parts and enormous in its impact: essentially every LLM you use today is built on the architecture it describes.
+📄 The Transformer was introduced in a 2017 research paper titled **"Attention Is All You Need"** by a team of researchers from Google (Google Brain and Google DeepMind) and the University of Toronto. The paper is short on the number of new moving parts and enormous in its impact: essentially every LLM you use today is built on the architecture it describes.
 
 You can read the original paper here:
 
@@ -115,7 +120,7 @@ Now **it** almost certainly refers to the **mat** (a cozy mat, not a cozy cat). 
 
 ### Self-attention: tokens talking to each other
 
-**Self-attention** is attention where each token looks at the *other tokens in the same sequence* and computes a relationship score with each of them. No human tells the model what **it** refers to — it works that out on its own from the numbers.
+👀 **Self-attention** is attention where each token looks at the *other tokens in the same sequence* and computes a relationship score with each of them. No human tells the model what **it** refers to — it works that out on its own from the numbers.
 
 Think of it as each token asking: *"How relevant is every other word to me?"* The answer is a set of weights (numbers that add up to 1). A higher weight means "pay more attention to that word."
 
@@ -152,7 +157,7 @@ Under the hood, self-attention turns each token's vector into three things — a
 2. The scores are normalized (with a step called **softmax**) into weights that add up to 1.
 3. Each token's new representation becomes a **weighted average** of all the **Values**, using those weights.
 
-So a token's updated vector is a blend of the whole sentence, weighted by what it decided to pay attention to. That is the entire mechanism in one breath. (The [code walkthrough](./episode-06-nanogpt-code-walkthrough.md) shows the actual lines that do this.)
+So a token's updated vector is a blend of the whole sentence, weighted by what it decided to pay attention to. That is the entire mechanism in one breath. (The [code walkthrough](./episode-06/nanogpt-code-walkthrough.md) shows the actual lines that do this.)
 
 > 🔒 **Causal** (or "masked") attention: in a language model that predicts the *next* token, a token is only allowed to attend to tokens **at or before** its position — never to future tokens. Otherwise the model could "cheat" by peeking at the answer. This is why the diagram says *multi-head, **causal** self-attention.*
 
@@ -165,7 +170,7 @@ So a token's updated vector is a blend of the whole sentence, weighted by what i
 <summary><strong style="font-size: 1.25em;">🫀 The Heart of the Transformer</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-There is a nesting of "hearts" worth memorizing:
+🫀 There is a nesting of "hearts" worth memorizing:
 
 > **The heart of a modern neural network is the Transformer architecture. The heart of the Transformer architecture is attention.**
 
@@ -196,7 +201,7 @@ flowchart TB
 <summary><strong style="font-size: 1.25em;">🔬 Inside the Neural Network: The Full Pipeline</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-Now let's open the "brain" and follow a single forward pass, matching the boxes in the [architecture diagram](#how-to-visualize).
+🔬 Now let's open the "brain" and follow a single forward pass, matching the boxes in the [architecture diagram](#how-to-visualize).
 
 ### Step 1 — Tokens become vectors (embeddings)
 
@@ -237,7 +242,7 @@ flowchart TB
     ADD2 --> OUT["updated vectors"]
 ```
 
-> 📐 **How many blocks?** A small GPT-2 has **12** blocks; larger models have dozens or more. Each block refines the representation a little further. The numbers `n_layer`, `n_head`, and `n_embd` in the [code walkthrough](./episode-06-nanogpt-code-walkthrough.md) control exactly this.
+> 📐 **How many blocks?** A small GPT-2 has **12** blocks; larger models have dozens or more. Each block refines the representation a little further. The numbers `n_layer`, `n_head`, and `n_embd` in the [code walkthrough](./episode-06/nanogpt-code-walkthrough.md) control exactly this.
 
 ### Step 4 — Turn the final vector into probabilities
 
@@ -262,7 +267,7 @@ The model samples the next token from that probability distribution (it does not
 <summary><strong style="font-size: 1.25em;">🎨 How to Visualize This (the Easy Way)</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-The diagram below is the standard way to picture a GPT model. Here is a beginner-friendly way to read it without getting lost in the boxes.
+🎨 The diagram below is the standard way to picture a GPT model. Here is a beginner-friendly way to read it without getting lost in the boxes.
 
 ![LLM architecture visualization showing the full pipeline from tokens to softmax output](../assets/season-1-inside-the-mind-of-ai/episode-06/LLM-visualization.png)
 
@@ -300,7 +305,7 @@ The little circles with a plus sign are **residual connections**. They mean: *"a
 The diagram is a still frame. To watch the data actually flow through a real model, try the interactive visualizations:
 
 - 🌐 **[bbycroft.net/llm](https://bbycroft.net/llm)** — an interactive 3D visualization of a GPT model. You can watch tokens move through the embedding, attention, and feed-forward layers in real time. (This is the source of the diagram above.)
-- 📺 **[Andrej Karpathy — "Let's build GPT from scratch"](https://www.youtube.com/watch?v=kCc8FmEb1nY)** — builds a tiny GPT in code, which pairs perfectly with the [code walkthrough](./episode-06-nanogpt-code-walkthrough.md).
+- 📺 **[Andrej Karpathy — "Let's build GPT from scratch"](https://www.youtube.com/watch?v=kCc8FmEb1nY)** — builds a tiny GPT in code, which pairs perfectly with the [code walkthrough](./episode-06/nanogpt-code-walkthrough.md).
 
 </div>
 </details>
@@ -311,7 +316,7 @@ The diagram is a still frame. To watch the data actually flow through a real mod
 <summary><strong style="font-size: 1.25em;">🛠️ Read the Real Code</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-The best way to make the internals concrete is to read a small, readable implementation. Two are worth your time:
+🛠️ The best way to make the internals concrete is to read a small, readable implementation. Two are worth your time:
 
 | Repo | Why it is useful |
 |:---|:---|
@@ -322,7 +327,7 @@ The best way to make the internals concrete is to read a small, readable impleme
 
 I have written a line-by-line walkthrough of the important parts of `model.py` (the embedding, the attention, the Transformer block, and the final output) so you can map the code directly onto the diagram:
 
-👉 **[Episode 06 — nanoGPT Code Walkthrough](./episode-06-nanogpt-code-walkthrough.md)**
+👉 **[Episode 06 — nanoGPT Code Walkthrough](./episode-06/nanogpt-code-walkthrough.md)**
 
 </div>
 </details>
@@ -333,7 +338,7 @@ I have written a line-by-line walkthrough of the important parts of `model.py` (
 <summary><strong style="font-size: 1.25em;">💡 My Mental Model</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-I picture the model as a room full of people (the tokens), each holding a note (its vector). At each round, everyone reads everyone else's note and decides who to pay attention to, then rewrites their own note as a blend of what they heard. They do a bit of private thinking after that, and the whole round repeats many times. At the end, each person raises a hand for every possible next word, and the heights of the hands are the probabilities.
+🏛️ I picture the model as a room full of people (the tokens), each holding a note (its vector). At each round, everyone reads everyone else's note and decides who to pay attention to, then rewrites their own note as a blend of what they heard. They do a bit of private thinking after that, and the whole round repeats many times. At the end, each person raises a hand for every possible next word, and the heights of the hands are the probabilities.
 
 The "heart" idea helps me remember the priority: the attention step is where the actual *understanding of relationships* happens. The feed-forward step is just processing. So if I ever feel lost in the architecture, I go back to attention — that is the beating center.
 
@@ -342,13 +347,13 @@ The "heart" idea helps me remember the priority: the attention step is where the
 
 ## Key Takeaways
 
-- [**GPT = Generative Pre-trained Transformer**](#what-is-gpt) — a general architecture, not just OpenAI's product; every modern LLM is one.
-- [**The Transformer (2017, "Attention Is All You Need")**](#attention-is-all-you-need) processes a whole sequence at once instead of one token at a time.
-- [**Self-attention lets each token relate to the others**](#attention-and-self-attention), which is how the model resolves references like "it" and ambiguous words like "bank."
-- [**Attention is the heart of the Transformer**](#the-heart-of-the-transformer), and the Transformer is the heart of the modern neural network.
-- [**The pipeline is embed → (attention + feed-forward) × N → probabilities**](#inside-the-neural-network), with layer norm and residual connections keeping it stable.
-- [**The output is a probability over the whole vocabulary**](#inside-the-neural-network); the next token is sampled from it, then the loop repeats.
-- [**Reading nanoGPT's `model.py` makes it concrete**](#read-the-code) — every diagram box has a matching class.
+- **GPT = Generative Pre-trained Transformer** — a general architecture, not just OpenAI's product; every modern LLM is one. [🔗](#what-is-gpt)
+- **The Transformer (2017, "Attention Is All You Need")** processes a whole sequence at once instead of one token at a time. [🔗](#attention-is-all-you-need)
+- **Self-attention lets each token relate to the others**, which is how the model resolves references like "it" and ambiguous words like "bank." [🔗](#attention-and-self-attention)
+- **Attention is the heart of the Transformer**, and the Transformer is the heart of the modern neural network. [🔗](#the-heart-of-the-transformer)
+- **The pipeline is embed → (attention + feed-forward) × N → probabilities**, with layer norm and residual connections keeping it stable. [🔗](#inside-the-neural-network)
+- **The output is a probability over the whole vocabulary**; the next token is sampled from it, then the loop repeats. [🔗](#inside-the-neural-network)
+- **Reading nanoGPT's `model.py` makes it concrete** — every diagram box has a matching class. [🔗](#read-the-code)
 
 ## Questions / Things to Explore
 

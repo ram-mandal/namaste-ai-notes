@@ -75,11 +75,13 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 
 - Keep `Quick Notes` collapsed and visual-only; reserve it for images or a small gallery.
 - Do not use `What you'll learn` by default. Use a specific heading such as `At a Glance` only when an overview table adds value.
-- Use meaningful emojis at the start of explanatory sentences or paragraphs, as demonstrated in Episode 3, when they improve scanning or reinforce the idea. Do not decorate every sentence or repeat the same emoji within one section.
+- **Inline paragraph emojis (required):** Every episode must use meaningful emojis at the start of key paragraphs that introduce a new concept, matching the density and style of Episode 3. Place 1–3 per section on paragraphs that open a new idea (not on every sentence). The emoji should reinforce the idea (e.g. 🧠 for a concept, 🔧 for a tool, 📐 for a formula, 🌱 for "learned"). Section-level emojis in `<summary>` tags are separate and also required.
 - Do not repeat the same emoji within one section when it represents the same idea; choose a distinct meaningful icon or omit it.
+- Do not use visual-only language ("look at," "hide the labels," "you see") when referring to text-based content (code blocks, tables, lists). Use "focus on the numbers," "ignore the names," etc. Reserve visual language for actual images or interactive tools.
 - Write notes as direct, self-contained explanations; do not refer to a transcript or how the course presents something.
 - Keep Mermaid diagrams unstyled unless the note explicitly needs styling. For an AI-assistant diagram, show the assistant as the outer layer around its base model and capabilities.
-- Link each Key Takeaway to the relevant section anchor so readers can jump back to the explanation.
+- **Key Takeaways:** keep the takeaway text as normal (non-linked) text — do not wrap the whole sentence in a link, which hurts readability. Append a small icon link at the end that jumps to the relevant section anchor, e.g. `**Takeaway text** [🔗](#section-anchor)`.
+- **Questions / Things to Explore:** when a question has been answered in a later episode, append an icon link pointing to that episode and section, e.g. `How does X work? [🔗](./episode-05-....md#section-anchor)`. Leave still-open questions as plain text (no icon). Revisit and add these links as new episodes are added.
 
 ## Tone
 

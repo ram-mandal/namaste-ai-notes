@@ -1,12 +1,14 @@
-# Episode 01: Welcome to Namaste AI
+> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
 
-> **Season 1 — Inside the Mind of AI**
+# Episode 01: Welcome to Namaste AI
 
 > This opening episode sets the roadmap for the course and a slower way to learn: pause, build, test ideas, and make your own notes.
 
 ---
 
-## At a Glance
+<details id="at-a-glance" style="margin-bottom: 1rem;">
+<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
+<div style="margin-left: 3rem; margin-top: .25rem;">
 
 | Question | Short answer |
 |:---|:---|
@@ -14,6 +16,9 @@
 | Do I need an ML background? | No. Basic programming and a practical understanding of software are enough to begin |
 | What is the learning approach? | Learn in sequence, take notes, pause often, and turn ideas into experiments and projects |
 | What should I bring? | Curiosity, enough time to think, and focused attention |
+
+</div>
+</details>
 
 ---
 
@@ -32,7 +37,7 @@
 <summary><strong style="font-size: 1.25em;">🗺️ The Course Roadmap</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-This course moves from the basic ideas behind AI to practical ways of building with it. Each topic gives context for the next one, so learning in sequence matters.
+🗺️ This course moves from the basic ideas behind AI to practical ways of building with it. Each topic gives context for the next one, so learning in sequence matters.
 
 | | |
 |:---|:---|
@@ -73,7 +78,7 @@ This is a high-level AI course for developers. You do not need to arrive with de
 <summary><strong style="font-size: 1.25em;">📖 Learn Slowly and Practically</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-The goal is not to finish videos quickly. The goal is to understand enough to apply an idea without needing to memorize every sentence.
+📖 The goal is not to finish videos quickly. The goal is to understand enough to apply an idea without needing to memorize every sentence.
 
 | | |
 |:---|:---|
@@ -116,7 +121,7 @@ Give the material focused time. Reduce distractions, pause to reflect, and keep 
 <summary><strong style="font-size: 1.25em;">💡 My Mental Model</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-I see this course as a route, not a race. The roadmap tells me where the topics connect, but my notes, experiments, and questions are what turn each stop into something I can use.
+🧭 I see this course as a route, not a race. The roadmap tells me where the topics connect, but my notes, experiments, and questions are what turn each stop into something I can use.
 
 When a concept feels difficult, the useful response is to slow down: pause the lesson, make a smaller example, and revisit it. Moving slowly is part of the method.
 
@@ -125,11 +130,11 @@ When a concept feels difficult, the useful response is to slow down: pause the l
 
 ## Key Takeaways
 
-- [**The course follows a deliberate sequence**](#course-roadmap), from AI foundations to projects and engineering practice.
-- [**Basic programming is enough to begin**](#prerequisites); deep ML mathematics is not a prerequisite for this course.
-- [**Active learning beats fast consumption**](#learn-slowly-and-practically): pause, code, write notes, experiment, break, and fix.
-- [**Curiosity, time, and attention support understanding**](#curiosity-time-and-attention), especially when a topic needs another pass.
-- [**Personal notes and experiments make learning reusable**](#mental-model), rather than leaving it as a finished video.
+- **The course follows a deliberate sequence** from AI foundations to projects and engineering practice. [🔗](#course-roadmap)
+- **Basic programming is enough to begin**; deep ML mathematics is not a prerequisite for this course. [🔗](#prerequisites)
+- **Active learning beats fast consumption**: pause, code, write notes, experiment, break, and fix. [🔗](#learn-slowly-and-practically)
+- **Curiosity, time, and attention support understanding**, especially when a topic needs another pass. [🔗](#curiosity-time-and-attention)
+- **Personal notes and experiments make learning reusable**, rather than leaving it as a finished video. [🔗](#mental-model)
 
 ## Questions / Things to Explore
 
