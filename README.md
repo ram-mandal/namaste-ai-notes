@@ -9,23 +9,6 @@ Notes by [Ram Mandal](https://www.linkedin.com/in/rvmandal/).
 The notes cover **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training.
 The goal is simple: understand how AI works well enough to build with it. 🚀
 
-## Course Roadmap
-
-The notes are organized around these topics:
-
-```mermaid
-flowchart LR
-    A[AI Fundamentals] --> B[LLMs]
-    B --> C[Prompt Engineering]
-    C --> D[AI for Developers]
-    D --> E[AI Tools & Ecosystem]
-    E --> F[RAG]
-    F --> G[AI Agents]
-    G --> H[MCP]
-    H --> I[AI Engineering]
-    I --> J[Projects]
-```
-
 ## Seasons
 
 ### [Season 1 — Inside the Mind of AI](./season-1-inside-the-mind-of-ai/README.md)
