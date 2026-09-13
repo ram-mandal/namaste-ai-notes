@@ -6,7 +6,8 @@ Notes by [Ram Mandal](https://www.linkedin.com/in/rvmandal/).
 
 ## About
 
-The notes cover **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training; the focus is on building with AI.
+The notes cover **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. No deep ML math or model training.
+The goal is simple: understand how AI works well enough to build with it. 🚀
 
 ## Course Roadmap
 
