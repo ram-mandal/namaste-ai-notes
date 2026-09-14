@@ -366,4 +366,4 @@ The "heart" idea helps me remember the priority: the attention step is where the
 
 | ← Previous | Next → |
 |:---:|:---:|
-| [Episode 05: How Machines Represent Meaning](./episode-05-how-machines-represent-meaning.md) | _coming soon_ |
+| [Episode 05: How Machines Represent Meaning](./episode-05-how-machines-represent-meaning.md) | [Episode 07: Sharpening the Brain](./episode-07-sharpening-the-brain.md) |
