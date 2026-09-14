@@ -60,8 +60,8 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 
 ### Episode Formatting
 
-- Use one clear H1 for the episode title: `# Episode NN: <Title>`
-- Put the full season name on the next line as a blockquote: `> **Season N — <Season Name>**`
+- Put the full season name on the **first line** as a blockquote with a link to the season README: `> **Season N — <Season Name>** [🔗](./README.md)`
+- Use one clear H1 for the episode title on the next line: `# Episode NN: <Title>`
 - Keep the title and season label on separate lines; do not mix font sizes inside one heading
 - Use `<details>` accordions for longer sections, keeping the first primary section expanded by default
 - Give each accordion a consistent inline title style and `margin-bottom: 1rem;` spacing
@@ -77,6 +77,7 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 - Do not use `What you'll learn` by default. Use a specific heading such as `At a Glance` only when an overview table adds value.
 - **Inline paragraph emojis (required):** Every episode must use meaningful emojis at the start of key paragraphs that introduce a new concept, matching the density and style of Episode 3. Place 1–3 per section on paragraphs that open a new idea (not on every sentence). The emoji should reinforce the idea (e.g. 🧠 for a concept, 🔧 for a tool, 📐 for a formula, 🌱 for "learned"). Section-level emojis in `<summary>` tags are separate and also required.
 - Do not repeat the same emoji within one section when it represents the same idea; choose a distinct meaningful icon or omit it.
+- **No similar icons close together:** if two nearby sentences/paragraphs express the same idea, do not open both with the same (or near-identical) emoji. Vary the icon or drop the second one so the page does not look repetitive.
 - Do not use visual-only language ("look at," "hide the labels," "you see") when referring to text-based content (code blocks, tables, lists). Use "focus on the numbers," "ignore the names," etc. Reserve visual language for actual images or interactive tools.
 - Write notes as direct, self-contained explanations; do not refer to a transcript or how the course presents something.
 - Keep Mermaid diagrams unstyled unless the note explicitly needs styling. For an AI-assistant diagram, show the assistant as the outer layer around its base model and capabilities.
@@ -95,12 +96,12 @@ If something in the notes appears technically questionable, **flag it** (e.g. `>
 
 ## Episode Structure (flexible)
 
-Every episode starts with a title, season label, and one-line summary:
+Every episode starts with a season label (with a link to the season README), a title, and a one-line summary:
 
 ```markdown
-# Episode XX: <Title>
+> **Season X — <Season Name>** [🔗](./README.md)
 
-> **Season X — <Season Name>**
+# Episode XX: <Title>
 
 > One-line summary of what this episode is about.
 ```
@@ -165,7 +166,7 @@ For each episode, identify the **ONE** most important concept that deserves a vi
 ## Before Committing
 
 - [ ] Episode title is clear and simple (5-7 words)
-- [ ] Full season name appears below the title in a consistent blockquote
+- [ ] Full season name appears on the first line (above the title) in a consistent blockquote with a link to the season README
 - [ ] Long sections use consistent, readable accordions with the first primary section expanded
 - [ ] Only sections that make sense for this episode are included (no filler/empty sections)
 - [ ] Course content vs. personal understanding clearly separated
