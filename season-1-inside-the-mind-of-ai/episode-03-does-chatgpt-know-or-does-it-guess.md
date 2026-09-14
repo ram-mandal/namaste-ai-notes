@@ -1,14 +1,12 @@
-> **Season 1 — Inside the Mind of AI** [🔗](./README.md)
-
 # Episode 03: Does ChatGPT Know or Does It Guess?
+
+> **Season 1 — Inside the Mind of AI**
 
 > ChatGPT does not retrieve a verified answer from a hidden database by default; it generates a response from learned patterns, context, and any tools the assistant uses.
 
 ---
 
-<details id="at-a-glance" style="margin-bottom: 1rem;">
-<summary><strong style="font-size: 1.25em;">👀 At a Glance</strong></summary>
-<div style="margin-left: 3rem; margin-top: .25rem;">
+## At a Glance
 
 | Search engines | LLM-based assistants |
 |:---|:---|
@@ -16,9 +14,6 @@
 | Rank results and show source links | Predict the next token repeatedly |
 | Can be checked against the original page | Inference generates a result after training |
 | Fresh information may come from newly indexed pages | Tools can retrieve information and extend an assistant |
-
-</div>
-</details>
 
 ---
 
@@ -380,19 +375,19 @@ From the outside, all three look identical — just a number. The interesting pa
 
 ## Key Takeaways
 
-- **Search engines retrieve and rank existing documents** — LLMs generate text from learned patterns and context. [🔗](#search-vs-llm)
-- **Inference uses a trained model to generate a response** — it is different from the earlier, much more expensive training process. [🔗](#inference)
-- **Fluent language and confidence do not guarantee truth** — a plausible answer can still be unsupported or wrong. [🔗](#hallucinations)
-- **Hallucinations have recognizable causes and forms** — insufficient information, outdated knowledge, false assumptions, invented facts, and false precision are common examples. [🔗](#why-hallucinations-happen)
-- **Ask for evidence, uncertainty, sources, or tools when accuracy matters** — confidence alone is not evidence. [🔗](#confidence)
-- **Tools and RAG add retrieval to generation** — they add external or private context, but do not remove all errors. [🔗](#tools-and-rag)
-- **My own exploration: math can be memorized, computed, or delegated to a tool** — tool use itself is a learned behavior, not a conscious decision. [🔗](#own-exploration)
-- **A model's self-description is not proof of self-awareness** — verify product details with official sources. [🔗](#model-self-knowledge)
+- [**Search engines retrieve and rank existing documents**](#search-vs-llm) - LLMs generate text from learned patterns and context.
+- [**Inference uses a trained model to generate a response**](#inference) - it is different from the earlier, much more expensive training process.
+- [**Fluent language and confidence do not guarantee truth**](#hallucinations) - a plausible answer can still be unsupported or wrong.
+- [**Hallucinations have recognizable causes and forms**](#why-hallucinations-happen) - insufficient information, outdated knowledge, false assumptions, invented facts, and false precision are common examples.
+- [**Ask for evidence, uncertainty, sources, or tools when accuracy matters**](#confidence) - confidence alone is not evidence.
+- [**Tools and RAG add retrieval to generation**](#tools-and-rag) - they add external or private context, but do not remove all errors.
+- [**My own exploration: math can be memorized, computed, or delegated to a tool**](#own-exploration) - tool use itself is a learned behavior, not a conscious decision.
+- [**A model's self-description is not proof of self-awareness**](#model-self-knowledge) - verify product details with official sources.
 
 ## Questions / Things to Explore
 
-- How are tokens different from words? [🔗](./episode-04-the-secret-language-of-llms.md#what-is-a-tokenizer)
-- How does a model represent meaning numerically? [🔗](./episode-05-how-machines-represent-meaning.md#from-token-ids-to-learned-vectors)
+- How are tokens different from words?
+- How does a model represent meaning numerically?
 - How does instruction tuning turn a base model into a helpful assistant?
 - How do web search and retrieval reduce, but not eliminate, hallucinations?
 - How does RAG retrieve the right private documents before generating an answer?

@@ -74,3 +74,7 @@ venv.bak/
 .env.local
 *.log
 
+# Local-only Copilot customizations (never commit)
+.github/agents/notes-creator.agent.md
+.github/agents/notes-reviewer.agent.md
+
