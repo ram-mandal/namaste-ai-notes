@@ -62,6 +62,8 @@ The *how* of that prediction is the subject of this episode. The machine that do
 | **Transformer** | The *architecture* — the specific neural network design that runs behind modern LLMs. This is the hero of the story. |
 
 > ⚠️ **GPT is not just ChatGPT.** OpenAI popularized the name with "ChatGPT," so people often use "GPT" to mean OpenAI's product. But *every* modern LLM — Gemini, Grok, Claude, Llama — is a GPT in the technical sense: a Generative Pre-trained Transformer. The name is a general architecture, not a brand.
+>
+> 🚗 **Why the confusion?** OpenAI was the first to ship a chat assistant to the public and named it **ChatGPT** — a first-mover advantage. Think of a car company called "Drive Car": people start using the company name to mean *any* car, even though "car" is a general word. That is what happened here — "GPT" got mentally reserved for OpenAI, even though it is not a trademark and technically describes every modern LLM.
 
 ### Why "Transformer" matters
 
@@ -82,6 +84,8 @@ That single sentence is the whole idea. The rest of this episode unpacks it.
 
 📄 The Transformer was introduced in a 2017 research paper titled **"Attention Is All You Need"** by a team of researchers from Google (Google Brain and Google DeepMind) and the University of Toronto. The paper is short on the number of new moving parts and enormous in its impact: essentially every LLM you use today is built on the architecture it describes.
 
+> 🌍 **Fun fact:** the 2017 paper was not written for chatbots. It was introduced to improve **machine translation** (translating text from one language to another). The researchers did not set out to build ChatGPT — they built a better way to process sequences, and that same idea later scaled into the LLMs we use every day.
+
 You can read the original paper here:
 
 - 📄 [Attention Is All You Need (Vaswani et al., 2017) — NeurIPS 2017](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
@@ -92,6 +96,8 @@ You can read the original paper here:
 > 1. **Drop the recurrence.** Instead of processing tokens one-by-one (RNN style), process the entire sequence in parallel.
 > 2. **Attention is the whole game.** The model's ability to relate tokens to each other comes entirely from the attention mechanism — hence the title.
 > 3. **Stack identical blocks.** The model is just many copies of the same block (attention + feed-forward) stacked on top of each other. More blocks = more capacity.
+
+> 📌 **The modern Transformer is not exactly the 2017 one.** The architecture used in today's LLMs is a refined descendant of the original paper — same core ideas (attention, stacked blocks, parallel processing), but with tweaks made over the years. So if a diagram you see online looks slightly different from the paper, that is normal.
 
 The paper's title is a hint about what matters most: **attention**. That is the heart of the architecture, and the next section explains why.
 
@@ -151,7 +157,7 @@ The token **bank** is the same in both sentences, but the surrounding tokens are
 
 ### How it is computed (the intuition, not the math)
 
-Under the hood, self-attention turns each token's vector into three things — a **Query**, a **Key**, and a **Value** — and then:
+Under the hood, self-attention turns each token's vector into three things — a **Query** (Q), a **Key** (K), and a **Value** (V) — and then:
 
 1. Each token's **Query** is compared against every other token's **Key** to produce a relevance score.
 2. The scores are normalized (with a step called **softmax**) into weights that add up to 1.
@@ -160,6 +166,25 @@ Under the hood, self-attention turns each token's vector into three things — a
 So a token's updated vector is a blend of the whole sentence, weighted by what it decided to pay attention to. That is the entire mechanism in one breath. (The [code walkthrough](./episode-06/nanogpt-code-walkthrough.md) shows the actual lines that do this.)
 
 > 🔒 **Causal** (or "masked") attention: in a language model that predicts the *next* token, a token is only allowed to attend to tokens **at or before** its position — never to future tokens. Otherwise the model could "cheat" by peeking at the answer. This is why the diagram says *multi-head, **causal** self-attention.*
+
+### What the mask looks like: a triangle
+
+🔺 Because each token can only look at itself and the tokens before it, the attention scores form a **lower-triangular** matrix — everything above the diagonal is zeroed out. For the sentence *"I went to the bank to deposit money"*:
+
+| attending ↓ / seen → | I | went | to | the | bank | to | deposit | money |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **I** | ✓ | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| **went** | ✓ | ✓ | 0 | 0 | 0 | 0 | 0 | 0 |
+| **to** | ✓ | ✓ | ✓ | 0 | 0 | 0 | 0 | 0 |
+| **the** | ✓ | ✓ | ✓ | ✓ | 0 | 0 | 0 | 0 |
+| **bank** | ✓ | ✓ | ✓ | ✓ | ✓ | 0 | 0 | 0 |
+| **to** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 0 | 0 |
+| **deposit** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 0 |
+| **money** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+The zeros above the diagonal are the mask doing its job. (In the [bbycroft.net/llm](https://bbycroft.net/llm) visualization you can literally watch this triangle fill in.)
+
+> 💡 **"But how does *bank* know about *money* if it can't see the future?"** It doesn't — and that is fine. When the model processes **bank**, it only sees *I went to the*. But when it later processes **money**, *money* looks back and picks up its relationship with **bank**. The meaning is built up token by token, each one absorbing what came before. So the connection is one-directional in time, but the whole sentence still ends up coherent.
 
 </div>
 </details>
@@ -176,7 +201,7 @@ So a token's updated vector is a blend of the whole sentence, weighted by what i
 
 Without attention, the Transformer has no way to relate words to each other, and without the Transformer, modern LLMs do not exist. Attention is the beating center of the whole thing.
 
-The course uses a vivid analogy to make this stick: just as, in the image of Lord Hanuman, Lord Ram is said to reside in his heart, **attention resides in the heart of the Transformer.** The point is not religious — it is a memory hook for the idea that attention is the innermost, most essential part.
+A vivid analogy makes this stick: just as, in the image of Lord Hanuman, Lord Ram is said to reside in his heart, **attention resides in the heart of the Transformer.** The point is not religious — it is a memory hook for the idea that attention is the innermost, most essential part.
 
 ```mermaid
 flowchart TB
@@ -203,6 +228,8 @@ flowchart TB
 
 🔬 Now let's open the "brain" and follow a single forward pass, matching the boxes in the [architecture diagram](#how-to-visualize).
 
+> 🧭 **Inference, not training.** Everything in this episode is **inference** — the model is *already trained*, and we are just watching it produce an output (predict the next token). *How* the model got trained in the first place — how those numbers learned their values — is the subject of [Episode 07: Sharpening the Brain](./episode-07-sharpening-the-brain.md).
+
 ### Step 1 — Tokens become vectors (embeddings)
 
 The model does not understand text; it understands numbers. Each token ID is looked up in an **embedding table** to get a vector (a list of numbers). This was covered in depth in [Episode 05](./episode-05-how-machines-represent-meaning.md).
@@ -222,9 +249,11 @@ The combined vectors enter a stack of identical **Transformer blocks**. Each blo
 1. **Multi-head causal self-attention** — the tokens talk to each other (see the [attention section](#attention-and-self-attention)). "Multi-head" means this happens several times in parallel, each "head" free to learn a different kind of relationship (grammar, reference, topic, etc.).
 2. **Feed-forward network (MLP)** — a small neural network applied to each token *independently*, letting the model do non-linear processing of what it just learned.
 
+A clean way to remember the split: **attention lets tokens communicate with each other; the feed-forward network lets each token "think" on its own** about what it just heard. Internally, the feed-forward network *expands* the token's vector into a wider space (more numbers) and then *contracts* it back — a little round trip that enriches the representation before it moves on.
+
 Two important details make these blocks stable and powerful:
 
-- **Layer Norm** — before each part, the vectors are normalized (their values are rescaled to a consistent range). This keeps the numbers well-behaved as they flow through many layers.
+- **Layer Norm** — before each part, the vectors are normalized (their values are rescaled to a consistent range). This keeps the numbers well-behaved as they flow through many layers. In practice it rescales each vector using its **mean** and **standard deviation**, then applies two small learnable parameters (often called **γ** and **β** — a weight and a bias) so the model can tune the result. Those learnable parameters are part of what gets trained, which we cover in [Episode 07](./episode-07-sharpening-the-brain.md).
 - **Residual (skip) connections** — the input to each part is *added back* to its output (the `⊕` symbols in the diagram). This lets information flow straight through the network and makes training deep stacks possible.
 
 ```mermaid
@@ -246,7 +275,7 @@ flowchart TB
 
 ### Step 4 — Turn the final vector into probabilities
 
-After the last block, one more **Layer Norm** is applied. Then a **linear** layer projects each token's vector out to a number for *every* token in the vocabulary (tens of thousands of numbers). Finally, **softmax** converts those raw numbers into a probability distribution that adds up to 1.
+After the last block, one more **Layer Norm** is applied. Then a **linear** layer projects each token's vector out to a number for *every* token in the vocabulary (tens of thousands of numbers). These raw, un-normalized numbers are called **logits** — they are hard to interpret directly. Finally, **softmax** converts those logits into a probability distribution that adds up to 1, so each token in the vocabulary gets a share (a "percentage") of the total.
 
 ```text
 "The pizza is" -> softmax -> { ready: 0.75, hot: 0.68, delicious: 0.40, ... potato: 0.01, ... }
@@ -254,7 +283,9 @@ After the last block, one more **Layer Norm** is applied. Then a **linear** laye
 
 ### Step 5 — Pick the next token and repeat
 
-The model samples the next token from that probability distribution (it does not always take the single highest one — sampling adds variety). The chosen token is appended, and the **entire** sequence runs through the pipeline again to predict the token after that. A full stop is just another token, so the model can "decide" to end the sentence the same way it decides anything else.
+The model samples the next token from that probability distribution (it does not always take the single highest one — sampling adds variety). The chosen token is appended, and the **entire** statement — not just the last word — runs through the pipeline again to predict the token after that. This whole input is what we call the **context**: the model always sees the full sentence so far, which is why it can keep the response coherent. A full stop is just another token (even a space is a token), so the model can "decide" to end the sentence the same way it decides anything else.
+
+> 🎲 **Why not always the top pick?** The vocabulary is large — on the order of hundreds of thousands of tokens — and many candidate words end up with very similar high probabilities. So the model uses a sampling step over the top candidates rather than blindly taking the single highest one, which keeps the output natural and varied.
 
 > 🧠 **The whole response is this loop, repeated:** embed → attend → feed-forward → probabilities → pick a token → repeat. It looks magical, but it is the same small set of operations running over and over.
 
@@ -304,8 +335,12 @@ The little circles with a plus sign are **residual connections**. They mean: *"a
 
 The diagram is a still frame. To watch the data actually flow through a real model, try the interactive visualizations:
 
-- 🌐 **[bbycroft.net/llm](https://bbycroft.net/llm)** — an interactive 3D visualization of a GPT model. You can watch tokens move through the embedding, attention, and feed-forward layers in real time. (This is the source of the diagram above.)
+- 🌐 **[bbycroft.net/llm](https://bbycroft.net/llm)** — an interactive 3D visualization of a GPT model. You can watch tokens move through the embedding, attention, and feed-forward layers in real time. (This is the source of the diagram above.) It runs a **nanoGPT** — a deliberately *small* version of GPT with far fewer numbers than a real LLM (whose vectors have hundreds of thousands of values) — so the math stays easy to follow.
 - 📺 **[Andrej Karpathy — "Let's build GPT from scratch"](https://www.youtube.com/watch?v=kCc8FmEb1nY)** — builds a tiny GPT in code, which pairs perfectly with the [code walkthrough](./episode-06/nanogpt-code-walkthrough.md).
+
+### Same architecture, just bigger
+
+📈 The bbycroft.net/llm tool can switch between model sizes, and it is a humbling thing to watch: **nanoGPT → GPT-2 → GPT-3** are the *same* architecture, just with more Transformer blocks, more heads, and bigger vectors. The tiny nanoGPT is barely a speck next to GPT-2, and GPT-2 is a speck next to GPT-3. The math is identical — it is simply repeated far more times and at a far larger scale. That is the whole story of "scaling": same bricks, more of them.
 
 </div>
 </details>
@@ -327,7 +362,20 @@ The diagram is a still frame. To watch the data actually flow through a real mod
 
 I have written a line-by-line walkthrough of the important parts of `model.py` (the embedding, the attention, the Transformer block, and the final output) so you can map the code directly onto the diagram:
 
-👉 **[Episode 06 — nanoGPT Code Walkthrough](./episode-06/nanogpt-code-walkthrough.md)**
+👉 **[Episode 06 — nanoGPT Code Walkthrough](./episode-06/nanogpt-code-walkthrough.md)
+
+> 💪 **The code is easier than it looks.** All of that intimidating architecture fits in a few hundred lines of readable Python — nanoGPT's `model.py` is only a few hundred lines, and GPT-2's core `model.py` is even shorter. The *research* (figuring out the architecture) is the hard part; the *code* that implements it is straightforward. You do not need to be a math genius to read it.
+
+### How to actually read a research paper
+
+📚 If you want to go deeper than this episode, here is a practical method for tackling a paper like *Attention Is All You Need* (it is only ~15 pages, most of it references):
+
+1. **Read it slowly, line by line.** Research papers are information-dense — missing one sentence can cost you the whole thread. Do not skim.
+2. **Look up every unknown term.** If a word like *supervised learning* or a dataset name is new, pause and look it up, then come back.
+3. **Summarize it with an LLM, then check yourself.** Feed the paper to ChatGPT/Claude and ask for a plain-language summary. Compare it against your own reading — if they match, your understanding is on track.
+4. **Ask it to quiz you.** Have the LLM generate questions from the paper and answer them. This is a fast way to find the gaps in your understanding.
+
+> ⏳ **Give it time.** A 15-page paper can take days or weeks to truly absorb, and the researchers spent years on the work behind it. Spending a long time on a short paper is completely normal and worth it.
 
 </div>
 </details>

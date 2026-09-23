@@ -660,13 +660,18 @@ The part that keeps clicking for me is how *un-magical* it is. There is no memor
 
 ## Key Takeaways
 
-- **Learning = adjusting parameters** — repeated optimization (predict → loss → backprop → gradients → update) run billions of times until the numbers are shaped just right. [🔗](#what-learning-means)
-- **Parameters are just numbers** (weights and biases) in the embeddings, attention, layer norm, and feed-forward layers — they don't store knowledge, they hold patterns learned from data. [🔗](#parameters)
+- **Learning = adjusting parameters** so the model's next-token predictions get better. [🔗](#what-learning-means)
+- **Parameters are just numbers** (weights and biases) living in the embeddings, attention, layer norm, and feed-forward layers. [🔗](#parameters)
+- **Parameters don't store knowledge** — they are stateless numbers with patterns learned from data. [🔗](#do-parameters-store-knowledge)
 - **The loss function** turns "how wrong was the prediction?" into a single number: small loss = good, large loss = bad. [🔗](#loss-function)
-- **Backpropagation** works backward to find how each parameter affects the loss (it does *not* update the weights); **gradient descent** then takes the step, sized by the **learning rate**. [🔗](#backpropagation)
+- **Backpropagation** works backward from the error to find how each parameter affects the loss — it does *not* update the weights. [🔗](#backpropagation)
+- **Gradients** say which way to move each parameter; **gradient descent** takes the step, sized by the **learning rate**. [🔗](#gradient-descent)
 - **Training changes the model; inference just uses it.** Training is expensive and slow; inference is one fast pass. [🔗](#training-vs-inference)
 - **Generalization** = performing well on unseen data. **Overfitting** = memorizing training data and failing on new examples. [🔗](#generalization)
 - **Self-supervised learning** needs no labels — the next token in the data is the target. [🔗](#self-supervised)
+- **Learning is repeated optimization:** predict → loss → backprop → gradients → update, run billions of times. [🔗](#key-idea)
+- **The model learns progressively:** word sequences → grammar → context → long-range relationships. [🔗](#progressive-learning)
+- **Key terms to know:** dataset, sample, batch, training step, forward pass, loss, backprop, gradient, learning rate, context window. [🔗](#key-terms)
 
 ## Questions / Things to Explore
 

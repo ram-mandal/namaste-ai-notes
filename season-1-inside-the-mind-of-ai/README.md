@@ -16,7 +16,7 @@
 | 04 | [The Secret Language of LLMs](./episode-04-the-secret-language-of-llms.md) | Tokens, token IDs, subwords, context windows, and prompt cost | ✅ |
 | 05 | [How Machines Represent Meaning](./episode-05-how-machines-represent-meaning.md) | Vectorization, embeddings, dimensions, semantic similarity, and context | ✅ |
 | 06 | [The Computational Brain of Machines](./episode-06-the-computational-brain-of-machines.md) | GPT, the Transformer, attention, self-attention, and the full forward pass (+ [nanoGPT code walkthrough](./episode-06/nanogpt-code-walkthrough.md)) | ✅ |
-| 07 | [Sharpening the Brain](./episode-07-sharpening-the-brain.md) | Training: parameters, loss, backpropagation, gradients, gradient descent, and the training loop | ✅ |
+| 07 | [Sharpening the Brain](./episode-07-sharpening-the-brain.md) | Training, parameters, loss, backpropagation, gradient descent, and generalization | ✅ |
 | 08 | From a Base Model to an AI Assistant | _coming soon_ | ⬜ |
 | 09 | Can AI Really Think? | _coming soon_ | ⬜ |
 
