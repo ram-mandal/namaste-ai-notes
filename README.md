@@ -146,6 +146,20 @@ These notes are a living document — your feedback makes them better. 🙏
 - 📝 **[Contributing](CONTRIBUTING.md)** — How to help improve these notes
 - 📄 **[License](LICENSE)** — MIT License
 
+## About the Course & Attribution
+
+These notes are **supplementary learning material** for the [**Namaste AI**](https://namastedev.com/learn/namaste-ai) course created by **[Akshay Saini](https://www.linkedin.com/in/akshaymarch7/)**.
+
+**Course Credit:** All course content, structure, and teaching methodology are © Namaste AI by Akshay Saini.  
+**Notes & Organization:** Compiled and maintained by [Ram Mandal](https://www.linkedin.com/in/rvmandal/) with community contributions.  
+**License:** Notes are shared under MIT license for educational purposes. Always refer to the [official course](https://namastedev.com/learn/namaste-ai) for authoritative course content.
+
+**How to use these notes properly:**
+1. Watch the [official course videos](https://namastedev.com/learn/namaste-ai)
+2. Use these notes as a reference and reinforcement tool
+3. Make your own notes alongside the course
+4. Refer back to the official course if anything is unclear
+
 ## Learning Philosophy
 
 > **Slow, Intentional Learning Over Quick Consumption**
