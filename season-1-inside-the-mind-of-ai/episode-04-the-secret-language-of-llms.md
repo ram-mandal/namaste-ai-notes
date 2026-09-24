@@ -106,7 +106,6 @@ Another tokenizer might use completely different numbers for the same strings. T
 Want to see tokenization in action? These online tools let you paste text and watch it convert to tokens:
 
 - **[OpenAI Tokenizer](https://platform.openai.com/tokenizer)** — See how OpenAI's models tokenize your text. Shows token IDs and counts. Great for experimenting with ChatGPT tokenization.
-- **[Tiktokenizer](https://tiktokenizer.vercel.app/)** — A visual tokenizer for OpenAI models. Paste text and see tokens highlighted with their IDs.
 - **[Hugging Face Tokenizers](https://huggingface.co/spaces)** — Search for tokenizer demos to experiment with different model tokenizers (BERT, GPT-2, etc.).
 
 Experiment with:
