@@ -1,6 +1,8 @@
 # Contributing to Namaste AI Notes
 
-Thank you for your interest in improving these notes! 🙏 Whether it's a typo, a clearer explanation, a new section, or an idea you'd like to share, your contributions are welcome and appreciated.
+Thank you for your interest in improving these **AI learning notes**! 🙏 Whether it's a typo, a clearer explanation, or a new idea, your contributions are welcome.
+
+These notes cover **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. They do **not** include deep ML math, neural networks, or model training.
 
 ## How to Contribute
 
@@ -11,81 +13,30 @@ Thank you for your interest in improving these notes! 🙏 Whether it's a typo, 
 
 ### Want to Add Content?
 
-- **Before you start**, open an issue to discuss your idea — this prevents overlapping work and ensures your contribution aligns with the repo's scope.
-- Follow the [Episode Structure Guide](#episode-structure-guide) below to maintain consistency.
+- **Before you start**, open an issue to discuss your idea — this prevents overlapping work and keeps contributions aligned with the repo's scope.
+- **Follow the existing episode files as a template** — consistency matters more than invention.
 
-### Scope
+## Style & Tone
 
-This repo covers **high-level AI** — LLMs, prompt engineering, RAG, AI agents, MCP, and AI engineering. It does **not** include deep ML math, neural networks, or model training.
+- **Conversational** — use "you" and "we"
+- **Simple language** — explain like talking to a beginner; no jargon without explanation
+- **Explain why first** — before jumping to how
+- **No redundancy** — don't repeat the same point across sections
+- **No rushing** — emphasize slow, intentional learning
 
-## Episode Structure Guide
+## Before Submitting
 
-All episodes follow a consistent format. See [.github/copilot-instructions.md](.github/copilot-instructions.md) for the full guide, but here are the essentials:
-
-### Filename & Frontmatter
-
-- Filename: `episode-NN-[descriptive-slug].md` (e.g., `episode-01-welcome-to-namaste-ai.md`)
-- Start with season blockquote and H1 title:
-  ```markdown
-  > **Season X — <Season Name>** [🔗](./README.md)
-  
-  # Episode XX: <Title>
-  
-  > One-line summary with core keywords (LLM, RAG, AI agents, etc.)
-  ```
-
-### Content Sections
-
-Include **only** the sections that make sense for your episode (don't force all of them):
-
-- 🎯 Episode Overview
-- 🧠 Key Concepts
-- 🔍 Deep Dive
-- 💡 My Mental Model
-- 🧩 Visual Explanation
-- 📝 Key Takeaways
-- 🤔 Questions / Things to Explore
-- 🛠️ Practical / Engineering Connection
-- 🧪 Experiments / Projects
-- 🔗 Resources
-- ➡️ Next
-
-### Key Rules
-
-- **Accuracy first** — verify all facts and links in existing files; never invent details.
-- **Simple language** — explain like talking to a beginner; avoid jargon without explanation.
-- **No redundancy** — don't repeat the same point across sections.
-- **Visual explanations** — max one diagram per episode (Mermaid preferred); don't force one if not needed.
-- **Keyword-rich summaries** — the one-line summary should include core topic keywords (e.g., "How do LLMs understand context?" not "Understanding LLMs").
-- **Descriptive image alt text** — all images must have meaningful alt text.
-- **Cross-links** — link related episodes where relevant (improves discoverability).
-- **End with navigation** — every episode ends with a prev/next table.
-
-### Before Submitting
-
-- [ ] Episode title is clear and simple (5–7 words)
-- [ ] Full season name appears on first line in blockquote with link to season README
-- [ ] One-line summary contains core keywords
-- [ ] Only relevant sections included (no empty placeholders)
-- [ ] Course content (Key Concepts, Deep Dive) is neutral; personal sections (My Mental Model, Questions) use first person
-- [ ] Visual explanation included or explicitly noted as not needed
+- [ ] One-line summary contains core keywords (LLM, RAG, AI agents, etc.)
+- [ ] Course content is neutral; personal sections use first person
 - [ ] All images have descriptive alt text
 - [ ] Related episodes cross-linked in prose
 - [ ] No broken links or typos
 - [ ] Season README episode table updated (status column)
 - [ ] Root README episode index updated with new episode link
 
-## Style & Tone
-
-- **Conversational** — use "you" and "we"
-- **Explain why first** — before jumping to how
-- **Active voice, short sentences** — max 2 lines per sentence
-- **Real-world analogies** — before code or formulas
-- **No rushing** — emphasize slow, intentional learning
-
 ## Questions?
 
-Open an issue on [GitHub](https://github.com/ram-mandal/namaste-ai-notes/issues) or reach out! Every contribution—no matter how small—helps these notes grow. 🌱
+Open an issue on [GitHub](https://github.com/ram-mandal/namaste-ai-notes/issues) or reach out! Every contribution—no matter how small—helps these AI notes grow. 🌱
 
 ---
 
