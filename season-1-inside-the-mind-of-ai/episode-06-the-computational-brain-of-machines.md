@@ -19,7 +19,7 @@
 | What is attention? | A mechanism that lets each token look at the other tokens and decide which ones matter most |
 | What is self-attention? | Attention where tokens attend to *other tokens in the same sequence* — no human tells it what to focus on |
 | What is the "heart" of a Transformer? | Attention. Without it, the architecture has no way to relate words to each other |
-| What does the model output? | A probability for every token in the vocabulary; the next token is chosen from those probabilities |
+| What does the model output? | A probability score for every token it knows — then it picks the next one |
 | Where can I see the real code? | [nanoGPT](https://github.com/karpathy/nanogpt) and the [GPT-2 codebase](https://github.com/openai/gpt-2/tree/master) — see the [code walkthrough](./episode-06/nanogpt-code-walkthrough.md) |
 
 </div>
@@ -34,7 +34,7 @@
 
 ---
 
-<details id="what-is-gpt" open style="margin-bottom: 1rem;">
+<details id="what-is-gpt" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧠 What Is GPT, Really?</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 

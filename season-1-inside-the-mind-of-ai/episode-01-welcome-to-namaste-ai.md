@@ -33,7 +33,7 @@
 
 ---
 
-<details id="course-roadmap" open style="margin-bottom: 1rem;">
+<details id="course-roadmap" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🗺️ The Course Roadmap</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 

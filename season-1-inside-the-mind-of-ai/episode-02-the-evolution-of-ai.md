@@ -35,22 +35,13 @@
 
 ## Fast Timeline
 
-| Year | Milestone | Why it matters |
-|:---:|:---|:---|
-| 1950 | Alan Turing asks "Can machines think?" | Starts the modern AI question |
-| 1955 | John McCarthy coins "Artificial Intelligence" | Gives the field its identity |
-| 1950s-1980s | Rule-based AI era | Systems relied on human-written rules (expert systems, if-else logic) |
-| 1997 | IBM Deep Blue beats Garry Kasparov | Restores public belief in machine intelligence |
-| 2000s | Deep Learning era gains momentum | Neural networks + better compute/data unlock modern perception systems |
-| 2012 | AlexNet + ImageNet breakthrough | Deep learning leap in computer vision |
-| 2016 | AlphaGo beats Lee Sedol in Go | Shows AI can handle highly complex strategy, not just brute-force chess search |
-| 2017 | "Attention Is All You Need" (Transformers) | Foundation for modern LLMs |
-| 2022+ | Chat-first LLM adoption and agentic wave | AI moves from labs into daily workflows |
-| 2025 | Agentic AI acceleration | AI shifts from answering prompts to planning and executing tasks |
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-The-Evolution-of-AI-Timeline.png" alt="Timeline of AI evolution from 1950 to 2025, showing the shift from rule-based AI to deep learning, transformers, LLMs, and agentic AI" width="100%">
+
+> 70+ years in one visual — from hand-written rules → learned patterns → attention → language → autonomous action.
 
 ---
 
-<details id="what-is-ai" open style="margin-bottom: 1rem;">
+<details id="what-is-ai" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧩 What is Artificial Intelligence?</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
@@ -235,6 +226,8 @@ In **1997**, IBM's chess-playing computer **Deep Blue** defeated **Garry Kasparo
 
 This might not sound like much today. But back then? It was **seismic**.
 
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-The-Illusion-of-Intelligence_ Kasparov-vs-Deep-Blue.png" alt="The Illusion of Intelligence: Kasparov (human) used intuition and understanding, while Deep Blue (machine) used mathematics and massive search — same behavior, very different mechanisms" width="100%">
+
 #### Who Was Garry Kasparov?
 
 **Kasparov** wasn't just any chess champion. He was:
@@ -248,28 +241,9 @@ So when a machine defeated the world's greatest human at the world's greatest ga
 
 It was the first time in history a machine had beaten a human in a competition. The world took notice.
 
-#### The Buzz (and the Reality Check) 🤓 vs. 🤖
-
-Deep Blue went **viral**. Media coverage exploded. Everyone was talking about intelligent machines and AI taking over.
-
-But here's the truth that researchers quietly pointed out: **Deep Blue wasn't really "thinking."**
-
-Deep Blue worked by:
-- Analyzing **permutations and combinations** of every possible chessboard position
-- Using **pure mathematics** to calculate which move would be best
-- Playing by brute force — not by understanding chess like Kasparov did
-
-In other words:
-- **Kasparov:** Used intuition, experience, creativity, real intelligence
-- **Deep Blue:** Used massive, selective search — not human-like understanding
-
 #### The Illusion of Intelligence
 
-Here's the fascinating part: **Deep Blue didn't need to be actually intelligent to *look* intelligent.**
-
-From the outside, when a machine defeated the world's greatest player, everyone assumed it must be thinking. It must be intelligent. It must understand the game.
-
-But inside, it was just running mathematics.
+Deep Blue went **viral** — media coverage exploded and everyone assumed the machine must be *thinking*. But researchers quietly pointed out the truth: **Deep Blue wasn't really "thinking."** The image above captures the contrast — from the outside, both "analyze the position, think for a while, and make a strong move," but inside, Kasparov used intuition and understanding while Deep Blue ran mathematics and massive search.
 
 > This raises a question that still matters today: **If something behaves intelligently, does it matter if it's not actually thinking?** Is the illusion of intelligence the same as intelligence itself?
 
@@ -331,6 +305,8 @@ When you use ChatGPT or code with Copilot today, you're standing on 70+ years of
 <summary><strong style="font-size: 1.25em;">📚 Why Machine Learning became necessary</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-AI-Evolution-Rules-to-Learning-Patterns.png" alt="The shift from rule-based AI (humans write if-else rules) to machine learning (machines learn patterns from labeled examples)" width="100%">
+
 ### The Era of Rule-Based AI (1950s–1980s) 📋
 
 📋 For the first 30 years of AI, there was only one way to make a machine "intelligent": **write rules**.
@@ -339,14 +315,6 @@ Intelligence was just a collection of if-else statements. Nothing more.
 
 #### Real-World Examples
 
-**Spam Detection:**
-Here's how you'd build a spam filter:
-```
-if email contains "free" → spam
-if email contains "$" → spam
-if email contains "lottery" → spam
-```
-
 **Medical Diagnosis:**
 Here's how you'd build a flu detector:
 ```
@@ -354,18 +322,11 @@ if patient has fever AND cold AND body ache → likely flu
 if patient has headache AND nausea → likely something else
 ```
 
-These were called **Expert Systems** — human experts (doctors, engineers, specialists) would sit down and write hundreds or thousands of rules, and the machine would blindly follow them.
+These were called **Expert Systems** — human experts (doctors, engineers, specialists) would sit down and write hundreds or thousands of rules, and the machine would blindly follow them. (The spam-filter example in the image above is the classic case.)
 
 #### The Fatal Flaw 🚨
 
-But there's a problem: **rules can never capture every edge case.**
-
-For your spam detector, what if someone writes:
-- "FR€€" (with special characters)
-- "F-R-E-E" (with hyphens)
-- "free!!!" (with exclamation marks)
-
-How many variations do you write rules for? Hundreds? Thousands? **Infinite?**
+But there's a problem: **rules can never capture every edge case.** As the image shows, spammers keep finding new ways to write the same thing — "FR€€", "F-R-E-E", "free!!!" — and the number of rules explodes.
 
 > If you try to cover every case with if-else statements, you'll write rules forever and still miss something.
 
@@ -393,11 +354,7 @@ Machine: "OK, I'll learn the patterns and figure it out myself"
 
 #### How Machine Learning Works
 
-For the spam detector:
-- You collect **1 million emails** labeled as "spam" or "not spam"
-- You show these to the machine
-- The machine **learns patterns** — "spam emails tend to have certain words, certain structures, certain characteristics"
-- Now when a new email comes in, the machine can say: "Based on what I've learned, this looks 85% like spam"
+For the spam detector (shown in the image above): you collect ~1 million labeled emails, the machine learns the patterns, and a new email comes back as "85% spam."
 
 For distinguishing between cats and dogs:
 - You collect **1 million images** labeled "cat" or "dog"
@@ -549,41 +506,19 @@ This was when the **AI hype cycle started rising again** — and this time, it h
 
 🧵 Before Transformers, AI struggled badly with long language context.
 
-### Why NLP Was Hard
-
-For years, language models used methods like:
-- **Bag of Words** — count words, ignore order
-- **N-grams** — look at 2-3 words together
-- **RNN/LSTM** — better memory, but still weak on very long context
-
-These methods helped, but they often lost meaning in long paragraphs.
-
-Example: In a long sentence, when you see "he," who is "he"? The model often forgot earlier context.
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-2017_Attention-Transformed-Language.png" alt="2017 Attention changed language: from sequential/local context (Bag of Words, N-grams, RNN/LSTM) to Transformer global attention" width="100%">
 
 ### 2017 — The Breakthrough
 
-🔁 In 2017, the paper **"Attention Is All You Need"** introduced the **Transformer** architecture.
+🔁 In 2017, the paper **"Attention Is All You Need"** introduced the **Transformer** architecture. As the image shows, instead of reading text step-by-step and forgetting older tokens (the way Bag of Words, N-grams, and RNN/LSTM did), the model learns to **attend** to the most relevant words across the whole sentence — no matter how far apart they are.
 
-Key idea:
-- Instead of reading text step-by-step and forgetting older tokens,
-- the model learns to **attend** to the most relevant words across the whole sentence (or document window).
-
-That changed everything:
-- Better long-context understanding
-- Faster parallel training on GPUs
-- Stronger language quality
+That changed everything: better long-context understanding, faster parallel training on GPUs, and stronger language quality.
 
 > If Deep Learning gave AI "eyes" for images, Transformers gave AI a much better "brain" for language.
 
 ### Why This Was a Turning Point
 
-Transformers became the foundation for modern AI systems:
-- GPT family
-- Claude-like models
-- Gemini-like models
-- Most modern text, code, and multimodal assistants
-
-Without Transformers, the current LLM wave would not exist in this form.
+Transformers became the architectural foundation for modern AI systems — the GPT family, Claude-like models, Gemini-like models, and most modern text, code, and multimodal assistants. Without Transformers, the current LLM wave would not exist in this form.
 
 </div>
 </details>
@@ -654,22 +589,11 @@ So adoption is global, but frontier model creation is concentrated.
 
 ### From "Answering" to "Doing"
 
-Classic chat AI answers your question.
+Classic chat AI answers your question ("Here is the answer"). 🧭 **Agentic AI** goes one step further: it can plan tasks, call tools, and execute multi-step workflows toward a goal — moving from "Here is the answer" to "I completed the task."
 
-🧭 **Agentic AI** goes one step further: it can plan tasks, call tools, and execute multi-step workflows toward a goal.
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-02/episode-02-Agentic-AI-Workflow-Infographic.png" alt="Agentic AI workflow: a 5-step loop of goal understanding, planning, tool use, memory/context, and iteration, plus multi-agent orchestration and the need to keep human judgment" width="100%">
 
-That means the model can move from:
-- "Here is the answer"
-- to "I completed the task"
-
-### What Makes an AI Agent "Agentic"
-
-A practical agent usually combines:
-- **Goal understanding** (what outcome you want)
-- **Planning** (task breakdown)
-- **Tool use** (APIs, browser, code tools, files)
-- **Memory/context** (state across steps)
-- **Iteration** (check, refine, retry)
+The image above shows the full picture: the **5-step agent loop** (goal understanding → planning → tool use → memory/context → iteration), the likely next step of **multi-agent orchestration** (planner, researcher, coder, tester, reviewer working like a small digital team), and the caution to **keep human judgment** for high-impact decisions in sensitive domains.
 
 ### Real Use Cases (Already Emerging)
 
@@ -677,26 +601,6 @@ A practical agent usually combines:
 - Prepare reports from multiple data sources
 - Generate, test, and refine code with tool feedback
 - Automate repetitive personal workflows (scheduling, reminders, summaries)
-
-### Multi-Agent Future
-
-A likely next step is **multi-agent orchestration**:
-- one agent plans,
-- one researches,
-- one codes,
-- one tests,
-- one reviews.
-
-Together, they can behave like a small digital team.
-
-### Important Caution
-
-⚠️ Agentic AI can increase productivity a lot, but we should avoid blind automation.
-
-Best practice:
-- offload repetitive tasks,
-- keep human judgment for high-impact decisions,
-- verify outputs in sensitive domains (finance, health, legal, security).
 
 > The goal is not to remove human thinking. The goal is to remove low-value friction so humans can focus on better decisions.
 
@@ -717,8 +621,8 @@ Best practice:
 
 ## Questions / Things to Explore
 
-- How does a model actually learn patterns from examples instead of following hand-written rules?
-- What makes a neural network "deep" compared to earlier machine learning approaches?
+- How does a model actually learn patterns from examples instead of following hand-written rules? [🔗](./episode-07-sharpening-the-brain.md#what-learning-means)
+- What makes a neural network "deep" compared to earlier machine learning approaches? [🔗](./episode-06-the-computational-brain-of-machines.md#inside-the-neural-network)
 - How did the Transformer architecture change what was possible in language modeling? [🔗](./episode-06-the-computational-brain-of-machines.md#attention-is-all-you-need)
 
 ---

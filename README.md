@@ -97,7 +97,7 @@ A: Absolutely! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 5. 🧮 [Episode 5: How Machines Represent Meaning](./season-1-inside-the-mind-of-ai/episode-05-how-machines-represent-meaning.md) — Vectorization, embeddings, and semantic similarity
 6. 🧠 [Episode 6: The Computational Brain of Machines](./season-1-inside-the-mind-of-ai/episode-06-the-computational-brain-of-machines.md) — Transformers, attention, and the forward pass
 7. ⚡ [Episode 7: Sharpening the Brain](./season-1-inside-the-mind-of-ai/episode-07-sharpening-the-brain.md) — Training, loss, backpropagation, and gradient descent
-8. 🚧 Episode 8: From a Base Model to an AI Assistant — _coming soon_
+8. 🤖 [Episode 8: From a Base Model to an AI Assistant](./season-1-inside-the-mind-of-ai/episode-08-from-a-base-model-to-an-ai-assistant.md) — Pre-training, base models, SFT, instruction tuning, and RLHF
 9. 🤷 Episode 9: Can AI Really Think? — _coming soon_
 
 ### Season 2 — AI Native Software Engineer
@@ -139,7 +139,7 @@ These notes are a living document — your feedback makes them better. 🙏
 ## Quick Links
 
 - 🏠 **[Home](README.md)** — You are here
-- 📚 **[Season 1 Episodes](./season-1-inside-the-mind-of-ai/)** — 7 complete episodes
+- 📚 **[Season 1 Episodes](./season-1-inside-the-mind-of-ai/README.md)** — 8 complete episodes
 - 🔨 **[Projects](./projects/README.md)** — Hands-on code and experiments
 - 🔗 **[External Resources](./resources/useful-links.md)** — Curated AI learning links
 - 📖 **[Course](https://namastedev.com/learn/namaste-ai)** — Official course by Akshay Saini
@@ -150,11 +150,12 @@ These notes are a living document — your feedback makes them better. 🙏
 
 These notes are **supplementary learning material** for the [**Namaste AI**](https://namastedev.com/learn/namaste-ai) course created by **[Akshay Saini](https://www.linkedin.com/in/akshaymarch7/)**.
 
-**Course Credit:** All course content, structure, and teaching methodology are © Namaste AI by Akshay Saini.  
+**Course Credit & Gratitude:** Heartfelt thanks to [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/) and [NamasteDev.com](https://namastedev.com) for creating such an exceptional learning experience. All original concepts, curriculum structure, and brilliant teaching methodology are credited to their incredible work.  
 **Notes & Organization:** Compiled and maintained by [Ram Mandal](https://www.linkedin.com/in/rvmandal/) with community contributions.  
 **License:** Notes are shared under MIT license for educational purposes. Always refer to the [official course](https://namastedev.com/learn/namaste-ai) for authoritative course content.
 
 **How to use these notes properly:**
+
 1. Watch the [official course videos](https://namastedev.com/learn/namaste-ai)
 2. Use these notes as a reference and reinforcement tool
 3. Make your own notes alongside the course
@@ -176,4 +177,4 @@ If these notes helped you, please **star the repo** ⭐ to help others find it. 
 
 ---
 
-**Made with 💜 for anyone curious about how AI works.**
+**Made with 💙 for anyone curious about how AI works.**

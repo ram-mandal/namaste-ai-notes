@@ -32,7 +32,7 @@
 
 ---
 
-<details id="from-token-ids-to-learned-vectors" open style="margin-bottom: 1rem;">
+<details id="from-token-ids-to-learned-vectors" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🔢 From Token IDs to Learned Vectors</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
@@ -543,7 +543,7 @@ The map helps find likely connections. I still need to inspect the actual source
 
 ## Questions / Things to Explore
 
-- How does a model adjust embedding-table values during training?
+- How does a model adjust embedding-table values during training? [🔗](./episode-07-sharpening-the-brain.md#embeddings-learned)
 - How does an application choose and test a similarity threshold for retrieval?
 - How do dedicated embedding models differ from language models used for generation?
 - How can a team evaluate retrieval quality across languages, domains, and user groups?

@@ -38,7 +38,7 @@
 
 ---
 
-<details id="what-learning-means" open style="margin-bottom: 1rem;">
+<details id="what-learning-means" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🧠 What Does "Learning" Actually Mean?</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
@@ -685,4 +685,4 @@ The part that keeps clicking for me is how *un-magical* it is. There is no memor
 
 | ← Previous | Next → |
 |:---:|:---:|
-| [Episode 06: The Computational Brain of Machines](./episode-06-the-computational-brain-of-machines.md) | _coming soon_ |
+| [Episode 06: The Computational Brain of Machines](./episode-06-the-computational-brain-of-machines.md) | [Episode 08: From a Base Model to an AI Assistant](./episode-08-from-a-base-model-to-an-ai-assistant.md) |

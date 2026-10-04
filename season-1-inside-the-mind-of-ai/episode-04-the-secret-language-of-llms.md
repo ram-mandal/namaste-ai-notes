@@ -35,7 +35,7 @@
 
 ---
 
-<details id="text-to-token-ids" open style="margin-bottom: 1rem;">
+<details id="text-to-token-ids" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🔤 From Human Text to Token IDs</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 

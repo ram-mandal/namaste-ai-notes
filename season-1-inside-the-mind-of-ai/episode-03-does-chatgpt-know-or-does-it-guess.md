@@ -29,7 +29,7 @@
 
 ---
 
-<details id="search-vs-llm" open style="margin-bottom: 1rem;">
+<details id="search-vs-llm" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🔎 Search Engines vs. LLMs</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
@@ -393,9 +393,9 @@ From the outside, all three look identical — just a number. The interesting pa
 
 - How are tokens different from words? [🔗](./episode-04-the-secret-language-of-llms.md#what-is-a-tokenizer)
 - How does a model represent meaning numerically? [🔗](./episode-05-how-machines-represent-meaning.md#from-token-ids-to-learned-vectors)
-- How does instruction tuning turn a base model into a helpful assistant?
+- How does instruction tuning turn a base model into a helpful assistant? [🔗](./episode-08-from-a-base-model-to-an-ai-assistant.md#supervised-fine-tuning)
 - How do web search and retrieval reduce, but not eliminate, hallucinations?
-- How does RAG retrieve the right private documents before generating an answer?
+- How does RAG retrieve the right private documents before generating an answer? [🔗](./episode-05-how-machines-represent-meaning.md#token-embeddings-text-embeddings-and-limits)
 
 ---
 
