@@ -217,9 +217,7 @@ flowchart LR
 
 ⏳ Training is expensive and is not continuously repeated for every new web page. A model therefore has a **knowledge cutoff**: a point after which its original training does not include new information.
 
-- It may not know about a recent election, product release, or local event.
-- It can state an old answer with confidence if the prompt does not provide newer context.
-- An assistant may use web search or another connected source to answer current questions, but that is a separate tool-assisted path.
+![LLM knowledge cutoff timeline: training data on the left, a hard cutoff wall, and unknown territory on the right bridged by a web search tool](../assets/season-1-inside-the-mind-of-ai/episode-03/episode-03-LLM-Knowledge-Cutoff-Infographic.png)
 
 > A model's stated cutoff date is a property of a particular model or deployment. Do not assume that every model has the same date.
 
@@ -234,14 +232,9 @@ flowchart LR
 
 🗣️ People often use a speaker's tone as evidence. "The answer may be X" feels different from "The answer is definitely X," even when neither statement includes proof. A polished, certain-sounding AI response can create the same effect.
 
+![What you hear vs what you need: a confident-sounding answer (clear grammar, firm tone) is not the same as a verified one (source cited, current, reproducible)](../assets/season-1-inside-the-mind-of-ai/episode-03/episode-03-What-You-Hear-vs-What-You-Need.png)
+
 > **Confidence in language is not confidence in truth.** Do not treat a firm tone, clear grammar, or a detailed explanation as evidence by itself.
-
-### Ask for evidence, not just confidence
-
-- Ask the assistant to separate **facts**, **assumptions**, and **uncertainty**.
-- Ask for sources, then open and evaluate them yourself.
-- Request a web search or retrieval when current information matters.
-- Use a calculator, code execution, or another suitable tool for work that must be exact.
 
 🤷 Sometimes an assistant says "I don't know" because of weak evidence, missing tools, system instructions, assistant training, safety rules, or the wording of the prompt. That response is useful, but it is not a guarantee that the assistant would be right in every other case.
 
@@ -328,13 +321,9 @@ flowchart LR
 
 🧮 This part is not from the course — I looked into it myself after wondering how ChatGPT handles a calculation like **738 × 429**. The same correct answer can come from three different processes:
 
-| How the answer appears | What's actually happening |
-|:---|:---|
-| Memorized | The exact calculation existed somewhere in training data |
-| Computed internally | The model reasons through the steps while generating tokens |
-| Tool-calculated | The model delegates the arithmetic to a calculator or code tool |
+![Three paths to one math answer: a memorized lookup, internal step-by-step computation, and a delegated tool call all converge on 316,602](../assets/season-1-inside-the-mind-of-ai/episode-03/episode-03-Three-Paths,-One-Math-Answer.png)
 
-From the outside, all three look identical — just a number. The interesting part: **using a tool is itself a learned behavior.** The model is not consciously deciding "I don't know this"; it generates a tool call when training and system instructions indicate a tool would help, the same way it generates any other token.
+The interesting part: **using a tool is itself a learned behavior.** The model is not consciously deciding "I don't know this"; it generates a tool call when training and system instructions indicate a tool would help, the same way it generates any other token.
 
 > This reframes the episode's question: an LLM does not just answer. Depending on the task, it can generate an answer directly, or generate a request for another tool to get one.
 
