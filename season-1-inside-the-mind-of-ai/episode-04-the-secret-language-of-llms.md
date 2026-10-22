@@ -601,7 +601,7 @@ The exact strategy is product- and model-dependent. A chat interface may still d
 
 ✂️ A prompt should be as long as the task needs, not as long as possible.
 
-> **Long Prompt! = Better Results?** No — less tokens ↙️
+> **Long Prompt != Better Results?** No — less tokens ↙️
 
 Compare these three requests about JavaScript closures:
 
