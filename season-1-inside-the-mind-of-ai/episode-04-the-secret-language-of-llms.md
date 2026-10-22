@@ -601,19 +601,29 @@ The exact strategy is product- and model-dependent. A chat interface may still d
 
 ✂️ A prompt should be as long as the task needs, not as long as possible.
 
-Compare these requests about JavaScript closures:
+> **Long Prompt! = Better Results?** No — less tokens ↙️
 
-### Short and sufficient
+Compare these three requests about JavaScript closures:
+
+### Example 1 — Short and sufficient
 
 ```text
 Explain closures in JavaScript with one simple example.
 ```
 
-### Long but repetitive
+### Example 2 — Long but repetitive
 
-This version repeats ideas such as “understandable,” “uncomplicated,” “beginner-friendly,” and “easy example.” It uses more tokens but does not add much new direction.
+```text
+I want you to provide an explanation of the concept known as closures
+in the JavaScript programming language. Please ensure that your
+explanation is understandable and not too complicated. Also include an
+example that is simple and easy to follow so that a beginner can
+understand the concept of closures properly.
+```
 
-### Long and relevant
+This version repeats ideas such as “understandable,” “not too complicated,” and “simple and easy to follow.” It uses more tokens but does not add much new direction.
+
+### Example 3 — Long and relevant
 
 ```text
 Explain closures in JavaScript to a beginner who understands functions
@@ -621,7 +631,7 @@ and scope but has never seen lexical environments. Use one example
 involving a counter. Keep it under 250 words.
 ```
 
-The second long prompt adds information that changes the likely response:
+Unlike Example 2, this prompt adds information that changes the likely response:
 
 | Added detail | What it controls |
 |:---|:---|
@@ -635,7 +645,7 @@ The lesson is simple: remove filler and retain information that changes the desi
 
 ### Tokens and API cost
 
-In API-based systems, input and output are generally measured in tokens for billing. More input tokens and more generated tokens can mean more cost. There is no price in this episode because prices vary by provider, model, and time.
+📉 Tokens directly affect API cost. In API-based systems, input and output are generally measured in tokens for billing — more input tokens and more generated tokens can mean more cost.
 
 This makes prompt relevance an engineering concern:
 
