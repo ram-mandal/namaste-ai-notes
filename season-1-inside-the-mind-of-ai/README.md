@@ -18,7 +18,7 @@
 | 06 | [The Computational Brain of Machines](./episode-06-the-computational-brain-of-machines.md) | GPT, the Transformer, attention, self-attention, and the full forward pass (+ [nanoGPT code walkthrough](./episode-06/nanogpt-code-walkthrough.md)) | ✅ |
 | 07 | [Sharpening the Brain](./episode-07-sharpening-the-brain.md) | Training, parameters, loss, backpropagation, gradient descent, and generalization | ✅ |
 | 08 | [From a Base Model to an AI Assistant](./episode-08-from-a-base-model-to-an-ai-assistant.md) | Pre-training, base models, SFT, instruction tuning, human preferences, reward models, and RLHF | ✅ |
-| 09 | Can AI Really Think? | _coming soon_ | ⬜ |
+| 09 | [Can AI Really Think?](./episode-09-can-ai-really-think.md) | Reasoning models, inference-time compute, Chain/Tree/Graph of Thoughts, RLVR, and the limits of "thinking harder" | ✅ |
 
 **Legend:** ✅ complete · 🚧 in progress · ⬜ not started
 

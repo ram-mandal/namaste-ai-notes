@@ -658,11 +658,11 @@ SFT gives the actor their rehearsal script. RLHF is the audience giving standing
 - What is **Direct Preference Optimization (DPO)**, and how does it optimize preferences without training a separate reward model?
 - How do AI labs defend against **prompt injection attacks** that attempt to break system prompt boundaries?
 - What is **constitutional AI**, and how does it use AI-generated critiques instead of direct human feedback (RLAIF)?
-- How do **reasoning models** (like OpenAI o1/o3 or DeepSeek R1) use reinforcement learning on chain-of-thought steps rather than simple response rankings?
+- How do **reasoning models** (like OpenAI o1/o3 or DeepSeek R1) use reinforcement learning on chain-of-thought steps rather than simple response rankings? [🔗](./episode-09-can-ai-really-think.md#rlvr)
 - How does the context window size affect long multi-turn conversations before older turns are truncated? [🔗](./episode-04-the-secret-language-of-llms.md#context-window)
 
 ---
 
 | ← Previous | Next → |
 |:---:|:---:|
-| [Episode 07: Sharpening the Brain](./episode-07-sharpening-the-brain.md) | Episode 09: Can AI Really Think? _(coming soon)_ |
+| [Episode 07: Sharpening the Brain](./episode-07-sharpening-the-brain.md) | [Episode 09: Can AI Really Think?](./episode-09-can-ai-really-think.md) |
