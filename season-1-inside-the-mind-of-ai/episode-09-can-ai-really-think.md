@@ -36,14 +36,14 @@
 <summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem; min-height: 1rem;">
 
-_(Visual notes and revision diagrams will be added here as new illustrations become available.)_
+![Episode 09 visual roadmap: eight panels covering the big question, inference-time compute, Chain/Tree/Graph of Thoughts, the honest limits, how reasoning is learned with RL and RLVR, evaluation, the modern assistant, and an engineer's playbook](../assets/season-1-inside-the-mind-of-ai/episode-09/Can-AI-Really-Think.png)
 
 </div>
 </details>
 
 ---
 
-<details id="the-big-question" style="margin-bottom: 1rem;" open>
+<details id="the-big-question" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">🎯 The Big Question: Can AI Really Think?</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
@@ -63,6 +63,8 @@ _(Visual notes and revision diagrams will be added here as new illustrations bec
 | 2 | *"Write a book on DNA science"* | Can produce a long, detailed book on a very complex topic |
 | 3 | *"What is bigger, 9.11 or 9.9?"* | **Gets it wrong** — says 9.11 is bigger |
 | 4 | *"Print every 3rd character of NAMASTEARTIFICIALINTELLIGENCE"* | **Miscounts** the characters |
+
+![Great at generating, bad at thinking: a model confidently writes books on quantum physics and DNA science, yet fails "9.11 vs 9.9" (comparing decimal digits 11 vs 9) and miscounts every 3rd character of a string](../assets/season-1-inside-the-mind-of-ai/episode-09/AI-Generation-Versus-Reasoning-Infographic.png)
 
 🤯 What really hit me was the contrast. The model can write a whole book on rocket engineering, yet it answers *"9.11 vs 9.9"* incorrectly — it compares the digits *after* the decimal (11 vs 9) instead of understanding the actual value. And it fumbles a simple character-counting task. This is not an old, weak model; it is a recent, very capable one.
 
@@ -245,6 +247,8 @@ Answer: 10 packets
 <summary><strong style="font-size: 1.25em;">🌲 Chain of Thought, Tree of Thought, and Graph of Thoughts</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
+![Chain to Tree to Graph of Thoughts: CoT walks one linear path (one wrong step poisons the rest, bat-and-ball trap: ball = ₹5 not ₹10); ToT branches from a prompt, prunes dead ends, and backtracks; GoT reconnects branches to merge an efficient algorithm with edge-case handling into a better solution](../assets/season-1-inside-the-mind-of-ai/episode-09/Chain-to-Graph-of-Thoughts-Infographic.png)
+
 ### Chain of Thought (CoT) — one linear path
 
 ➡️ **Chain of Thought** broadly refers to producing intermediate reasoning steps *before* arriving at an answer. Instead of jumping from problem to answer, the model walks a single chain:
@@ -292,30 +296,13 @@ The ball costs **₹5**. The mistake happens because we fall for the wording and
 | - Explores several possibilities | - Prunes weak branches |
 | - Scores partial solutions | - Continues the promising branches |
 
-```text
-            Prompt
-        /      |      \
-       A       B       C
-      / \      |     / | \
-     A1  A2   B1    C1 C2 C3
-        / \
-      A21 A22
-```
-
 The model can try approach A, realize it is failing, and **backtrack** to switch to approach C — something a single chain cannot do. Because each step in a chain depends on the previous one, one wrong early step poisons everything after it; a tree lets the model abandon the bad branch and explore a different direction. At the end, it can **evaluate the surviving candidates** (by correctness, execution, or what a human would prefer) and pick the winner.
 
 ### Graph of Thoughts (GoT) — let ideas combine
 
 🕸️ A tree has one remaining limitation: **each branch grows independently** — there is no way for branch A to "talk to" branch C. But real reasoning is sometimes not tree-shaped; two different ideas can *combine*.
 
-**Graph of Thoughts** allows nodes to reconnect and merge. The final output can pick the best sub-solution from *different* branches:
-
-```text
-Approach A  → finds an efficient algorithm (O(n))
-Approach B  → finds an important edge case
-
-Efficient algorithm from A  +  Edge-case handling from B  =  Better solution
-```
+**Graph of Thoughts** allows nodes to reconnect and merge. The final output can pick the best sub-solution from *different* branches — an efficient algorithm from one approach plus edge-case handling from another, combined into a better solution.
 
 🧩 A concrete example: suppose you are writing a heap sort. One branch writes the `heapify` function correctly; another branch writes the main `heapSort` loop correctly. In a graph, you can **merge the best parts of both** instead of throwing one away. This is how many reasoning models actually work in practice — not as a single chain, but as a graph of thoughts.
 
@@ -330,17 +317,11 @@ Efficient algorithm from A  +  Edge-case handling from B  =  Better solution
 <summary><strong style="font-size: 1.25em;">⚠️ Visible Reasoning Is Not Necessarily Faithful</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
+![The reasoning you see is not the reasoning it did: a polished explanation shown to you is built on a simplified, reconstructed, sometimes post-hoc middle layer, sitting on top of raw internal computation (noisy traces, abandoned hypotheses, hidden system processes) that systems like OpenAI's do not expose](../assets/season-1-inside-the-mind-of-ai/episode-09/LLM-Reasoning-The-Hidden-Computation-Gap.png)
+
 ### The trap of trusting the shown steps
 
-🎭 Suppose a model answers: *"I first did X, then Y, then Z."* We naturally assume that must be *exactly* how it produced the answer. But **generated reasoning is still generated text** — and there can be a gap between:
-
-| | |
-|:---|:---|
-| - Internal computation | - The explanation ultimately shown to the user |
-| - Intermediate latent representations | |
-| - Hidden system processes | |
-
-The final explanation may be **simplified, reconstructed, summarised, or partially post-hoc** — written *after* the answer was already decided.
+🎭 Suppose a model answers: *"I first did X, then Y, then Z."* We naturally assume that must be *exactly* how it produced the answer. But **generated reasoning is still generated text** — and there can be a gap between the internal computation (intermediate latent representations, hidden system processes) and the explanation ultimately shown to the user. The final explanation may be **simplified, reconstructed, summarised, or partially post-hoc** — written *after* the answer was already decided.
 
 ### A fun exercise for you
 
@@ -361,13 +342,7 @@ The final explanation may be **simplified, reconstructed, summarised, or partial
 
 ### Raw traces are often more harm than help
 
-🙈 You might expect a "thinking" model to show you every intermediate step. In practice, many systems deliberately hide the raw trace. Why?
-
-| | |
-|:---|:---|
-| - Raw intermediate traces may be noisy | - Exposing them can make systems easier to manipulate |
-| - They can contain abandoned hypotheses | - Traces may reveal system strategies or sensitive internal instructions |
-| - They may be confusing rather than useful | - A concise answer or summary may be more useful for users |
+🙈 You might expect a "thinking" model to show you every intermediate step. In practice, many systems deliberately hide the raw trace — it may be noisy, full of abandoned hypotheses, confusing rather than useful, and exposing it can reveal system strategies or make the system easier to manipulate.
 
 ### The OpenAI example
 
@@ -383,6 +358,8 @@ The final explanation may be **simplified, reconstructed, summarised, or partial
 <details id="limits-of-reasoning" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">📉 Limits of Reasoning Models: More Tokens ≠ More Intelligence</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
+
+![More thinking does not equal more intelligence: accuracy rises with reasoning compute, plateaus at a sweet spot of useful compute, then dips in the overthinking zone where diminishing returns can abandon an initially correct solution; failure modes like hallucination, arithmetic errors, and wrong assumptions persist even with more thinking](../assets/season-1-inside-the-mind-of-ai/episode-09/More-Thinking≠More-Intelligence.png)
 
 ### Thinking harder is not a correctness guarantee
 
@@ -414,13 +391,7 @@ More thinking can **increase the probability of success**, but it does **not tur
 
 ### Overthinking: diminishing returns
 
-🔁 Recent research on reasoning models has observed **overthinking**: increasing the reasoning budget beyond a useful point can produce **diminishing returns** and can even cause the model to **abandon an initially correct solution**. So the right mental model is:
-
-| Compute level | What tends to happen |
-|:---|:---|
-| **1. Too little compute** | May answer prematurely |
-| **2. Useful compute** | Can improve difficult reasoning |
-| **3. Unlimited compute** | Does **NOT** guarantee correctness |
+🔁 Recent research on reasoning models has observed **overthinking**: increasing the reasoning budget beyond a useful point can produce **diminishing returns** and can even cause the model to **abandon an initially correct solution**. Too little compute may answer prematurely, useful compute can improve difficult reasoning, and unlimited compute does **not** guarantee correctness.
 
 > 🧭 **The honest limit:** *Reasoning raises your odds, it does not remove risk. There is a sweet spot — and past it, more thinking can actively hurt.*
 
@@ -439,21 +410,11 @@ More thinking can **increase the probability of success**, but it does **not tur
 <summary><strong style="font-size: 1.25em;">🎮 How We Teach a Model to Reason: Reinforcement Learning</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
+![Teaching a model to reason: the RL loop (model produces behavior, gets reward, training pushes behavior toward higher reward) with RLHF's human-preference reward on one side (expensive, subjective, error-prone) and RLVR's verifiable reward on the other (pass/fail tests, exact math answers); below, AlphaGo's self-play loop and learning curves showing supervised learning plateauing at the human ceiling while RL self-play rises beyond it](../assets/season-1-inside-the-mind-of-ai/episode-09/Teaching-Models-to-Reason-RL-to-RLVR.png)
+
 ### The answer is Reinforcement Learning
 
-🎯 So how do we actually *teach* a model to reason? The answer is **Reinforcement Learning (RL)** — a simple trial-and-error loop:
-
-```text
-Model
-  ↓
-Produces Behavior
-  ↓
-Reward
-  ↓
-Training pushes behavior toward higher reward
-```
-
-The model tries something, gets a reward signal, and training nudges it toward behaviors that earn higher rewards. Repeat millions of times and the "reasoning" habits become strong.
+🎯 So how do we actually *teach* a model to reason? The answer is **Reinforcement Learning (RL)** — a simple trial-and-error loop: the model produces behavior, gets a reward signal, and training nudges it toward behaviors that earn higher rewards. Repeat millions of times and the "reasoning" habits become strong.
 
 ### RL is not new — it has just improved
 
@@ -636,25 +597,13 @@ The third option — using an LLM to judge another LLM's output — is known as 
 1. **Supervised learning** from human expert games (the familiar "learn from examples" approach).
 2. **Reinforcement learning from self-play** — the most important line. The model played against *itself*, learning by trial and error with **no human involved**.
 
-The self-play loop is simple:
-
-```text
-AI plays a match against another AI
-  → Win  → positive reward → retrain on the decisions made
-  → Lose → negative reward → retrain on the decisions made
-  → Repeat millions of times
-```
+The self-play loop is simple: the AI plays a match against another AI, a win gives a positive reward and a loss a negative one, and the model retrains on the decisions made — repeated millions of times.
 
 Lee Sedol had played roughly **1,000 matches** in his entire life. AlphaGo could play **millions or billions** of self-play matches, updating after every single one. That is the power of reinforcement learning: given enough training, the model can **go beyond human capability**.
 
 ### Supervised learning vs. Reinforcement Learning
 
-📊 Here's a key distinction worth highlighting:
-
-| Approach | Ceiling |
-|:---|:---|
-| **Supervised learning** | Can only go up to the capability of the human data it was trained on |
-| **Reinforcement learning (self-play)** | Can go **beyond** human capability — the improvement curve keeps rising until it plateaus |
+📊 Here's a key distinction worth highlighting: **supervised learning** can only go up to the capability of the human data it was trained on, while **reinforcement learning from self-play** can go **beyond** human capability — the improvement curve keeps rising until it plateaus.
 
 > 🧭 **Why it matters:** *Move 37 was not programmed by a human — it was discovered by the model through self-play. This is the same "learn from a reward signal, not from a human teacher" idea that powers modern reasoning models like DeepSeek-R1.*
 

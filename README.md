@@ -98,11 +98,11 @@ A: Absolutely! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 6. 🧠 [Episode 6: The Computational Brain of Machines](./season-1-inside-the-mind-of-ai/episode-06-the-computational-brain-of-machines.md) — Transformers, attention, and the forward pass
 7. ⚡ [Episode 7: Sharpening the Brain](./season-1-inside-the-mind-of-ai/episode-07-sharpening-the-brain.md) — Training, loss, backpropagation, and gradient descent
 8. 🤖 [Episode 8: From a Base Model to an AI Assistant](./season-1-inside-the-mind-of-ai/episode-08-from-a-base-model-to-an-ai-assistant.md) — Pre-training, base models, SFT, instruction tuning, and RLHF
-9. 🤷 Episode 9: Can AI Really Think? — _coming soon_
+9. � [Episode 9: Can AI Really Think?](./season-1-inside-the-mind-of-ai/episode-09-can-ai-really-think.md) — Reasoning models, inference-time compute, Chain/Tree/Graph of Thoughts, and RLVR
 
 ### Season 2 — AI Native Software Engineer
 
-Coming soon...
+1. 🚀 [Episode 1: Fundamentals of Building with AI](./season-2-ai-native-software-engineer/episode-01-fundamentals-of-building-with-ai.md) — The SDLC, the AI-first approach, tools, models, and subscriptions
 
 ### Season 3 — Building AI Applications
 
@@ -127,7 +127,7 @@ These notes are a living document — your feedback makes them better. 🙏
 ```
 .
 ├── season-1-inside-the-mind-of-ai/    Episode notes for Season 1
-├── season-2-... (future)               Season 2 notes
+├── season-2-ai-native-software-engineer/  Episode notes for Season 2
 ├── assets/                             Diagrams and visual aids
 ├── projects/                           Hands-on projects & experiments
 ├── resources/                          External links and references
@@ -139,8 +139,9 @@ These notes are a living document — your feedback makes them better. 🙏
 ## Quick Links
 
 - 🏠 **[Home](README.md)** — You are here
-- 📚 **[Season 1 Episodes](./season-1-inside-the-mind-of-ai/README.md)** — 8 complete episodes
-- 🔨 **[Projects](./projects/README.md)** — Hands-on code and experiments
+- 📚 **[Season 1 Episodes](./season-1-inside-the-mind-of-ai/README.md)** — 9 complete episodes
+- � **[Season 2 Episodes](./season-2-ai-native-software-engineer/README.md)** — Building real products with AI
+- �🔨 **[Projects](./projects/README.md)** — Hands-on code and experiments
 - 🔗 **[External Resources](./resources/useful-links.md)** — Curated AI learning links
 - 📖 **[Course](https://namastedev.com/learn/namaste-ai)** — Official course by Akshay Saini
 - 📝 **[Contributing](CONTRIBUTING.md)** — How to help improve these notes
@@ -177,4 +178,4 @@ If these notes helped you, please **star the repo** ⭐ to help others find it. 
 
 ---
 
-**Made with 💙 for anyone curious about how AI works.**
+**Made with 🩵 for anyone curious about how AI works.**
