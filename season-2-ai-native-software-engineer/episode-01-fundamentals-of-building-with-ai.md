@@ -28,10 +28,7 @@
 <summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-| | |
-|:---|:---|
-| ![The software development lifecycle pipeline drawn on a whiteboard: Idea → Features → PRD → Architecture → DB → APIs → Development → Debugging → Code Review → Testing → Deployment](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-sdlc-pipeline.jpg) | ![Three questions written on a whiteboard: what tools are we going to use, should I buy a premium subscription, and can I work with free alternatives](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-tools-questions.jpg) |
-| ![A whiteboard slide asking whether you can use alternative tools, comparing Codex vs Claude Code vs Antigravity and alternative tech stacks](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-alternative-tools.jpg) | ![An "Important Point" slide: everything changes fast in AI (tools, UI, settings, models), think beyond the tech stack, you won't get the same result, but basic fundamentals remain the same](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-everything-changes-fast.jpg) |
+![The AI-native software engineer roadmap: an 11-stage SDLC from idea to deployed product, the AI-first build loop, the no-magic-prompt rule, tool-agnostic fundamentals, and the engineer's mindset](../assets/season-2-ai-native-software-engineer/episode-01/AI-Native-Software-Engineering-Roadmap.png)
 
 </div>
 </details>
@@ -45,6 +42,8 @@
 🚀 Season 2 is all about **practical implementation**. Instead of learning concepts in isolation, you will build a real-world product and watch the entire development process unfold — from the first idea all the way to a deployed, live application.
 
 🧱 The single most important warning: **the biggest mistake people make is writing one very long prompt and expecting the product to magically appear the way they imagined it.** It will not. If you skip the software engineering steps, AI will hand you a pile of garbage code. The whole point of this season is to show the *right* way to build a product today — not "one prompt, magic result."
+
+![The biggest mistake when building with AI: one giant prompt leads to garbage output, while following the SDLC with a human guiding AI leads to a deployed product](../assets/season-2-ai-native-software-engineer/episode-01/AI-Workflow-From-Mistak-to-Success.png)
 
 👥 This season is designed for **everyone**, not just experienced developers:
 
@@ -67,21 +66,7 @@
 
 🗺️ Building software follows a well-known process called the **Software Development Life Cycle (SDLC)**. These steps have existed long before AI — the only difference now is that AI writes the code instead of you typing every line by hand.
 
-![The SDLC pipeline: Idea → Features → PRD → Architecture → DB → APIs → Development → Debugging → Code Review → Testing → Deployment](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-sdlc-pipeline.jpg)
-
-```mermaid
-flowchart LR
-	A["Idea"] --> B["Features"]
-	B --> C["PRD"]
-	C --> D["Architecture"]
-	D --> E["DB design"]
-	E --> F["APIs"]
-	F --> G["Development"]
-	G --> H["Debugging"]
-	H --> I["Code Review"]
-	I --> J["Testing"]
-	J --> K["Deployment"]
-```
+![The 11-stage SDLC pipeline for building with AI: Idea → Features → PRD → Architecture → DB Design → APIs → Development → Debugging → Code Review → Testing → Deployment](../assets/season-2-ai-native-software-engineer/episode-01/AI-Era-SDLC.png)
 
 Here is what each stage means in plain words:
 
@@ -116,6 +101,8 @@ Here is what each stage means in plain words:
 
 🧑‍💻 I am a full-stack software engineer with about a decade of industry experience — I can write every line of this project by hand. But in this season I deliberately **step back and do not act like a software engineer**. I rely on AI almost 99% of the time, only stepping in to fix things when AI gets stuck.
 
+![The AI-first approach: a 99% AI / 1% you donut chart, with callouts for instructing and guiding AI, expecting and handling mistakes, and AI empowering engineers rather than replacing them](../assets/season-2-ai-native-software-engineer/episode-01/AI-First-Software-Development-Infographic.png)
+
 > **Why?** Because the point is not to show off hand-coding. The point is to explore the *potential* of AI — to see what you can actually build when you let AI do the work.
 
 🔮 My view on the future: the future of software engineering is **not staring at a screen typing code** — it is **instructing and guiding AI** to build what you need. Even at large companies, I have observed that engineers have largely stopped writing code by hand.
@@ -137,6 +124,10 @@ Here is what each stage means in plain words:
 🛠️ There are many AI coding tools in the market — **Codex** (OpenAI), **Cursor**, **Claude Code**, **Antigravity** (Google), and more. I use **Codex**, but the process works in *any* of them. Pick the tool you like; the SDLC fundamentals are the same.
 
 > **Go beyond the tool.** The software development lifecycle is what matters, not which app you open. If you use Claude Code, use Claude Code. If you use Cursor, use Cursor.
+
+![Three questions before you start building with AI: what tools are we going to use, should I buy a premium subscription, and which model should I use](../assets/season-2-ai-native-software-engineer/episode-01/Three-Questions-Before-Building-with-AI.png)
+
+![Tools change, fundamentals don't: Codex, Cursor, Claude Code, and Antigravity all converge on the same SDLC, and alternative tech stacks work too](../assets/season-2-ai-native-software-engineer/episode-01/Tools-Change-Fundamentals-Remain.png)
 
 ### Use the best available model
 
@@ -174,7 +165,7 @@ _(The exact framework will be revealed as the series progresses.)_
 <summary><strong style="font-size: 1.25em;">⚡ Important Point: Everything Changes Fast — Understand, Don't Copy</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-![An "Important Point" slide: everything changes fast in AI (tools, UI, settings, models), think beyond the tech stack, you won't get the same result, but basic fundamentals remain the same](../assets/season-2-ai-native-software-engineer/episode-01/episode-01-everything-changes-fast.jpg)
+![Everything changes fast in AI (tools, UI, settings, models) — think beyond the tech stack — while the SDLC and software engineering fundamentals never change; a generative model gives different results every time](../assets/season-2-ai-native-software-engineer/episode-01/AI-Engineering-Understand-Dont-Copy.png)
 
 🌪️ The AI space changes **very fast**. By the time you work through these notes, the tools, the UI, the settings, and the models may all look different from what is shown here. Do not panic if something does not match — **think beyond the tool and the tech stack.**
 

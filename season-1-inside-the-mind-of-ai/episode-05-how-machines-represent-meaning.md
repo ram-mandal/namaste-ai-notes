@@ -27,7 +27,9 @@
 
 <details id="quick-notes" style="margin-bottom: 1rem;">
 <summary><strong style="font-size: 1.25em;">📝 Quick Notes — visual revision</strong></summary>
-<div style="margin-left: 3rem; margin-top: .25rem; min-height: 1rem;">&nbsp;</div>
+<div style="margin-left: 3rem; margin-top: .25rem;">
+<img src="../assets/season-1-inside-the-mind-of-ai/episode-05/episode-05-how-machine-represent-meaning.png" alt="Visual notes for Episode 5: How Machines Represent Meaning" width="100%">
+</div>
 </details>
 
 ---
@@ -43,10 +45,6 @@
 > I ate an **apple** in the afternoon.
 
 > **Apple** launched a new device.
-
-> I am sitting near a river **bank**.
-
-> I have a savings account in **Bank** of America.
 
 Add sarcasm, tone, and cultural context, and the problem gets even harder. Understanding meaning behind words is difficult even for humans. Making a machine do it is a genuinely hard problem in **Natural Language Processing (NLP)**.
 
@@ -271,7 +269,7 @@ When embeddings are trained well, related concepts form **neighborhoods**. These
 - "JavaScript is used in web development" → **JavaScript** and **web development** move closer.
 - "Apple and banana are fruits" → **apple**, **banana**, and **fruit** cluster together.
 
-During training, every time the model sees these words together, it makes a tiny adjustment to the relevant dimensions. This is sometimes called **tuning**: the numbers shift slightly up or down, and over millions of examples, useful relationships become encoded in the vector space.
+During training, every time the model sees these words together, it makes the same tiny **tuning** adjustments described earlier — and over millions of examples, useful relationships become encoded in the vector space.
 
 > **Vector space** is the n-dimensional space where all these vectors live. You cannot picture 1,000 dimensions, but mathematically, every token occupies a point in that space, and the distances and angles between points encode relationships.
 
@@ -327,6 +325,8 @@ $$
 $$
 
 The top part (**dot product**) measures how much the two vectors point in the same direction. The bottom part (**magnitudes**) is just the length of each vector. Dividing by the lengths removes the size difference, so a long vector and a short vector pointing the same way still score near $1$. Think of it as: **ignore how long the arrows are, only compare which way they point.**
+
+![Cosine similarity: two arrows of different lengths pointing the same direction, the 0°/90°/180° angle scale, and the formula with dot product and magnitudes annotated](../assets/season-1-inside-the-mind-of-ai/episode-05/cosine-similarity.png)
 
 Think about the angle:
 
@@ -386,6 +386,8 @@ Things to try:
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
 ### Identity is not enough; order matters too
+
+![Identity plus order: "Dog bites man" and "Man bites dog" use the same tokens and embeddings, but different order changes the meaning](../assets/season-1-inside-the-mind-of-ai/episode-05/Identity-and-Order-Meaning-in-Context.png)
 
 🔀 These sentences contain the same words but describe very different events:
 
@@ -460,6 +462,8 @@ The exact context a token can use depends on the model's design. For example, mo
 
 ### Token embedding vs. text embedding in practice
 
+![Token embedding vs text embedding: "I love JavaScript." split into per-token vectors, then compressed into one sentence vector, compared with cosine similarity](../assets/season-1-inside-the-mind-of-ai/episode-05/Embedding-Concepts-Infographic.png)
+
 Take the sentence **"I love JavaScript."**
 
 - **Token embedding:** Each token ("I", "love", "JavaScript") gets its own vector. These vectors help the language model process the sequence internally, one token at a time, in order.
@@ -470,6 +474,8 @@ For example, to check whether "I love JavaScript" and "JavaScript is a very beau
 > **Token embeddings** help an LLM process individual tokens in sequence. **Text embeddings** help applications compare and retrieve larger pieces of content.
 
 ### Where text embeddings are used
+
+![Hub-and-spoke map of text embedding use cases: semantic search, RAG, recommendations, clustering, classification, duplicate detection, and multimodal search](../assets/season-1-inside-the-mind-of-ai/episode-05/text-embeddings-meaning-to-relationship.png)
 
 | | |
 |:---|:---|

@@ -82,7 +82,7 @@ That single sentence is the whole idea. The rest of this episode unpacks it.
 <summary><strong style="font-size: 1.25em;">📄 "Attention Is All You Need" (2017)</strong></summary>
 <div style="margin-left: 3rem; margin-top: .25rem;">
 
-📄 The Transformer was introduced in a 2017 research paper titled **"Attention Is All You Need"** by a team of researchers from Google (Google Brain and Google DeepMind) and the University of Toronto. The paper is short on the number of new moving parts and enormous in its impact: essentially every LLM you use today is built on the architecture it describes.
+📄 The Transformer was introduced in a 2017 research paper titled **"Attention Is All You Need"** by a team of researchers from Google (Google Brain and Google Research) and the University of Toronto. The paper is short on the number of new moving parts and enormous in its impact: essentially every LLM you use today is built on the architecture it describes.
 
 > 🌍 **Fun fact:** the 2017 paper was not written for chatbots. It was introduced to improve **machine translation** (translating text from one language to another). The researchers did not set out to build ChatGPT — they built a better way to process sequences, and that same idea later scaled into the LLMs we use every day.
 
@@ -278,7 +278,7 @@ flowchart TB
 After the last block, one more **Layer Norm** is applied. Then a **linear** layer projects each token's vector out to a number for *every* token in the vocabulary (tens of thousands of numbers). These raw, un-normalized numbers are called **logits** — they are hard to interpret directly. Finally, **softmax** converts those logits into a probability distribution that adds up to 1, so each token in the vocabulary gets a share (a "percentage") of the total.
 
 ```text
-"The pizza is" -> softmax -> { ready: 0.75, hot: 0.68, delicious: 0.40, ... potato: 0.01, ... }
+"The pizza is" -> softmax -> { ready: 0.42, hot: 0.11, delicious: 0.07, ... potato: 0.001, ... }
 ```
 
 ### Step 5 — Pick the next token and repeat
@@ -405,9 +405,9 @@ The "heart" idea helps me remember the priority: the attention step is where the
 
 ## Questions / Things to Explore
 
-- What exactly does each "head" in multi-head attention specialize in?
-- How do the number of layers, heads, and embedding size trade off against cost and quality?
-- Why does sampling (temperature, top-k) change the style of the output?
+- What exactly does each "head" in multi-head attention specialize in? [🔗](./episode-06/nanogpt-code-walkthrough.md#4-self-attention-the-heart-in-code)
+- How do the number of layers, heads, and embedding size trade off against cost and quality? [🔗](./episode-06/nanogpt-code-walkthrough.md#1-the-configuration-the-models-shape)
+- Why does sampling (temperature, top-k) change the style of the output? [🔗](./episode-06/nanogpt-code-walkthrough.md#9-generating-text-the-prediction-loop)
 - How does the model learn to stop (emit an end-of-sequence token) at the right time?
 
 ---
